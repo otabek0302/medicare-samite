@@ -22,8 +22,8 @@ jobs:
           password: cPe4!uQshbHT
           port: 22
           script: |
-            cd /var/www
-            git clone cooperation@samit.global 
+            cd projeckt
+            git clone https://github.com/otabek0302/medicare-samite.git
             docker-compose down
             docker-compose up --build -d
             docker system prune -f
