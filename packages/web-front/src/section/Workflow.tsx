@@ -19,7 +19,7 @@ const Workflow: React.FC<WorkflowProps> = () => {
         <>
             <div>
                 
-               <div className="container mx-auto py-10 px-4">
+               <div className="container mx-auto py-10 mt-10 px-4">
             <div className="flex flex-col lg:flex-row items-start gap-8">
                 <div className="lg:w-1/2">
                     <h3 className="text-green-500 text-xl font-semibold mb-2">Our Operational Method</h3>
