@@ -121,30 +121,30 @@ services:
       - mysql
       - redis
       - api
-  web:
-    build:
-      context: ./packages/web-front
-      dockerfile: Dockerfile.dev
-    container_name: web-frontend
-    volumes:
-      - ./packages/web-front:/var/www/front
-      - /var/www/front/node_modules
-      - /etc/letsencrypt:/etc/letsencrypt
-    logging:
-      driver: json-file
-      options:
-        max-size: '10mb'
-        max-file: '1'
-    env_file: ./.env
-    environment:
-      - DISABLE_IPV6=true
-    ports:
-      - 5174:5173
-    restart: unless-stopped
-    depends_on:
-      - mysql
-      - redis
-      - api
+  # web:
+  #   build:
+  #     context: ./packages/web-front
+  #     dockerfile: Dockerfile.dev
+  #   container_name: web-frontend
+  #   volumes:
+  #     - ./packages/web-front:/var/www/front
+  #     - /var/www/front/node_modules
+  #     - /etc/letsencrypt:/etc/letsencrypt
+  #   logging:
+  #     driver: json-file
+  #     options:
+  #       max-size: '10mb'
+  #       max-file: '1'
+  #   env_file: ./.env
+  #   environment:
+  #     - DISABLE_IPV6=true
+  #   ports:
+  #     - 5174:5173
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - mysql
+  #     - redis
+  #     - api
 
 volumes:
   redis-data:
