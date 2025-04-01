@@ -20,11 +20,4 @@ jobs:
 
       - name: Run deploy script on server with password
         run: |
-          sshpass -p "cPe4!uQshbHT" ssh -t -t  root@83.222.23.106 << EOF
-            
-            git pull origin main
-            cd medicare-samite/
-       
-            docker-compose up --build -d
-           
-          EOF
+          sshpass -p "cPe4!uQshbHT" ssh   root@83.222.23.106
