@@ -9,16 +9,16 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Pull latest changes
+      - name: Manually checkout repository
         run: |
+          cd $GITHUB_WORKSPACE
+          git init
+          git remote add origin https://github.com/otabek0302/medicare-samite.git
           git fetch origin
           git reset --hard origin/main
 
       - name: Restart Docker containers
-        working-directory: ${{ github.workspace }}
         run: |
+          cd $GITHUB_WORKSPACE
           docker-compose up --pull always --build -d
           docker system prune -f --volumes
