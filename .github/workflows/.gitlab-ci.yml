@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - git pull origin main
+    - cd $PROJECT_FOLDER 
+    - docker-compose down
+    - docker-compose up --build -d
+    - docker system prune -f
+  only:
+    - main
