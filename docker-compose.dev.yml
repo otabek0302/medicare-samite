@@ -1,0 +1,156 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: db-mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=laravel
+      - MYSQL_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    logging:
+      driver: json-file
+      options:
+        max-size: '10mb'
+        max-file: '1'
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+  redis:
+    image: redis:alpine
+    container_name: db-redis
+    volumes:
+      - redis-data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: '10mb'
+        max-file: '1'
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 5s
+  pusher:
+    image: quay.io/soketi/soketi:1.4-16-debian
+    container_name: rt-pusher
+    logging:
+      driver: json-file
+      options:
+        max-size: '10mb'
+        max-file: '1'
+    environment:
+      - DISABLE_IPV6=true
+    ports:
+      - 6001:6001
+      - 9601:9601
+    restart: unless-stopped
+  api:
+    build:
+      context: ./packages/api
+      # No Live reload currently
+      dockerfile: Dockerfile
+    container_name: api-backend
+    volumes:
+      - ./packages/api:/var/www/api
+      - /var/www/api/vendor
+      - /etc/letsencrypt:/etc/letsencrypt
+    logging:
+      driver: json-file
+      options:
+        max-size: '10mb'
+        max-file: '1'
+    env_file: ./.env
+    environment:
+      - DISABLE_IPV6=true
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=laravel
+      - DB_USERNAME=root
+      - DB_PASSWORD=
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=null
+      - REDIS_PORT=6379
+      - PUSHER_APP_ID=app-id
+      - PUSHER_APP_KEY=app-key
+      - PUSHER_APP_SECRET=app-secret
+      - PUSHER_HOST=pusher
+      - PUSHER_PORT=6001
+      - PUSHER_SCHEME=ws
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'curl', 'http://0.0.0.0:8000']
+      interval: 10s
+      timeout: 3s
+    depends_on:
+      - mysql
+      - redis
+  admin:
+    build:
+      context: ./packages/web-admin
+      dockerfile: Dockerfile.dev
+    container_name: admin-frontend
+    volumes:
+      - ./packages/web-admin:/var/www/admin
+      - /var/www/admin/node_modules
+      - /etc/letsencrypt:/etc/letsencrypt
+    logging:
+      driver: json-file
+      options:
+        max-size: '10mb'
+        max-file: '1'
+    env_file: ./.env
+    environment:
+      - DISABLE_IPV6=true
+    ports:
+      - 5173:5173
+    restart: unless-stopped
+    depends_on:
+      - mysql
+      - redis
+      - api
+  web:
+    build:
+      context: ./packages/web-front
+      dockerfile: Dockerfile.dev
+    container_name: web-frontend
+    volumes:
+      - ./packages/web-front:/var/www/front
+      - /var/www/front/node_modules
+      - /etc/letsencrypt:/etc/letsencrypt
+    logging:
+      driver: json-file
+      options:
+        max-size: '10mb'
+        max-file: '1'
+    env_file: ./.env
+    environment:
+      - DISABLE_IPV6=true
+    ports:
+      - 5174:5173
+    restart: unless-stopped
+    depends_on:
+      - mysql
+      - redis
+      - api
+
+volumes:
+  redis-data:
+  mysql-data:
+
+networks:
+  default:
+    external: true
+    name: medicare

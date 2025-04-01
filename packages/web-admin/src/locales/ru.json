@@ -1,0 +1,2017 @@
+{
+  "login": {
+    "title": "Вход в систему",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "forgotPassword": "Забыли пароль?",
+    "signIn": "Войти",
+    "loginAs": "Войти как - ",
+    "continue": "Продолжить",
+    "cancel": "Отмена",
+    "errors": {
+      "noPermission": "У вас нет прав доступа к панели администратора. Пожалуйста, обратитесь к администратору, если считаете, что это ошибка.",
+      "wrongCredentials": "Неверный email или пароль.",
+      "generalError": "Произошла ошибка при входе. Пожалуйста, попробуйте снова."
+    }
+  },
+  "dashboard": {
+    "title": "Главная",
+    "charts": {
+      "appointments": {
+        "title": "Приемы",
+        "completed": "Завершенные",
+        "cancelled": "Отмененные",
+        "confirmed": "Подтвержденные"
+      },
+      "transactions": {
+        "title": "Транзакции",
+        "credited": "Зачислено",
+        "debited": "Списано"
+      }
+    },
+    "calendar": {
+      "title": "Календарь приемов"
+    },
+    "cancellation": {
+      "title": "Статистика запросов на отмену",
+      "chart": "Распределение запросов на отмену"
+    }
+  },
+  "buttons": {
+    "addNewAppointment": "Добавить новый прием",
+    "addDoctor": "Добавить врача",
+    "addPatient": "Добавить пациента",
+    "addMedicine": "Добавить лекарство",
+    "newCheckin": "Новый прием",
+    "showDisplay": "Показать экран регистрации"
+  },
+  "appointments": {
+    "cards": {
+      "todayAppointment": "Приемы на сегодня",
+      "upcomingAppointment": "Предстоящие приемы",
+      "pendingAppointments": "Ожидающие приемы",
+      "confirmAppointments": "Подтвержденные приемы",
+      "cancelledAppointments": "Отмененные приемы",
+      "rejectedAppointments": "Отклоненные приемы",
+      "completedAppointments": "Завершенные приемы",
+      "visitedAppointments": "Посещенные приемы"
+    },
+    "status": {
+      "unknown": "Неизвестно",
+      "pending": "В ожидании",
+      "confirmed": "Подтверждено",
+      "rejected": "Отклонено",
+      "cancelled": "Отменено",
+      "completed": "Завершено",
+      "rescheduled": "Перенесено",
+      "visited": "Посещено",
+      "distribution": "Распределение статусов приемов",
+      "label": "Статус",
+      "select": "Выберите статус",
+      "cancellation": "Запрос на отмену"
+    },
+    "registration": {
+      "title": "Приемы за последние {{days}} дней",
+      "columns": {
+        "doctor": "Врач",
+        "patient": "Пациент",
+        "status": "Статус",
+        "date": "Дата",
+        "timeSlots": "Время",
+        "type": "Тип",
+        "paymentStatus": "Статус оплаты"
+      },
+      "types": {
+        "emergency": "Экстренный",
+        "regular": "Обычный"
+      },
+      "payment": {
+        "paid": "Оплачено",
+        "refunded": "Возвращено",
+        "notPaid": "Не оплачено"
+      }
+    },
+    "chart": {
+      "title": "Приемы за последние {{days}} дней",
+      "lastDays": "Последние {{days}} дней",
+      "labels": {
+        "all": "Все",
+        "cancelled": "Отменены",
+        "completed": "Завершены"
+      }
+    },
+    "add": {
+      "title": "Добавить новый прием",
+      "or": "Или",
+      "addPatient": "Добавить пациента",
+      "details": "Детали приема",
+      "type": {
+        "label": "Тип приема",
+        "select": "Выберите тип приема",
+        "emergency": "Экстренный",
+        "opd": "Амбулаторный",
+        "video": "Видео консультация"
+      },
+      "payment": {
+        "status": {
+          "label": "Статус оплаты",
+          "select": "Выберите статус оплаты",
+          "paid": "Оплачено",
+          "unpaid": "Не оплачено"
+        },
+        "method": {
+          "label": "Способ оплаты",
+          "select": "Выберите способ оплаты"
+        },
+        "details": "Детали оплаты",
+        "timeSlot": "Выберите время"
+      },
+      "fee": {
+        "label": "Стоимость",
+        "total": "Итоговая сумма"
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить прием"
+      }
+    },
+    "labels": {
+      "appointmentDate": "Дата приема",
+      "appointmentTimeSlot": "Время приема",
+      "selectDoctor": "Выберите врача",
+      "selectType": "Выберите тип приема"
+    },
+    "buttons": {
+      "refreshTable": "Обновить таблицу",
+      "close": "Закрыть"
+    },
+    "timeSlots": {
+      "selectDateTime": "Выберите дату и время",
+      "available": "Доступное время",
+      "noAvailable": "Извините, на выбранную дату нет доступных временных интервалов."
+    },
+    "reschedule": {
+      "title": "Перенести прием",
+      "button": "Перенести прием"
+    },
+    "update": {
+      "patientDetails": "Данные пациента",
+      "doctorDetails": "Данные врача",
+      "labels": {
+        "patientFirstName": "Имя пациента",
+        "patientLastName": "Фамилия пациента",
+        "phone": "Телефон",
+        "gender": "Пол",
+        "doctorFirstName": "Имя врача",
+        "doctorLastName": "Фамилия врача",
+        "meetingLink": "Ссылка на встречу",
+        "updateRequestStatus": "Обновить статус запроса"
+      },
+      "cancellationTab": "Запрос на отмену от пациента",
+      "alerts": {
+        "reject": {
+          "title": "Отклонить прием",
+          "message": "Вы уверены? Это действие нельзя отменить.",
+          "cancel": "Отмена",
+          "confirm": "Отклонить"
+        },
+        "cancellation": {
+          "title": "Запрос {{type}}",
+          "message": "Вы уверены? Обновить статус отмены на {{type}}",
+          "cancel": "Отмена",
+          "confirm": "{{type}} запрос на отмену"
+        }
+      },
+      "details": "Детали приема",
+      "source": "Источник",
+      "buttons": {
+        "joinMeeting": "Присоединиться к встрече",
+        "printReport": "Распечатать отчет о консультации",
+        "back": "Назад"
+      }
+    },
+    "actions": {
+      "edit": "Редактировать прием"
+    },
+    "search": {
+      "placeholder": "Поиск"
+    },
+    "messages": {
+      "error": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      }
+    }
+  },
+  "welcome": {
+    "title": "С возвращением!",
+    "stats": {
+      "activeDoctors": "Всего активных врачей",
+      "appointments": "Всего приемов",
+      "patients": "Всего пациентов",
+      "users": "Всего пользователей",
+      "departments": "Всего отделений",
+      "prescriptions": "Всего рецептов",
+      "medicine": "Всего лекарств",
+      "doctorReviews": "Отзывы о врачах"
+    }
+  },
+  "registration": {
+    "users": {
+      "title": "Регистрация пользователей за последние {{days}} дней"
+    },
+    "patients": {
+      "title": "Регистрация пациентов за последние {{days}} дней"
+    }
+  },
+  "cancellation": {
+    "requests": {
+      "initiated": "Запрос на отмену инициирован",
+      "processing": "Запрос на отмену обрабатывается",
+      "approved": "Запрос на отмену одобрен",
+      "rejected": "Запрос на отмену отклонен"
+    },
+    "chart": {
+      "title": "Статус отмены приема",
+      "labels": {
+        "initiated": "Запрос на отмену создан",
+        "rejected": "Запрос на отмену отклонен",
+        "approved": "Запрос на отмену одобрен",
+        "processing": "Запрос на отмену обрабатывается"
+      }
+    }
+  },
+  "checkin": {
+    "title": "Новая регистрация",
+    "or": "Или",
+    "buttons": {
+      "scanQr": "Сканировать QR",
+      "addManually": "Добавить вручную",
+      "getDetails": "Получить детали",
+      "close": "Закрыть",
+      "add": "Добавить регистрацию",
+      "showDisplay": "Показать экран регистрации",
+      "update": "Обновить регистрацию"
+    },
+    "form": {
+      "appointmentId": "ID приема",
+      "date": "Дата",
+      "time": "Время"
+    },
+    "errors": {
+      "notFound": "Прием не найден",
+      "videoConsult": "Видео-консультации не могут быть зарегистрированы"
+    },
+    "delete": {
+      "title": "Удалить регистрацию",
+      "confirm": "Вы уверены? Это действие нельзя отменить.",
+      "cancel": "Отмена",
+      "delete": "Удалить"
+    },
+    "success": {
+      "added": "Добавлено!",
+      "deleted": "Удалено!",
+      "updated": "Обновлено!"
+    },
+    "update": {
+      "title": "Обновить регистрацию"
+    },
+    "queue": {
+      "nextPatients": "Следующие пациенты",
+      "noUpcoming": "Нет предстоящих пациентов",
+      "currentlyBeingSeen": "Сейчас нет пациентов на приеме",
+      "now": "Сейчас",
+      "table": {
+        "serialNo": "№",
+        "id": "ID",
+        "patientName": "Имя пациента"
+      },
+      "doctor": {
+        "title": "Врач",
+        "selectOption": "Выберите опцию",
+        "selectDate": "Выберите дату"
+      },
+      "appointment": {
+        "id": "ID приема",
+        "name": "Имя",
+        "time": "Время",
+        "date": "Дата"
+      }
+    }
+  },
+  "errors": {
+    "oops": "Упс!",
+    "somethingWrong": "Что-то пошло не так.",
+    "pleaseTryRefreshing": "Пожалуйста, попробуйте обновить страницу, или вернитесь на главную страницу.",
+    "tryAgain": "Попробовать снова",
+    "500": "500",
+    "internalServerError": "Внутренняя ошибка сервера",
+    "logout": "Выйти"
+  },
+  "common": {
+    "search": "Поиск",
+    "addNew": "Добавить новый"
+  },
+  "payments": {
+    "methods": {
+      "cash": "Наличные",
+      "online": "Онлайн",
+      "other": "Другое",
+      "wallet": "Кошелек",
+      "upi": "UPI"
+    },
+    "modal": {
+      "amountPaid": "Сумма оплачена",
+      "selectMode": "Выберите способ оплаты",
+      "close": "Закрыть",
+      "setToPaid": "Отметить как оплачено"
+    }
+  },
+  "calendar": {
+    "title": "Календарь приемов",
+    "views": {
+      "week": "Неделя",
+      "day": "День",
+      "agenda": "Повестка"
+    },
+    "messages": {
+      "noEvents": "Нет приемов в этом временном диапазоне",
+      "allDay": "Весь день",
+      "date": "Дата",
+      "time": "Время",
+      "event": "Событие"
+    }
+  },
+  "doctors": {
+    "add": {
+      "title": "Добавить врача",
+      "back": "Назад",
+      "form": {
+        "email": "Email",
+        "password": "Пароль",
+        "confirmPassword": "Подтвердите пароль",
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "phone": "Телефон",
+        "dateOfBirth": "Дата рождения (ММ/ДД/ГГГГ)",
+        "gender": {
+          "label": "Пол",
+          "select": "Выберите пол",
+          "female": "Женский",
+          "male": "Мужской"
+        },
+        "experience": "Лет опыта",
+        "department": "Отделение",
+        "specialization": "Специализация",
+        "submit": "Добавить"
+      },
+      "profilePicture": {
+        "title": "Фото профиля",
+        "upload": "Загрузить фото профиля",
+        "clear": "Очистить"
+      },
+      "errors": {
+        "passwordMismatch": "Пароли не совпадают",
+        "selectDepartment": "Выберите отделение",
+        "selectSpecialization": "Выберите специализацию"
+      },
+      "success": "Врач добавлен!"
+    },
+    "delete": {
+      "title": "Удалить врача",
+      "confirmMessage": "Вы уверены? Это действие нельзя отменить.",
+      "cancel": "Отмена",
+      "confirm": "Удалить врача",
+      "success": "Врач удален!",
+      "titleWithName": "Удалить врача ( {{id}} , {{firstName}} {{lastName}} )"
+    },
+    "appointments": {
+      "title": "Приемы врача",
+      "search": "Поиск",
+      "addNew": "Добавить новый",
+      "filters": {
+        "confirmed": "Подтвержденные",
+        "visited": "Посещенные",
+        "completed": "Завершенные",
+        "pending": "Ожидающие",
+        "cancelled": "Отмененные",
+        "rejected": "Отклоненные",
+        "cancellationInitiated": "Запрос на отмену"
+      },
+      "noPermission": "У вас нет прав для просмотра приемов",
+      "error": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      },
+      "statuses": {
+        "Confirmed": "Подтверждено",
+        "Visited": "Посещено",
+        "Completed": "Завершено",
+        "Pending": "Ожидает",
+        "Cancelled": "Отменено",
+        "Rejected": "Отклонено",
+        "Cancellation": "Запрос на отмену",
+        "Emergency": "Экстренный",
+        "Regular": "Обычный",
+        "Paid": "Оплачено",
+        "Refunded": "Возвращено",
+        "Not Paid": "Не оплачено"
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "addNew": "Добавить нового",
+      "table": {
+        "name": "Имя",
+        "phone": "Телефон",
+        "email": "Email",
+        "specialization": "Специализация",
+        "department": "Отделение",
+        "active": "Активен",
+        "stopBooking": "Остановить запись"
+      },
+      "actions": {
+        "edit": "Редактировать",
+        "delete": "Удалить"
+      },
+      "errors": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      },
+      "success": {
+        "updated": "Врач обновлен!"
+      },
+      "noPermission": "У вас нет прав для просмотра врачей"
+    },
+    "review": {
+      "appointmentsDone": "Приемов проведено",
+      "loading": "Загрузка...",
+      "noReviews": "Пока нет отзывов"
+    },
+    "update": {
+      "title": "Обновить врача",
+      "tabs": {
+        "details": "Данные врача",
+        "timeSlots": "Временные интервалы",
+        "reviews": "Отзывы",
+        "appointments": "Приемы"
+      },
+      "professionalInfo": "Профессиональная информация",
+      "appointmentSettings": "Настройки приема",
+      "active": "Врач активен?",
+      "stopBooking": "Остановить запись?",
+      "basicDetails": "Основные данные",
+      "contactDetails": "Контактные данные",
+      "addressDetails": "Адрес",
+      "fees": {
+        "title": "Стоимость",
+        "opd": "Стоимость приема",
+        "video": "Стоимость видео консультации",
+        "emergency": "Стоимость экстренного приема"
+      },
+      "buttons": {
+        "back": "Назад",
+        "update": "Обновить"
+      },
+      "socialLinks": {
+        "placeholders": {
+          "facebook": "Facebook",
+          "twitter": "Twitter",
+          "instagram": "Instagram",
+          "youtube": "Youtube"
+        }
+      },
+      "messages": {
+        "imageDeleted": "Изображение удалено!",
+        "doctorUpdated": "Врач успешно обновлен"
+      },
+      "success": "Врач обновлен!",
+      "headings": {
+        "personalInfo": "Личная информация",
+        "contactInfo": "Контактная информация",
+        "addressInfo": "Адресная информация",
+        "professionalInfo": "Профессиональная информация",
+        "socialLinks": "Социальные сети"
+      },
+      "form": {
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "dob": "Дата рождения",
+        "email": "Email",
+        "phone": "Телефон",
+        "secondaryPhone": "Дополнительный телефон",
+        "state": "Область",
+        "city": "Город",
+        "postalCode": "Почтовый индекс",
+        "address": "Адрес",
+        "department": "Отделение",
+        "selectDepartment": "Выберите отделение",
+        "specialization": "Специализация",
+        "selectSpecialization": "Выберите специализацию",
+        "description": "Описание",
+        "experience": {
+          "label": "Лет опыта",
+          "placeholder": "Введите количество лет опыта"
+        },
+        "gender": {
+          "label": "Пол",
+          "selectGender": "Выберите пол",
+          "male": "Мужской",
+          "female": "Женский"
+        },
+        "validation": {
+          "required": "Это поле обязательно",
+          "email": "Неверный адрес электронной почты",
+          "phone": "Неверный номер телефона"
+        }
+      }
+    }
+  },
+  "departments": {
+    "add": {
+      "title": "Добавить отделение",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        },
+        "description": {
+          "label": "Описание",
+          "placeholder": "Описание"
+        },
+        "image": {
+          "dropzone": {
+            "title": "Выберите файл или перетащите его сюда",
+            "selectedFile": "Выбранный файл:"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить отделение"
+      },
+      "messages": {
+        "success": "Отделение добавлено!"
+      }
+    },
+    "delete": {
+      "title": "Удалить отделение",
+      "titleWithName": "Удалить отделение ( {{title}} )",
+      "confirmMessage": "Вы уверены? Это действие нельзя отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Отделение удалено!"
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "addNew": "Добавить новое",
+      "table": {
+        "name": "Название",
+        "active": "Активно"
+      },
+      "errors": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      },
+      "messages": {
+        "updated": "Отделение обновлено!",
+        "noPermission": "У вас нет прав для просмотра отделений"
+      },
+      "actions": {
+        "edit": "Редактировать",
+        "delete": "Удалить"
+      }
+    },
+    "update": {
+      "title": "Обновить отделение",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        },
+        "description": {
+          "label": "Описание",
+          "placeholder": "Описание"
+        },
+        "image": {
+          "dropzone": {
+            "title": "Выберите файл или перетащите его сюда",
+            "selectedFile": "Выбранный файл:"
+          },
+          "remove": "Удалить изображение"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить отделение"
+      },
+      "messages": {
+        "success": "Отделение обновлено!",
+        "imageDeleted": "Изображение удалено!"
+      }
+    }
+  },
+  "specializations": {
+    "add": {
+      "title": "Добавить специализацию",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить специализацию"
+      },
+      "messages": {
+        "success": "Специализация добавлена!"
+      }
+    },
+    "delete": {
+      "title": "Удалить специализацию",
+      "titleWithName": "Удалить специализацию ( {{title}} )",
+      "confirmMessage": "Вы уверены? Это действие нельзя отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить специализацию"
+      },
+      "messages": {
+        "success": "Специализация удалена!"
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "addNew": "Добавить новую",
+      "table": {
+        "name": "Название",
+        "active": "Активно"
+      },
+      "errors": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      },
+      "messages": {
+        "noPermission": "У вас нет прав для просмотра специализаций"
+      },
+      "actions": {
+        "edit": "Редактировать",
+        "delete": "Удалить"
+      }
+    },
+    "update": {
+      "title": "Обновить специализацию",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить специализацию"
+      },
+      "messages": {
+        "success": "Специализация обновлена!"
+      }
+    }
+  },
+  "roles": {
+    "add": {
+      "title": "Добавить роль",
+      "form": {
+        "title": "Название роли",
+        "placeholder": "Введите название роли"
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "submit": "Добавить роль"
+      },
+      "messages": {
+        "success": "Роль добавлена!"
+      }
+    },
+    "assignedUsers": {
+      "title": "Назначенные пользователи",
+      "search": "Поиск",
+      "buttons": {
+        "assignRole": "Назначить роль пользователю",
+        "addNewRole": "Добавить новую роль"
+      },
+      "delete": {
+        "title": "Удалить назначенную роль",
+        "titleWithName": "Удалить роль ( {{role}} ) у пользователя ( {{name}} )",
+        "confirmMessage": "Вы уверены? Это действие нельзя отменить.",
+        "buttons": {
+          "cancel": "Отмена",
+          "delete": "Удалить"
+        },
+        "messages": {
+          "success": "Назначение роли удалено!"
+        }
+      },
+      "messages": {
+        "noPermission": "У вас нет прав для просмотра ролей",
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        }
+      }
+    },
+    "assign": {
+      "title": "Назначить роль пользователю",
+      "form": {
+        "user": "Выберите пользователя",
+        "role": "Выберите роль",
+        "placeholder": "Выберите роль"
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "submit": "Назначить роль",
+        "assign": "Назначить роль пользователю"
+      },
+      "messages": {
+        "success": "Роль успешно назначена!",
+        "error": "Ошибка доступа",
+        "errorDescription": "У вас нет прав для назначения ролей"
+      }
+    },
+    "delete": {
+      "title": "Удалить роль",
+      "messages": {
+        "success": "Роль успешно удалена!",
+        "confirm": "Вы уверены? Это действие нельзя отменить.",
+        "cannotDelete": "Невозможно удалить эту роль!"
+      },
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить роль"
+      }
+    },
+    "tabs": {
+      "roles": "Роли",
+      "assignedUsers": "Назначенные пользователи"
+    },
+    "search": {
+      "placeholder": "Поиск"
+    },
+    "buttons": {
+      "assignRoleToUser": "Назначить роль пользователю",
+      "addNew": "Добавить новую роль",
+      "delete": "Удалить",
+      "add": "Добавить"
+    },
+    "error": {
+      "title": "Упс!",
+      "description": "Что-то пошло не так."
+    },
+    "permissions": {
+      "all": "Выбрать все",
+      "search": {
+        "placeholder": "Поиск разрешений"
+      }
+    },
+    "update": {
+      "title": "Обновить роль",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Имя"
+        },
+        "permissions": {
+          "label": "Разрешения"
+        }
+      },
+      "buttons": {
+        "updateTitle": "Обновить название",
+        "updatePermissions": "Обновить разрешения",
+        "close": "Закрыть"
+      },
+      "messages": {
+        "success": {
+          "role": "Роль обновлена!",
+          "permissions": "Разрешения обновлены"
+        }
+      }
+    }
+  },
+  "patients": {
+    "messages": {
+      "success": "Пациент добавлен",
+      "error": "Что-то пошло не так"
+    },
+    "placeholder": {
+      "search": "Поиск пациента"
+    },
+    "add": {
+      "title": "Добавить пациента",
+      "form": {
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя"
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Телефонный номер"
+        },
+        "gender": {
+          "label": "Пол",
+          "placeholder": "Пол",
+          "options": {
+            "male": "Мужской",
+            "female": "Женский"
+          }
+        },
+        "dob": {
+          "label": "Дата рождения"
+        },
+        "city": {
+          "label": "Город"
+        },
+        "state": {
+          "label": "Область"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить пациента"
+      },
+      "messages": {
+        "success": "Пациент добавлен",
+        "errors": {
+          "selectIsd": "Выберите ISD код"
+        }
+      }
+    },
+    "update": {
+      "title": "Обновить пациента",
+      "actions": {
+        "edit": "Редактировать",
+        "back": "Назад",
+        "update": "Обновить"
+      },
+      "messages": {
+        "success": "Пациент обновлен",
+        "error": "Что-то пошло не так"
+      },
+      "details": "Детали",
+      "files": "Файлы",
+      "appointments": "Записи",
+      "prescriptions": "Рецепты",
+      "basicDetails": "Основные детали",
+      "contactDetails": "Контактные детали",
+      "form": {
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя"
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Телефонный номер"
+        },
+        "gender": {
+          "label": "Пол",
+          "placeholder": "Пол",
+          "options": {
+            "male": "Мужской",
+            "female": "Женский"
+          }
+        },
+        "dob": {
+          "label": "Дата рождения",
+          "placeholder": "Дата рождения"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "address": {
+          "label": "Адрес",
+          "placeholder": "Адрес"
+        },
+        "state": {
+          "label": "Область",
+          "placeholder": "Область"
+        },
+        "city": {
+          "label": "Город",
+          "placeholder": "Город"
+        },
+        "postalCode": {
+          "label": "Почтовый индекс",
+          "placeholder": "Почтовый индекс"
+        },
+        "notes": {
+          "label": "Примечание",
+          "placeholder": "Примечание"
+        },
+        "profilePicture": {
+          "label": "Изображение",
+          "placeholder": "Изображение"
+        },
+        "uploadProfilePicture": {
+          "label": "Загрузить изображение",
+          "placeholder": "Загрузить изображение"
+        },
+        "delete": {
+          "label": "Удалить",
+          "placeholder": "Удалить"
+        }
+      }
+    },
+    "patientFiles": {
+      "title": "Файлы пациента",
+      "updatedOn": "Обновлено",
+      "actions": {
+        "edit": "Редактировать",
+        "delete": "Удалить",
+        "addNew": "Добавить новый"
+      },
+      "add": {
+        "title": "Добавить файлы пациента",
+        "form": {
+          "name": {
+            "label": "Название",
+            "placeholder": "Название"
+          },
+          "file": {
+            "choose": "Выберите файл",
+            "dragHere": "или перетащите его сюда",
+            "selectedFile": "Выбранный файл:",
+            "maxSize": "Максимальный размер 5 MB"
+          }
+        },
+        "buttons": {
+          "close": "Закрыть",
+          "add": "Добавить"
+        },
+        "messages": {
+          "success": "Файлы пациента добавлены!",
+          "error": "Пожалуйста, выберите файл меньше 5 MB."
+        }
+      },
+      "update": {
+        "title": "Обновить файлы пациента",
+        "form": {
+          "title": {
+            "label": "Название",
+            "placeholder": "Name"
+          },
+          "file": {
+            "choose": "Choose a file",
+            "dragHere": "or Drag it here",
+            "selectedFile": "Selected File:",
+            "maxSize": "Max 5 MB"
+          },
+          "close": "Close",
+          "update": "Update"
+        },
+        "buttons": {
+          "close": "Закрыть",
+          "update": "Обновить"
+        },
+        "messages": {
+          "success": "Файлы пациента обновлены!",
+          "error": "Пожалуйста, выберите файл меньше 5 MB."
+        }
+      }
+    },
+    "actions": {
+      "next": "Следующий",
+      "previous": "Предыдущий"
+    },
+    "tables": {
+      "actions": "Действия",
+      "name": "Название",
+      "phone": "Телефон",
+      "gender": "Пол",
+      "dateOfBirth": "Дата рождения",
+      "email": "Email",
+      "image": "Изображение",
+      "createdOn": "Создано"
+    }
+  },
+  "users": {
+    "add": {
+      "title": "Добавить пользователя",
+      "back": "Назад",
+      "form": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Пароль",
+          "placeholder": "Пароль"
+        },
+        "confirmPassword": {
+          "label": "Подтвердите пароль",
+          "placeholder": "Подтвердите пароль"
+        },
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя"
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Номер телефона"
+        },
+        "dateOfBirth": {
+          "label": "Дата рождения (ММ/ДД/ГГГГ)"
+        },
+        "gender": {
+          "label": "Пол",
+          "placeholder": "Выберите пол",
+          "options": {
+            "male": "Мужской",
+            "female": "Женский"
+          }
+        },
+        "profilePicture": {
+          "label": "Фото профиля",
+          "upload": "Загрузить фото профиля",
+          "clear": "Очистить"
+        }
+      },
+      "buttons": {
+        "add": "Добавить"
+      },
+      "messages": {
+        "passwordMismatch": "Пароли не совпадают",
+        "success": "Пользователь добавлен!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "vitals": {
+      "title": "Показатели здоровья семьи",
+      "back": "Назад",
+      "form": {
+        "familyMember": {
+          "label": "Выберите члена семьи",
+          "placeholder": "Выберите члена семьи"
+        },
+        "alert": "Пожалуйста, выберите члена семьи"
+      },
+      "tabs": {
+        "bloodPressure": "Кровяное давление",
+        "bloodSugar": "Уровень сахара",
+        "spo2": "SpO2",
+        "temperature": "Температура",
+        "weight": "Вес"
+      }
+    },
+    "update": {
+      "title": {
+        "admin": "Данные администратора",
+        "user": "Данные пользователя"
+      },
+      "back": "Назад",
+      "wallet": "Баланс кошелька",
+      "form": {
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя"
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Номер телефона"
+        },
+        "dateOfBirth": {
+          "label": "Дата рождения (ММ/ДД/ГГГГ)",
+          "placeholder": "Выберите дату"
+        },
+        "gender": {
+          "label": "Пол",
+          "placeholder": "Выберите пол",
+          "options": {
+            "male": "Мужской",
+            "female": "Женский"
+          }
+        },
+        "profilePicture": {
+          "label": "Фото профиля",
+          "change": "Изменить фото профиля",
+          "clear": "Очистить"
+        }
+      },
+      "buttons": {
+        "update": "Обновить"
+      },
+      "messages": {
+        "success": "Пользователь обновлен!",
+        "error": "Что-то пошло не так",
+        "imageDeleted": "Изображение удалено!"
+      },
+      "tabs": {
+        "overview": "Обзор",
+        "familyMembers": "Члены семьи",
+        "familyVitals": "Показатели здоровья семьи",
+        "wallet": "Кошелек"
+      }
+    },
+    "index": {
+      "title": "Все пользователи",
+      "search": "Поиск",
+      "add": "Добавить пользователя",
+      "tabs": {
+        "all": "Все",
+        "admin": "Админ",
+        "user": "Пользователь"
+      }
+    }
+  },
+  "cities": {
+    "add": {
+      "title": "Добавить город",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить город"
+      },
+      "messages": {
+        "success": "Город добавлен!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "update": {
+      "title": "Обновить город",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить город"
+      },
+      "messages": {
+        "success": "Город обновлен!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "delete": {
+      "title": "Удалить город",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Город удален!",
+        "error": "Что-то пошло не так"
+      }
+    }
+  },
+  "coupons": {
+    "add": {
+      "title": "Добавить купон",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        },
+        "value": {
+          "label": "Значение (Скидка в %)",
+          "placeholder": "Значение"
+        },
+        "description": {
+          "label": "Описание",
+          "placeholder": "Описание"
+        },
+        "dates": {
+          "start": {
+            "label": "Дата начала",
+            "placeholder": "Дата начала"
+          },
+          "end": {
+            "label": "Дата окончания",
+            "placeholder": "Дата окончания"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить купон"
+      }
+    },
+    "index": {
+      "title": "Все купоны",
+      "search": "Поиск",
+      "addNew": "Добавить новый",
+      "table": {
+        "active": "Активный",
+        "title": "Название",
+        "value": "Значение",
+        "description": "Описание",
+        "startDate": "Дата начала",
+        "endDate": "Дата окончания",
+        "updatedAt": "Обновлено"
+      },
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        },
+        "success": {
+          "statusUpdated": "Обновлено!"
+        }
+      },
+      "tabs": {
+        "all": "Все купоны",
+        "used": "Использованные купоны"
+      }
+    },
+    "update": {
+      "title": "Обновить купон",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        },
+        "value": {
+          "label": "Значение (Скидка в %)",
+          "placeholder": "Значение"
+        },
+        "description": {
+          "label": "Описание",
+          "placeholder": "Описание"
+        },
+        "startDate": {
+          "label": "Дата начала",
+          "placeholder": "Дата начала"
+        },
+        "endDate": {
+          "label": "Дата окончания",
+          "placeholder": "Дата окончания"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить купон"
+      },
+      "messages": {
+        "success": "Купон обновлен!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "delete": {
+      "title": "Удалить купон",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Купон удален!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "usedCoupons": {
+      "title": "Использованные купоны",
+      "actions": {
+        "add": "Добавить новый"
+      },
+      "error": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      }
+    }
+  },
+  "familyMembers": {
+    "add": {
+      "title": "Добавить члена семьи",
+      "form": {
+        "user": "Пользователь",
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя"
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Номер телефона"
+        },
+        "dateOfBirth": {
+          "label": "Дата рождения (ММ/ДД/ГГГГ)",
+          "placeholder": "Выберите дату"
+        },
+        "gender": {
+          "label": "Пол",
+          "placeholder": "Выберите пол",
+          "options": {
+            "male": "Мужской",
+            "female": "Женский"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить члена семьи"
+      },
+      "messages": {
+        "success": "Член семьи добавлен!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "delete": {
+      "title": "Удалить члена семьи",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Член семьи удален!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "edit": {
+      "title": "Редактировать члена семьи",
+      "form": {
+        "user": "Пользователь",
+        "firstName": {
+          "label": "Имя",
+          "placeholder": "Имя"
+        },
+        "lastName": {
+          "label": "Фамилия",
+          "placeholder": "Фамилия"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Номер телефона"
+        },
+        "dateOfBirth": {
+          "label": "Дата рождения (ММ/ДД/ГГГГ)",
+          "placeholder": "Выберите дату"
+        },
+        "gender": {
+          "label": "Пол",
+          "placeholder": "Выберите пол",
+          "options": {
+            "male": "Мужской",
+            "female": "Женский"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить члена семьи"
+      },
+      "messages": {
+        "success": "Член семьи обновлен!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "byUser": {
+      "title": "Члены семьи по пользователю",
+      "search": "Поиск",
+      "buttons": {
+        "add": "Добавить новый",
+        "edit": "Редактировать",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "error": "Что-то пошло не так"
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "table": {
+        "name": "Имя",
+        "phone": "Телефон",
+        "gender": "Пол",
+        "dob": "Дата рождения",
+        "createdAt": "Создано"
+      },
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        }
+      },
+      "buttons": {
+        "add": "Добавить новый",
+        "edit": "Редактировать",
+        "delete": "Удалить"
+      }
+    }
+  },
+  "reviews": {
+    "search": "Поиск отзывов",
+    "buttons": {
+      "refresh": "Обновить"
+    },
+    "title": "Отзывы",
+    "message": "Вы уверены? Обновите статус отмены на {{type}}"
+  },
+  "transactions": {
+    "add": {
+      "title": "Добавить транзакцию",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить транзакцию"
+      },
+      "messages": {
+        "success": "Транзакция добавлена!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "delete": {
+      "title": "Удалить транзакцию",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Транзакция удалена!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "update": {
+      "title": "Обновить транзакцию",
+      "form": {
+        "title": {
+          "label": "Название",
+          "placeholder": "Название"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить транзакцию"
+      },
+      "messages": {
+        "success": "Транзакция обновлена!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "badge": {
+        "credited": "Начислено",
+        "debited": "Списано",
+        "na": "N/A",
+        "yes": "Да",
+        "no": "Нет"
+      },
+      "tabs": {
+        "all": "Все транзакции",
+        "appointmentPayments": "Платежи по заказам",
+        "invoices": "Счета"
+      },
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        }
+      }
+    },
+    "chart": {
+      "title": "Последние {{days}} дней транзакций",
+      "lastDays": "Последние {{days}} дней",
+      "distribution": "Распределение общей суммы транзакций"
+    }
+  },
+  "notifications": {
+    "title": "Уведомления",
+    "search": {
+      "placeholder": "Поиск"
+    },
+    "table": {
+      "id": "ID",
+      "title": "Заголовок",
+      "body": "Текст",
+      "appointmentId": "ID приема",
+      "userId": "ID пользователя",
+      "fileId": "ID файла",
+      "prescriptionId": "ID рецепта",
+      "updatedAt": "Обновлено",
+      "buttons": {
+        "goToAppointment": "Перейти к приему",
+        "goToUser": "Перейти к пользователю",
+        "goToFile": "Перейти к файлу",
+        "goToPrescription": "Перейти к рецепту"
+      }
+    },
+    "buttons": {
+      "addNew": "Добавить новое"
+    },
+    "messages": {
+      "error": {
+        "title": "Упс!",
+        "description": "Что-то пошло не так."
+      }
+    },
+    "add": {
+      "title": "Отправить уведомление",
+      "form": {
+        "title": {
+          "label": "Заголовок",
+          "placeholder": "Заголовок"
+        },
+        "body": {
+          "label": "Текст",
+          "placeholder": "Текст"
+        },
+        "file": {
+          "choose": "Выберите файл",
+          "dragHere": "или перетащите его сюда",
+          "selectedFile": "Выбранный файл:"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "send": "Отправить"
+      },
+      "messages": {
+        "success": "Уведомление отправлено!",
+        "error": "Что-то пошло не так"
+      }
+    }
+  },
+  "states": {
+    "add": {
+      "title": "Добавить область",
+      "submit": "Название",
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить область"
+      },
+      "messages": {
+        "success": "Область добавлена!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "delete": {
+      "title": "Удалить область",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Область удалена!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "add": "Добавить новый",
+      "buttons": {
+        "edit": "Редактировать",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Область добавлена!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "update": {
+      "title": "Обновить область",
+      "submit": "Название",
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить область"
+      },
+      "messages": {
+        "success": "Область обновлена!",
+        "error": "Что-то пошло не так"
+      }
+    }
+  },
+  "prescriptions": {
+    "add": {
+      "title": "Добавить рецепт",
+      "medicine": "Лекарство",
+      "dosage": "Дозировка",
+      "duration": {
+        "label": "Продолжительность",
+        "options": {
+          "threeDays": "На 3 дня",
+          "fiveDays": "На 5 дней",
+          "sevenDays": "На 7 дней",
+          "fifteenDays": "На 15 дней",
+          "oneMonth": "На 1 месяц"
+        }
+      },
+      "time": {
+        "label": "Время приема",
+        "options": {
+          "afterMeal": "После еды",
+          "beforeMeal": "До еды"
+        }
+      },
+      "doseInterval": {
+        "label": "Интервал приема",
+        "options": {
+          "onceADay": "Один раз в день",
+          "everyMorningAndEvening": "Утром и вечером",
+          "threeTimesADay": "Три раза в день",
+          "fourTimesADay": "Четыре раза в день"
+        }
+      },
+      "notes": {
+        "label": "Примечания"
+      },
+      "buttons": {
+        "save": "Сохранить рецепт",
+        "back": "Назад",
+        "newMedicine": "Новый препарат"
+      },
+      "form": {
+        "physicalInformation": {
+          "label": "Физическая информация"
+        },
+        "foodAllergies": {
+          "label": "Пищевые аллергии"
+        },
+        "tendencyToBleed": {
+          "label": "Склонность к кровотечению"
+        },
+        "heartDisease": {
+          "label": "Сердечные заболевания"
+        },
+        "bloodPressure": {
+          "label": "Кровяное давление"
+        },
+        "diabetic": {
+          "label": "Диабет"
+        },
+        "surgery": {
+          "label": "Операции"
+        },
+        "accident": {
+          "label": "Травмы"
+        },
+        "others": {
+          "label": "Другое"
+        },
+        "medicalHistory": {
+          "label": "История болезни"
+        },
+        "currentMedication": {
+          "label": "Текущие лекарства"
+        },
+        "femalePregnancy": {
+          "label": "Беременность"
+        },
+        "breastFeeding": {
+          "label": "Грудное вскармливание"
+        },
+        "pulseRate": {
+          "label": "Пульс"
+        },
+        "temperature": {
+          "label": "Температура"
+        },
+        "problemAndAdvice": {
+          "label": "Проблема и рекомендации"
+        },
+        "problem": {
+          "label": "Проблема"
+        },
+        "tests": {
+          "label": "Анализы"
+        },
+        "advice": {
+          "label": "Рекомендации"
+        },
+        "nextVisit": {
+          "label": "Следующий визит",
+          "after": "Через",
+          "days": "дней"
+        }
+      }
+    },
+    "index": {
+      "search": "Поиск",
+      "table": {
+        "action": "Действие",
+        "id": "ID",
+        "appointmentId": "ID заказа",
+        "patient": "Пациент",
+        "date": "Дата",
+        "pulseRate": "Пульс",
+        "temperature": "Температура"
+      },
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        },
+        "noData": "Нет данных в таблице"
+      }
+    },
+    "delete": {
+      "title": "Удалить рецепт",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      }
+    },
+    "prescription": {
+      "title": "Рецепт",
+      "search": "Поиск",
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        },
+        "noData": "Нет данных в таблице"
+      },
+      "table": {
+        "patient": "Пациент",
+        "doctor": "Доктор",
+        "date": "Дата",
+        "pulseRate": "Пульс",
+        "temperature": "Температура"
+      },
+      "buttons": {
+        "newPrescription": "Новый рецепт",
+        "close": "Закрыть",
+        "print": "Печать"
+      }
+    },
+    "prescriptionByPatientID": {
+      "title": "Рецепт по ID пациента",
+      "search": "Поиск",
+      "tables": {
+        "id": "ID",
+        "appointmentId": "ID заказа",
+        "patient": "Пациент",
+        "date": "Дата",
+        "pulseRate": "Пульс",
+        "temperature": "Температура",
+        "action": "Действие"
+      },
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        },
+        "noData": "Нет данных в таблице"
+      }
+    },
+    "update": {
+      "title": "Обновить рецепт",
+      "messages": {
+        "success": "Рецепт обновлен!",
+        "error": "Что-то пошло не так"
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "back": "Назад",
+        "update": "Обновить рецепт",
+        "newMedicine": "Новый препарат",
+        "save": "Сохранить"
+      },
+      "form": {
+        "dosage": "Дозировка",
+        "duration": {
+          "label": "Длительность",
+          "options": {
+            "threeDays": "На 3 дня",
+            "fiveDays": "На 5 дней",
+            "sevenDays": "На 7 дней",
+            "fifteenDays": "На 15 дней",
+            "oneMonth": "На 1 месяц"
+          }
+        },
+        "time": {
+          "label": "Время",
+          "options": {
+            "afterMeal": "После еды",
+            "beforeMeal": "До еды"
+          }
+        },
+        "doseInterval": {
+          "label": "Интервал дозировки",
+          "options": {
+            "onceADay": "Раз в день",
+            "everyMorningAndEvening": "Каждый день дважды",
+            "threeTimesADay": "Каждый день трижды",
+            "fourTimesADay": "Каждый день четырежды"
+          }
+        },
+        "notes": {
+          "label": "Примечания",
+          "placeholder": "Примечания"
+        },
+        "physicalInformation": {
+          "label": "Физическая информация",
+          "placeholder": "Физическая информация"
+        },
+        "foodAllergies": {
+          "label": "Пищевые аллергии",
+          "placeholder": "Пищевые аллергии"
+        },
+        "tendencyToBleed": {
+          "label": "Склонность к кровотечению",
+          "placeholder": "Склонность к кровотечению"
+        },
+        "heartDisease": {
+          "label": "Сердечные заболевания",
+          "placeholder": "Сердечные заболевания"
+        },
+        "bloodPressure": {
+          "label": "Кровяное давление",
+          "placeholder": "Кровяное давление"
+        },
+        "diabetic": {
+          "label": "Диабет",
+          "placeholder": "Диабет"
+        },
+        "surgery": {
+          "label": "Операции",
+          "placeholder": "Операции"
+        },
+        "accident": {
+          "label": "Травмы",
+          "placeholder": "Травмы"
+        },
+        "others": {
+          "label": "Другое",
+          "placeholder": "Другое"
+        },
+        "medicalHistory": {
+          "label": "История болезни",
+          "placeholder": "История болезни"
+        },
+        "currentMedication": {
+          "label": "Текущие лекарства",
+          "placeholder": "Текущие лекарства"
+        },
+        "femalePregnancy": {
+          "label": "Беременность",
+          "placeholder": "Беременность"
+        },
+        "breastFeeding": {
+          "label": "Грудное вскармливание",
+          "placeholder": "Грудное вскармливание"
+        },
+        "pulseRate": {
+          "label": "Пульс",
+          "placeholder": "Пульс"
+        },
+        "temperature": {
+          "label": "Температура",
+          "placeholder": "Температура"
+        },
+        "problemAndAdvice": {
+          "label": "Проблема и рекомендации",
+          "placeholder": "Проблема и рекомендации"
+        },
+        "problem": {
+          "label": "Проблема",
+          "placeholder": "Проблема"
+        },
+        "tests": {
+          "label": "Анализы",
+          "placeholder": "Анализы"
+        },
+        "advice": {
+          "label": "Рекомендации",
+          "placeholder": "Рекомендации"
+        },
+        "nextVisit": {
+          "label": "Следующий визит",
+          "after": "Через",
+          "days": "дней"
+        }
+      }
+    }
+  },
+  "files": {
+    "title": "Добавить файлы пациента",
+    "buttons": {
+      "close": "Закрыть",
+      "add": "Добавить"
+    },
+    "form": {
+      "title": "Пациент",
+      "fileName": "Имя файла",
+      "maxSize": "Максимум 5 MB",
+      "choose": "Выберите файл",
+      "dragHere": "или перетащите его сюда",
+      "selectedFile": "Выбранный файл:"
+    },
+    "messages": {
+      "sizeError": "Пожалуйста, выберите файл меньше 5 MB.",
+      "fileError": "Пожалуйста, выберите файл",
+      "patientError": "Пожалуйста, выберите пациента",
+      "success": "Файл добавлен!"
+    }
+  },
+  "medicines": {
+    "add": {
+      "title": "Добавить лекарство",
+      "form": {
+        "name": {
+          "label": "Название",
+          "placeholder": "Название лекарства"
+        },
+        "notes": {
+          "label": "Примечания",
+          "placeholder": "Дополнительные примечания"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "add": "Добавить лекарство"
+      },
+      "messages": {
+        "success": "Лекарство добавлено!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "update": {
+      "title": "Обновить лекарство",
+      "form": {
+        "name": {
+          "label": "Название",
+          "placeholder": "Название лекарства"
+        },
+        "notes": {
+          "label": "Примечания",
+          "placeholder": "Дополнительные примечания"
+        }
+      },
+      "buttons": {
+        "close": "Закрыть",
+        "update": "Обновить лекарство"
+      },
+      "messages": {
+        "success": "Лекарство обновлено!",
+        "error": "Что-то пошло не так"
+      }
+    },
+    "index": {
+      "title": "Лекарства",
+      "search": {
+        "placeholder": "Поиск"
+      },
+      "buttons": {
+        "addNew": "Добавить новое"
+      },
+      "messages": {
+        "error": {
+          "title": "Упс!",
+          "description": "Что-то пошло не так."
+        }
+      }
+    },
+    "delete": {
+      "title": "Удалить лекарство",
+      "message": "Вы уверены? Это действие нельзя будет отменить.",
+      "buttons": {
+        "cancel": "Отмена",
+        "delete": "Удалить"
+      },
+      "messages": {
+        "success": "Лекарство удалено!",
+        "error": "Что-то пошло не так"
+      }
+    }
+  }
+}

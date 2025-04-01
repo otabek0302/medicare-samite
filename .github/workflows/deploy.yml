@@ -1,0 +1,116 @@
+name: Build and Deploy with Bun
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: develoment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies [NPM]
+        run: bun install
+
+      - name: Install dependencies [PHP]
+        uses: 'php-actions/composer@v6'
+        env:
+          COMPOSER: 'composer.json'
+        with:
+          dev: no
+          args: '--optimize-autoloader'
+          working_dir: 'packages/api'
+
+      - name: Create `.env` File
+        run: |
+          echo "NODE_ENV=production" > .env
+          echo "DB_CONNECTION=mysql" > .env
+          echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
+          echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+          echo "VITE_API_ADDRESS=${{ env.VITE_API_ADDRESS }}" >> .env
+          echo "VITE_FIREBASE_API_KEY=${{ secrets.VITE_FIREBASE_API_KEY }}" >> .env
+          echo "VITE_FIREBASE_AUTH_DOMAIN=${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}" >> .env
+          echo "VITE_FIREBASE_PROJECT_ID=${{ secrets.VITE_FIREBASE_PROJECT_ID }}" >> .env
+          echo "VITE_FIREBASE_STORAGE_BUCKET=${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}" >> .env
+          echo "VITE_FIREBASE_MESSAGING_SENDER_ID=${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}" >> .env
+          echo "VITE_FIREBASE_APP_ID=${{ secrets.VITE_FIREBASE_APP_ID }}" >> .env
+          echo "VITE_FIREBASE_MEASUREMENT_ID=${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}" >> .env
+          echo "VITE_FIREBASE_FCM_PUBLIC_KEY=${{ secrets.VITE_FIREBASE_FCM_PUBLIC_KEY }}" >> .env
+          echo "APP_NAME=${{ env.APP_NAME }}" >> .env
+          echo "APP_ENV=local" >> .env
+          echo "APP_KEY=" >> .env
+          echo "APP_DEBUG=true" >> .env
+          echo "APP_URL=${{ env.APP_URL }}" >> .env
+          echo "MAIL_MAILER=${{ env.MAIL_MAILER }}" >> .env
+          echo "MAIL_HOST=${{ secrets.MAIL_HOST }}" >> .env
+          echo "MAIL_PORT=${{ env.MAIL_PORT }}" >> .env
+          echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> .env
+          echo "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" >> .env
+          echo "MAIL_ENCRYPTION=${{ env.MAIL_ENCRYPTION }}" >> .env
+          echo "MAIL_FROM_ADDRESS=${{ env.MAIL_FROM_ADDRESS }}" >> .env
+          echo "MAIL_FROM_NAME=${{ env.MAIL_FROM_NAME }}" >> .env
+          echo "SOFTWARE_ID=${{ secrets.SOFTWARE_ID }}" >> .env
+          echo "BUYER_USERNAME=${{ secrets.BUYER_USERNAME }}" >> .env
+          echo "PURCHASE_CODE=${{ secrets.PURCHASE_CODE }}" >> .env
+          cp .env ./packages/api/.env
+          cp .env ./packages/web-admin/.env
+          cp .env ./packages/web-front/.env
+
+      - name: Build only `web-*` packages
+        run: bun run build
+
+      - name: SFTP copy tree bug [API]
+        run: cd ./packages
+
+      - name: Deploy to SFTP server [API]
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          rm: true
+          source: 'api/*'
+          target: '/var/www/${{ secrets.SFTP_USER }}/data/www/api.medicare.samit.global'
+
+      - name: SFTP copy tree bug [Front]
+        run: cd ./web-front
+
+      - name: Deploy to SFTP server [Front]
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          rm: true
+          source: 'dist/*'
+          target: '/var/www/${{ secrets.SFTP_USER }}/data/www/medicare.samit.global'
+
+      - name: SFTP copy tree bug [Admin]
+        run: cd ../web-admin
+
+      - name: Deploy to SFTP server [Admin]
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          rm: true
+          source: 'dist/*'
+          target: '/var/www/${{ secrets.SFTP_USER }}/data/www/medicare.samit.global/admin'

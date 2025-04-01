@@ -1,0 +1,8043 @@
+{
+	"info": {
+		"_postman_id": "69fccfa1-20ef-4a20-b8b7-976b58df7b61",
+		"name": "Clinic Managment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20325281",
+		"_collection_link": "https://planetary-sunset-10850.postman.co/workspace/Team-Workspace~162f56f2-c7b6-4ad8-887a-c7f94e1497f9/collection/20325281-69fccfa1-20ef-4a20-b8b7-976b58df7b61?action=share&source=collection_link&creator=20325281"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();\r",
+									"// pm.environment.set(\"token\", res['token']);\r",
+									"// pm.globals.set(\"token\", res['token']);\r",
+									"pm.collectionVariables.set(\"token\", res['token']);\r",
+									"\r",
+									"var ii=pm.variables.get(\"token\");console.log(ii);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "doctor@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/login",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_Phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "9754472611",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/login_phone",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"login_phone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LogOut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/logout",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "re_login_mobile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "9754472611",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/re_login_phone",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"re_login_phone"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Add_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_name",
+									"value": "Ashish",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Khae",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1245628190",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "+91",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"description": "Male, Female, Other",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-02",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ashishadmin2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_user",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Pass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_password",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_user/13",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_user",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_users_date?start_date=2024-01-03&end_date=2024-01-08",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_users_date"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-01-03"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-01-08"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_users",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "f_name",
+									"value": "Ashish Update",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Khare Update",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "+93",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "125172392100",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-03",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/Your paragraph text.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_user",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_users/page?start=0&end=10&search=Female",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_users",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Female"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft_Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "44",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/user_soft_delete",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"user_soft_delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Add_Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "role_name",
+									"value": "Accountent",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_role",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "14",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_role",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "role_name",
+									"value": "Adminxx",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_role",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_roles",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_roles/16",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_roles",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Dentalty",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description Here",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/WhatsApp Image 2023-12-26 at 2.04.10 PM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_department",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Dentalxrrr",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Description Herex3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/WhatsApp Image 2023-12-26 at 2.04.10 PM.jpeg",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/udpate_department",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"udpate_department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "14",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/remove_department_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"remove_department_image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_department",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_department/15",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_department",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_department",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_department"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Specialization",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "MD Medicine",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_specialization",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_specialization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "MBBS",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_specialization",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_specialization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_specialization",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_specialization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_specialization",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_specialization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_specialization/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_specialization",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Kawardhaxxyx0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_city",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Raipurx",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_city",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_city",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_city",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_city/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "uttar pradesh",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_state",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Raipurx",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_state",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_state",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_state",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_state/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_state",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "doctor4@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa@",
+									"type": "text"
+								},
+								{
+									"key": "f_name",
+									"value": "Ashish",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Khare Doctor",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "ex_year",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "+91",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "8889990649",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-02",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/teacher.png"
+								},
+								{
+									"key": "specialization",
+									"value": "MBBS, MD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_doctor",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "27",
+									"description": "it will be user id",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "doctor@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678Aa@",
+									"type": "text"
+								},
+								{
+									"key": "f_name",
+									"value": "Ashish F",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Khare Doctor L",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "ex_year",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "+91",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "88899906436",
+									"type": "text"
+								},
+								{
+									"key": "isd_code_sec",
+									"value": "+93",
+									"type": "text"
+								},
+								{
+									"key": "phone_sec",
+									"value": "8889990640",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "DescriptionD",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-03",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/teacher.png"
+								},
+								{
+									"key": "specialization",
+									"value": "MBBS, MD, More",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Addressxx",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "CHHATTxxx",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Raipurxxxx",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "123457",
+									"type": "text"
+								},
+								{
+									"key": "zoom_client_id",
+									"value": "xxxx",
+									"type": "text"
+								},
+								{
+									"key": "zoom_secret_id",
+									"value": "xxxx",
+									"type": "text"
+								},
+								{
+									"key": "fb_linik",
+									"value": "FB",
+									"type": "text"
+								},
+								{
+									"key": "twitter_link",
+									"value": "TW Link",
+									"type": "text"
+								},
+								{
+									"key": "you_tube_link",
+									"value": "YTubeLink",
+									"type": "text"
+								},
+								{
+									"key": "insta_link",
+									"value": "i LInk",
+									"type": "text"
+								},
+								{
+									"key": "opd_fee",
+									"value": "420",
+									"type": "text"
+								},
+								{
+									"key": "video_fee",
+									"value": "450",
+									"type": "text"
+								},
+								{
+									"key": "emg_fee",
+									"value": "500",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_doctor",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "27",
+									"description": "it will be user_id",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/remove_doctor_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"remove_doctor_image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor/27",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_by_dep_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Time Slots",
+			"item": [
+				{
+					"name": "Add_Slots",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doct_id",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "time_start",
+									"value": "08:00",
+									"type": "text"
+								},
+								{
+									"key": "time_end",
+									"value": "09:05",
+									"type": "text"
+								},
+								{
+									"key": "time_duration",
+									"value": "10",
+									"description": "Time Gap Between Slots Can not be Zero",
+									"type": "text"
+								},
+								{
+									"key": "day",
+									"value": "Tuesday",
+									"description": "'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_timeslots",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_timeslots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Doctor_Time_Slots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_time_slots/27",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_time_slots",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Doctor_video_Time_Slots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_video_time_slots/27",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_video_time_slots",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Doctors_Time_Intervals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_time_interval/27/Monday",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_time_interval",
+								"27",
+								"Monday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Doctors_Video_Time_Intervals Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_video_time_interval/27/Monday",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_video_time_interval",
+								"27",
+								"Monday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Booked_time_Slot_By_DoctId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_booked_time_slots?doct_id=28&date=2024-03-19&type=Video Consultant",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_booked_time_slots"
+							],
+							"query": [
+								{
+									"key": "doct_id",
+									"value": "28"
+								},
+								{
+									"key": "date",
+									"value": "2024-03-19"
+								},
+								{
+									"key": "type",
+									"value": "Video Consultant",
+									"description": "Video Consultant,OPD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Time_Slot",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "24",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_timeslots",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_timeslots"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Video_Time_Slot",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doct_id",
+									"value": "27",
+									"type": "text"
+								},
+								{
+									"key": "time_start",
+									"value": "08:00",
+									"type": "text"
+								},
+								{
+									"key": "time_end",
+									"value": "09:05",
+									"type": "text"
+								},
+								{
+									"key": "time_duration",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "day",
+									"value": "Tuesday",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_video_timeslots",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_video_timeslots"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Add_User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_name",
+									"value": "Ashish",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Khae",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "8889990648",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "+91",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"description": "Male, Female, Other   required",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-02",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "ashishadmin2@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Raipur",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "Chhattisgarh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "Address",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "postal_code",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "notes",
+									"value": "Notes",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/Swarg_Logo_A (1)_bg.jpg",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_patient",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "f_name",
+									"value": "AshishFs",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "l_name",
+									"value": "KhaeL",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "8889990641",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isd_code",
+									"value": "+92",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"description": "Male, Female, Other",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dob",
+									"value": "2024-01-03",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "ashishadmin3@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Raipurx",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "Chhattisgarh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "Addressc",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "postal_code",
+									"value": "123457",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "notes",
+									"value": "Notesx",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/doctor (3).png"
+								},
+								{
+									"key": "user_id",
+									"value": "14",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_patient",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patients",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Patients_By_UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patients/user/14",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patients",
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/remove_patient_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"remove_patient_image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patients/10",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patients",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patients_date?start_date=2024-01-28&end_date=2024-02-13",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patients_date"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-01-28"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-02-13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patient/page?start=0&end=10",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patient",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patient_id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Confirmed",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-08-30",
+									"type": "text"
+								},
+								{
+									"key": "time_slots",
+									"value": "17:20",
+									"type": "text"
+								},
+								{
+									"key": "doct_id",
+									"value": "27",
+									"type": "text"
+								},
+								{
+									"key": "dept_id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Video Consultant",
+									"description": "Video OPD",
+									"type": "text"
+								},
+								{
+									"key": "meeting_id",
+									"value": "xc63527389326",
+									"type": "text"
+								},
+								{
+									"key": "meeting_link",
+									"value": "https",
+									"type": "text"
+								},
+								{
+									"key": "fee",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "service_charge",
+									"value": "30.0",
+									"type": "text"
+								},
+								{
+									"key": "total_amount",
+									"value": "430.0",
+									"type": "text"
+								},
+								{
+									"key": "invoice_description",
+									"value": "OPD",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Online",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "payment_transaction_id",
+									"value": "8279_hab",
+									"description": "in case of wallet txn send Wallet",
+									"type": "text"
+								},
+								{
+									"key": "is_wallet_txn",
+									"value": "0",
+									"description": "in case of wallet txn send 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "payment_status",
+									"value": "Unpaid",
+									"description": "Paid  ,Unpaid",
+									"type": "text"
+								},
+								{
+									"key": "coupon_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "coupon_title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "coupon_value",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "coupon_off_amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "unit_tax_amount",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tax",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "unit_total_amount",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "source",
+									"value": "Android App",
+									"description": "'Android App','Ios App','Web','Admin','Front Desk','Doctor'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_appointment",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment/user/13",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment",
+								"user",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_patientID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment/user/13",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment",
+								"user",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment/303",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment",
+								"303"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appointment Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "Pending",
+									"description": "Pending, Confirmed,Completed,Visited",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "19",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_appointment_status",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_appointment_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appointment  Rescheduled",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "68",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-08-05",
+									"type": "text"
+								},
+								{
+									"key": "time_slots",
+									"value": "13:05",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/appointment_rescheduled",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"appointment_rescheduled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Payment_Status_To_Paid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appointment_id",
+									"value": "89",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Cash",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_appointment_to_paid",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_appointment_to_paid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_date?start_date=2024-01-01&end_date=2024-01-02",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_date"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-01-02"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointments/page?start=0&end=10",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointments",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Rohan Sahu",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Doctor_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointments/doctor/27",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointments",
+								"doctor",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Appointment_by_Doctor_Id_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointments/doctor_id/page?start=0&end=5&doctor_id=27",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointments",
+								"doctor_id",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "5"
+								},
+								{
+									"key": "doctor_id",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fee",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_fee",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_fee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_fee/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_fee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_fee?id=1&fee=400&service_charge=30",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_fee"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "fee",
+									"value": "400"
+								},
+								{
+									"key": "service_charge",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Cat",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_product_cat",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_product_cat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_product",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_product/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_cart",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_cart/user/12",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_cart",
+								"user",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "order_type",
+									"value": "Paid",
+									"description": "Paid, Cod",
+									"type": "text"
+								},
+								{
+									"key": "final_total_amount",
+									"value": "1010.45",
+									"description": "reuired if paid",
+									"type": "text"
+								},
+								{
+									"key": "payment_transaction_id",
+									"value": "pay_93728",
+									"description": "reuired if paid",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Online",
+									"description": "reuired if paid",
+									"type": "text"
+								},
+								{
+									"key": "delivery_type",
+									"value": "Delivery",
+									"description": "Delivery, Emergency Delivery",
+									"type": "text"
+								},
+								{
+									"key": "delivery_time_type",
+									"value": "Home Time",
+									"description": "Office Time,Home Time",
+									"type": "text"
+								},
+								{
+									"key": "delivery_charge",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "order_amount_before_charge",
+									"value": "1080.45",
+									"type": "text"
+								},
+								{
+									"key": "collection_type",
+									"value": "Collection",
+									"type": "text"
+								},
+								{
+									"key": "collection_time_type",
+									"value": "Office Time",
+									"type": "text"
+								},
+								{
+									"key": "service_charge",
+									"value": "60",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_cart_order",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_cart_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_orders_items/user/14",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_orders_items",
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Order_Item_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_orders_item/30",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_orders_item",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lab Test",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_lab_test",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_lab_test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_lab_test/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_lab_test",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lab Req",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "14add",
+									"type": "text"
+								},
+								{
+									"key": "patient_id",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_lab_req",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_lab_req"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments cancellation",
+			"item": [
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appointment_id",
+									"value": "60",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_appointment_cancellation",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_appointment_cancellation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data_By_Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_appointment_cancellation_by_admin dont use this",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_appointment_cancellation_by_admin dont use this"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Appointment_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_cancel_req/appointment/31",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_cancel_req",
+								"appointment",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appointment_id",
+									"value": "196",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Initiated",
+									"description": "'Initiated','Rejected','Approved','Processing'",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "notes any",
+									"description": "Can be null",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/appointment_cancellation",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"appointment_cancellation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancellation And Refund",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "Approved",
+									"description": "Fixed",
+									"type": "text"
+								},
+								{
+									"key": "appointment_id",
+									"value": "64",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/appointment_cancellation_and_refund",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"appointment_cancellation_and_refund"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject And Refund",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appointment_id",
+									"value": "65",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/appointment_reject_and_refund",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"appointment_reject_and_refund"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctors Review",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doctor_id",
+									"value": "27",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "points",
+									"value": "3",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Very Good Doctor",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "13",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "appointment_id",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_doctor_review",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_doctor_review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Doctot_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_review/doctor/28",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_review",
+								"doctor",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_all_doctor_review",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_all_doctor_review"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prescribe Mdicines",
+			"item": [
+				{
+					"name": "add_data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Medicaine 2",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "Need to take on fever",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_prescribe_medicines",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_prescribe_medicines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescribe_medicines",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescribe_medicines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescribe_medicines/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescribe_medicines",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Medicine Name",
+									"type": "text"
+								},
+								{
+									"key": "Notes",
+									"value": "Notes Any",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_prescribe_medicines",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_prescribe_medicines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_prescribe_medicines",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_prescribe_medicines"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prescription",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer {{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointment_id\": \"5\",\r\n    \"patient_id\": \"9\",\r\n    \"test\": \"Blood Test\",\r\n    \"advice\": \"Stay hydrated and avoid junk food\",\r\n    \"problem_desc\": \"Headache and dizziness\",\r\n    \"food_allergies\": \"Peanuts\",\r\n    \"tendency_bleed\": \"None\",\r\n    \"heart_disease\": \"None\",\r\n    \"blood_pressure\": \"120/80\",\r\n    \"diabetic\": \"No\",\r\n    \"surgery\": \"Appendectomy in 2018\",\r\n    \"accident\": \"Minor car accident in 2019, no serious injuries\",\r\n    \"others\": \"Occasional migraines\",\r\n    \"medical_history\": \"Hypertension, Asthma\",\r\n    \"current_medication\": \"Amlodipine 5mg daily\",\r\n    \"female_pregnancy\": \"No\",\r\n    \"breast_feeding\": \"No\",\r\n    \"pulse_rate\": \"72\",\r\n    \"temperature\": \"98.6\",\r\n    \"next_visit\":\"30\",\r\n    \"medicines\": [\r\n        {\r\n            \"medicine_name\": \"Medicine A\",\r\n            \"dosage\":\"1\",\r\n            \"duration\": \"5 Days\",\r\n            \"time\": \"After Meal\",\r\n            \"dose_interval\":\"Every Morning\",\r\n            \"notes\": \"Take after meals\"\r\n        },\r\n        {\r\n           \"medicine_name\": \"Medicine B\",\r\n            \"duration\": \"5 Days\",\r\n            \"time\": \"After Meal\",\r\n            \"dose_interval\":\"Every Morning & Evening\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_prescription",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_prescription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription/26",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Appointment_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription/appointment/5",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription",
+								"appointment",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Genrate_Prescription_Pdf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/prescription/generatePDF/26",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"prescription",
+								"generatePDF",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "64",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_prescription",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_prescription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Prescription",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":43,\r\n    \"appointment_id\": \"5\",\r\n    \"patient_id\": \"9\",\r\n    \"test\": \"Blood Test Update\",\r\n    \"advice\": \"Stay hydrated and avoid junk food Update\",\r\n    \"problem_desc\": \"Headache and dizziness Update\",\r\n    \"food_allergies\": \"Peanuts Update\",\r\n    \"tendency_bleed\": \"None Update\",\r\n    \"heart_disease\": \"None Update\",\r\n    \"blood_pressure\": \"120/80 Update\",\r\n    \"diabetic\": \"No Update\",\r\n    \"surgery\": \"Appendectomy in 2018 Update\",\r\n    \"accident\": \"Minor car accident in 2019, no serious injuries Update\",\r\n    \"others\": \"Occasional migraines Update\",\r\n    \"medical_history\": \"Hypertension, Asthma Update\",\r\n    \"current_medication\": \"Amlodipine 5mg daily Update\",\r\n    \"female_pregnancy\": \"No Update\",\r\n    \"breast_feeding\": \"No Update\",\r\n    \"pulse_rate\": \"72 Update\",\r\n    \"temperature\": \"98.6 Update\",\r\n    \"next_visit\":\"30 Update\",\r\n    \"medicines\": [\r\n        {\r\n            \"medicine_name\": \"Medicine A\",\r\n            \"dosage\":\"1\",\r\n            \"duration\": \"5 Days\",\r\n            \"time\": \"After Meal\",\r\n            \"dose_interval\":\"Every Morning\",\r\n            \"notes\": \"Take after meals\"\r\n        },\r\n        {\r\n           \"medicine_name\": \"Medicine B\",\r\n            \"duration\": \"5 Days\",\r\n            \"time\": \"After Meal\",\r\n            \"dose_interval\":\"Every Morning & Evening\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_prescription",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_prescription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Doctor_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription/doctor/{id}",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription",
+								"doctor",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription/user/61",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription",
+								"user",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_PatientID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription/user/61",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription",
+								"user",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Prescriotion_Search_With_DoctorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_prescription_doctor_search?doctor_id=30",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_prescription_doctor_search"
+							],
+							"query": [
+								{
+									"key": "doctor_id",
+									"value": "30"
+								},
+								{
+									"key": "search_query",
+									"value": "Ashish",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All Transaction",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_all_transaction",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_all_transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_all_transaction/44",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_all_transaction",
+								"44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Appointment_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_all_transaction/appointment/90",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_all_transaction",
+								"appointment",
+								"90"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_all_transaction_date?start_date=2024-07-02&end_date=2024-07-03",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_all_transaction_date"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-07-02"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-03"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Wallet_Money",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "payment_transaction_id",
+									"value": "pay_12345",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "Online",
+									"description": "Cash', 'Online', 'Other', 'Wallet'",
+									"type": "text"
+								},
+								{
+									"key": "transaction_type",
+									"value": "Credited",
+									"description": "Credited,Debited",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Amount Crediteduser wallet",
+									"description": "Amount Debitedto user walletAmount credited to user wallet,",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_wallet_money",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_wallet_money"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Wallet_Txn_By_UID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_wallet_txn/user/14",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_wallet_txn",
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_all_transactions/page?start=0&end=10&search=Ram Lal",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_all_transactions",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Ram Lal"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_invoice",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_invoice/97",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_invoice",
+								"97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Invoice_By_Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_invoice/appointment/54",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_invoice",
+								"appointment",
+								"54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Genrate_Invoice_Pdf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/invoice/generatePDF/97",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"invoice",
+								"generatePDF",
+								"97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_invoices/page?start=0&end=10&search=163",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_invoices",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "163"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment  Payments",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_payment",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Appointment_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_payment/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_payment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Appointment_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_payment/appintment/89",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_payment",
+								"appintment",
+								"89"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Peg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_payments/page?start=0&end=10&search=Ram",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_payments",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Ram"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RazorPay",
+			"item": [
+				{
+					"name": "create-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apiKey",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "apiSecret",
+									"value": "INR",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/razorpay/create-order",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"razorpay",
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stripe",
+			"item": [
+				{
+					"name": "create-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apiKey",
+									"value": "sk_test_51P6CDpGyoJGy4hVPkoJYCSHyDyWchbdsXFub278exuFeMMguFwEDd0FDYiAKInLg8h8ad1DjshQSUUDUKXUzw7oq00FlA30gAa",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "INR",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/stripe/create-order",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"stripe",
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zoom Meeting",
+			"item": [
+				{
+					"name": "Create_Meeting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/create_zoom_meeting",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"create_zoom_meeting"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Family Members",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_name",
+									"value": "Ashish",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Member 1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "8889990643",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "91",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "1997-07-27",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_family_member",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_family_member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_family_members/page?start=0&end=10",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_family_members",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_family_members/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_family_members",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_User_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_family_members/user/14",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_family_members",
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_family_member",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_family_member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_name",
+									"value": "Ashishx",
+									"type": "text"
+								},
+								{
+									"key": "l_name",
+									"value": "Member 10",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12356789450",
+									"type": "text"
+								},
+								{
+									"key": "isd_code",
+									"value": "92",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2019-09-27",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_family_member",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_family_member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Page",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "seach",
+									"value": "Ashihs",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/get_family_member/page?start=0&end=10",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_family_member",
+								"page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Female",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Get_Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_dashboard_count",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_dashboard_count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_count_By_Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_dashboard_count/doctor/27",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_dashboard_count",
+								"doctor",
+								"27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role Assign User",
+			"item": [
+				{
+					"name": "Assign_Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "role_id",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/assign_role",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"assign_role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_assign_role",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_assign_role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Assign_Role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_assign_roles",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_assign_roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permissions",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_permisssion",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_permisssion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_permisssion/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_permisssion",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role Permission",
+			"item": [
+				{
+					"name": "Assign_Permission_To_Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "role_id",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "permission_ids",
+									"value": "10,12,12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/assign_permission_to_tole",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"assign_permission_to_tole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_role_permisssion",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_role_permisssion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_role_permisssion/8",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_role_permisssion",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Role_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_role_permisssion/role/16",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_role_permisssion",
+								"role",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Screen Images",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_login_screen_images",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_login_screen_images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_login_screen_images/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_login_screen_images",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/walkthrough2.jpg"
+								},
+								{
+									"key": "preferences",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_login_screen_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_login_screen_image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/close.png"
+								},
+								{
+									"key": "preferences",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_login_screen_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_login_screen_image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_login_screen_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_login_screen_image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Social Media",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_social_media",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_social_media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_social_media",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_social_media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Faceexxxxxx",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/laimage.png"
+								},
+								{
+									"key": "url",
+									"value": "https://",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_social_media",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_social_media"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Face update",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/swarg_Splash_logo-removebg-preview.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_social_media",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_social_media"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "Face",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/remove_social_media_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"remove_social_media_image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Web Pages",
+			"item": [
+				{
+					"name": "Update_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/api/update_web_page",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"api",
+								"update_web_page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_web_pages",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_web_pages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Configurations",
+			"item": [
+				{
+					"name": "Get_Data_By_Group_Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_configurations/group_name/Video Configuration",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_configurations",
+								"group_name",
+								"Video Configuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_configurations/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_configurations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_ID_Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Base_Url}}/get_configurations/id_name/play_store_link",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_configurations",
+								"id_name",
+								"play_store_link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "tctyf67",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_configurations",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_configurations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/remove_configurations_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"remove_configurations_image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testimonials",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Rohan Sahu",
+									"type": "text"
+								},
+								{
+									"key": "sub_title",
+									"value": "Very good application",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "I suggent to use thi applicaiton very easy to use",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/doctor (3).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_testimonial",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_testimonial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Rohan Sahu update",
+									"type": "text"
+								},
+								{
+									"key": "sub_title",
+									"value": "Very good application update",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "I xxxsuggent to use thi applicaiton very easy to use",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/doctor (3).png",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_testimonial",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_testimonial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_testimonial",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_testimonial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_testimonial/4",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_testimonial",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_testimonial",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_testimonial"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove_Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/remove_testimonia_image",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"remove_testimonia_image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Send Notification",
+			"item": [
+				{
+					"name": "Send_To_Topic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test Title",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Test Body",
+									"type": "text"
+								},
+								{
+									"key": "topic",
+									"value": "PATIENT_APP",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/sent_notificaiton_to_topic",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"sent_notificaiton_to_topic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send_To_Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Your appointment in 1 hour",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Test Body Fcm",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "f-g8tMHvTmaWSyNq9MZXUa:APA91bHDMAXOFp0jd2GuY2BBnQrwuAxNhZz2xM1jx_J5c16yCQYOYupFJXtN2Gg7zoCbKVcGOAUNLylX0b0muj4Qy6MQ9FqjpRKltATGXOgsOZRurZTUygk2JGXGNTtPqfZTCO-RITBw",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/sent_notificaiton_to_token",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"sent_notificaiton_to_token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscripbe To Topic",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fcm_token",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "topic",
+									"value": "PATIENT_APP",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/subscribe_to_topic",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"subscribe_to_topic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Notification",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "xxxx",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "yyyy",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/doctor (3).png"
+								},
+								{
+									"key": "topic",
+									"value": "PATIENT_APP",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_user_notification",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_user_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_user_notification",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_user_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_user_notification/4",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_user_notification",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_notification",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_user_notification/date/48/2024-09-04 05:22:24",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_user_notification",
+								"date",
+								"48",
+								"2024-09-04 05:22:24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check_user_notificaiton_seen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/users_notification_seen_status/44",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"users_notification_seen_status",
+								"44"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor Notificaiton",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_notification",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_notification/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_notification",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Doctor_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_doctor_notification/doctor/30",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_doctor_notification",
+								"doctor",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_doctor_notification",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_doctor_notification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vitals",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "44",
+									"type": "text"
+								},
+								{
+									"key": "bp_systolic",
+									"value": "110",
+									"description": "mmHg",
+									"type": "text"
+								},
+								{
+									"key": "bp_diastolic",
+									"value": "140",
+									"description": "mmHg",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "70",
+									"description": "kg",
+									"type": "text"
+								},
+								{
+									"key": "spo2",
+									"value": "98",
+									"description": "percentage",
+									"type": "text"
+								},
+								{
+									"key": "temperature",
+									"value": "93",
+									"description": "F",
+									"type": "text"
+								},
+								{
+									"key": "sugar_random",
+									"value": "180",
+									"description": "Mg/dl",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Blood Pressure",
+									"description": "'Blood Pressure','Sugar','SpO2','Weight','Temperature'",
+									"type": "text"
+								},
+								{
+									"key": "family_member_id",
+									"value": "29",
+									"type": "text"
+								},
+								{
+									"key": "sugar_fasting",
+									"value": "120",
+									"type": "text"
+								},
+								{
+									"key": "family_member_id",
+									"value": "31",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-09-12",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10:40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_vitals",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_vitals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_vitals",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_vitals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_vitals",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_vitals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_vitals/3",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_vitals",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_User_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_vitals/user/44",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_vitals",
+								"user",
+								"44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_by_Family_Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_vitals/family_member/29",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_vitals",
+								"family_member",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_by_Family_Member_Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_vitals_family_member_id_type?family_member_id=31&type=Blood Pressure&start_date=2024-09-06&end_date=2024-09-08",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_vitals_family_member_id_type"
+							],
+							"query": [
+								{
+									"key": "family_member_id",
+									"value": "31"
+								},
+								{
+									"key": "type",
+									"value": "Blood Pressure"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-09-06"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-09-08"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bp_systolic",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "bp_diastolic",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "spo2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "temperature",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "sugar_random",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "sugar_fasting",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_vitals",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_vitals"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Coupon 50",
+									"description": "Always send in upper case",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Get 50%  INSETENT  OFF",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-09-10",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-09-10",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_coupon",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Coupon 509",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Get 50%  INSETENT  OFF Update",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-09-11",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-09-12",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_coupon",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_coupon",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Active",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_coupon_active",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_coupon_active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_coupon/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_coupon",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Validate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "CUP10",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "44",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/get_validate",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_coupon",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_coupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "upon Use",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_coupon_use",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_coupon_use"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_coupon_use/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_coupon_use",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_coupon_use",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_coupon_use"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment Checkin",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appointment_id",
+									"value": "250",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2024-10-19",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "08:02:00",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_appointment_checkin",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_appointment_checkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_check_in",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_check_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_check_in/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_check_in",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Doct_Id_ANd_Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_check_in_doct_date/30/2024-09-12",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_check_in_doct_date",
+								"30",
+								"2024-09-12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_appointment_checkin",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_appointment_checkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Udpate_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "20:42:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_appointment_checkin",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_appointment_checkin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RazorPay",
+			"item": [
+				{
+					"name": "Create_Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "100.98",
+									"type": "text"
+								},
+								{
+									"key": "key",
+									"value": "rzp_test_sIR4XxBJqqnGUD",
+									"type": "text"
+								},
+								{
+									"key": "secret",
+									"value": "vmtaVsSP9kze3eLvlT8pqYMY",
+									"type": "text"
+								},
+								{
+									"key": "payload",
+									"value": "{\"amount\":\"23\",\"key\":\"rzp_test_sIR4XxBJqqnGUD\",\"secret\":\"vmtaVsSP9kze3eLvlT8pqYMY\",\"user_id\":\"48\",\"payment_method\":\"Online\",\"transaction_type\":\"Credited\",\"description\":\"Amount credited to user wallet\"}",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Wallet",
+									"description": "Appointment,Wallet",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/create_rz_order",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"create_rz_order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RazorPay Webhooks",
+			"item": [
+				{
+					"name": "test_centrelize",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "payload",
+									"value": "{\"id\":\"pay_OxmDHRFpRt5j8y\",\"entity\":\"payment\",\"amount\":50000,\"currency\":\"INR\",\"status\":\"captured\",\"order_id\":\"order_OxmDCfceAAO4Uf\",\"invoice_id\":null,\"international\":false,\"method\":\"netbanking\",\"amount_refunded\":0,\"refund_status\":null,\"captured\":true,\"description\":\"Wallet Translation\",\"card_id\":null,\"bank\":\"HDFC\",\"wallet\":null,\"vpa\":null,\"email\":\"void@razorpay.com\",\"contact\":\"+93123456788\",\"notes\":{\"amount\":\"500\",\"user_id\":\"48\",\"description\":\"Amount credited to user wallet\",\"payment_method\":\"Online\",\"transaction_type\":\"Credited\"},\"fee\":1180,\"tax\":180,\"error_code\":null,\"error_description\":null,\"error_source\":null,\"error_step\":null,\"error_reason\":null,\"acquirer_data\":{\"bank_transaction_id\":\"6181749\"},\"created_at\":1726476335,\"reward\":null,\"base_amount\":50000}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/test_centreliz_logic",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"test_centreliz_logic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paymentt  Gateway",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_payment_gateway",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_payment_gateway"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_payment_gateway/2",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_payment_gateway",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Active",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "key",
+									"value": "ss00",
+									"type": "text"
+								},
+								{
+									"key": "secret",
+									"value": "xx00",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "webhook_secret_key",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_payment_gateway",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_payment_gateway"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stripe",
+			"item": [
+				{
+					"name": "Create_Intent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ashish",
+									"type": "text"
+								},
+								{
+									"key": "address_line1",
+									"value": "Address LIne 1",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Pune",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Maharashtra",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "India",
+									"type": "text"
+								},
+								{
+									"key": "STRIPE_SECRET_KEY",
+									"value": "sk_test_51JBd1uSGLTzQS8hqzULLGzHlO8qxyn9irfOojXXhy3lvW7B2GXnNH1iRi74IM0szbmBwn3utd6Iht2mwHvJHv5WD00jkkiWb9S",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "currency",
+									"value": "USD",
+									"type": "text"
+								},
+								{
+									"key": "payload",
+									"value": "{\"amount\":\"23\",\"key\":\"rzp_test_sIR4XxBJqqnGUD\",\"secret\":\"vmtaVsSP9kze3eLvlT8pqYMY\",\"user_id\":\"48\",\"payment_method\":\"Online\",\"transaction_type\":\"Credited\",\"description\":\"Amount credited to user wallet\"}",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Amount credited to user wallet",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Appointment",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/create_intent",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"create_intent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/stripe_webhook",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"stripe_webhook"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient File",
+			"item": [
+				{
+					"name": "Add_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "73",
+									"type": "text"
+								},
+								{
+									"key": "file_name",
+									"value": "xxxxx",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/USER/Downloads/letter-a.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/add_patient_file",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"add_patient_file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patient_file?search_query=john",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patient_file"
+							],
+							"query": [
+								{
+									"key": "search_query",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patient_file/1",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patient_file",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "file_name",
+									"value": "xxxxx",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/0ASHI/Downloads/clinicmamagement (400 x 500 px) (3).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/update_patient_file",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"update_patient_file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/delete_patient_file",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"delete_patient_file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by patientid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patient_file/patient/73",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patient_file",
+								"patient",
+								"73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get _By _Usertid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patient_file_q/user?user_id=61&search_query=Vinesh",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patient_file_q",
+								"user"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "61"
+								},
+								{
+									"key": "search_query",
+									"value": "Vinesh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Patient_Id_By_earch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_patient_file_q_patient?patient_id=73&search_query=blood",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_patient_file_q_patient"
+							],
+							"query": [
+								{
+									"key": "patient_id",
+									"value": "73"
+								},
+								{
+									"key": "search_query",
+									"value": "blood"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Notification",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_admin_notification",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_admin_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_admin_notification/162",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_admin_notification",
+								"162"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment Status Log",
+			"item": [
+				{
+					"name": "Get_Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_status_log",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_status_log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_status_log/4",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_status_log",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Data_Page",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{Base_Url}}/get_appointment_status_log_page?start=0&end=3&search=290",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"get_appointment_status_log_page"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "end",
+									"value": "3"
+								},
+								{
+									"key": "search",
+									"value": "290"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SMTP",
+			"item": [
+				{
+					"name": "forget_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "appwebdevash@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Base_Url}}/forget_password",
+							"host": [
+								"{{Base_Url}}"
+							],
+							"path": [
+								"forget_password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "storage:link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_Url}}/storage_link",
+					"host": [
+						"{{Base_Url}}"
+					],
+					"path": [
+						"storage_link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "Base_Url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

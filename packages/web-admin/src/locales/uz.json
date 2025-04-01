@@ -1,0 +1,2018 @@
+{
+  "login": {
+    "title": "Tizimga kirish",
+    "email": "Email",
+    "password": "Parol",
+    "forgotPassword": "Parolni unutdingizmi?",
+    "signIn": "Kirish",
+    "loginAs": "Sifatida kirish - ",
+    "continue": "Davom etish",
+    "cancel": "Bekor qilish",
+    "errors": {
+      "noPermission": "Admin paneliga kirish uchun ruxsatingiz yo'q. Agar bu xato deb hisoblasangiz, administrator bilan bog'laning.",
+      "wrongCredentials": "Email yoki parol noto'g'ri.",
+      "generalError": "Kirishda xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring."
+    }
+  },
+  "dashboard": {
+    "title": "Asosiy",
+    "charts": {
+      "appointments": {
+        "title": "Qabullar",
+        "completed": "Yakunlangan",
+        "cancelled": "Bekor qilingan",
+        "confirmed": "Tasdiqlangan"
+      },
+      "transactions": {
+        "title": "Tranzaksiyalar",
+        "credited": "Kirim",
+        "debited": "Chiqim"
+      }
+    },
+    "calendar": {
+      "title": "Qabullar taqvimi",
+      "views": {
+        "week": "Hafta",
+        "day": "Kun",
+        "agenda": "Kun tartibi"
+      },
+      "messages": {
+        "noEvents": "Bu vaqt oralig'ida qabullar yo'q",
+        "allDay": "Butun kun",
+        "date": "Sana",
+        "time": "Vaqt",
+        "event": "Tadbir"
+      }
+    },
+    "cancellation": {
+      "title": "Bekor qilish so'rovlari statistikasi",
+      "chart": "Bekor qilish so'rovlari taqsimoti"
+    }
+  },
+  "buttons": {
+    "addNewAppointment": "Yangi qabul qo'shish",
+    "addDoctor": "Doktor qo'shish",
+    "addPatient": "Bemor qo'shish",
+    "addMedicine": "Dori qo'shish",
+    "newCheckin": "Yangi qabul",
+    "showDisplay": "Ro'yxatdan o'tish ekranini ko'rsatish"
+  },
+  "appointments": {
+    "cards": {
+      "todayAppointment": "Bugungi qabullar",
+      "upcomingAppointment": "Kelgusi qabullar",
+      "pendingAppointments": "Kutilayotgan qabullar",
+      "confirmAppointments": "Tasdiqlangan qabullar",
+      "cancelledAppointments": "Bekor qilingan qabullar",
+      "rejectedAppointments": "Rad etilgan qabullar",
+      "completedAppointments": "Yakunlangan qabullar",
+      "visitedAppointments": "Tashrif buyurilgan qabullar"
+    },
+    "status": {
+      "unknown": "Noma'lum",
+      "pending": "Kutilmoqda",
+      "confirmed": "Tasdiqlangan",
+      "rejected": "Rad etilgan",
+      "cancelled": "Bekor qilingan",
+      "completed": "Yakunlangan",
+      "rescheduled": "Qayta rejalashtirilgan",
+      "visited": "Tashrif buyurilgan",
+      "distribution": "Qabullar holati taqsimoti",
+      "label": "Holat",
+      "select": "Holatni tanlang",
+      "cancellation": "Bekor qilish so'rovi yuborildi"
+    },
+    "registration": {
+      "title": "So'nggi {{days}} kun ichidagi qabullar",
+      "columns": {
+        "doctor": "Shifokor",
+        "patient": "Bemor",
+        "status": "Holat",
+        "date": "Sana",
+        "timeSlots": "Vaqt",
+        "type": "Turi",
+        "paymentStatus": "To'lov holati"
+      },
+      "types": {
+        "emergency": "Shoshilinch",
+        "regular": "Oddiy"
+      },
+      "payment": {
+        "paid": "To'langan",
+        "refunded": "Qaytarilgan",
+        "notPaid": "To'lanmagan"
+      }
+    },
+    "chart": {
+      "title": "So'nggi {{days}} kun ichidagi qabullar",
+      "lastDays": "So'nggi {{days}} kun",
+      "labels": {
+        "all": "Hammasi",
+        "cancelled": "Bekor qilingan",
+        "completed": "Yakunlangan"
+      }
+    },
+    "add": {
+      "title": "Yangi qabul qo'shish",
+      "or": "Yoki",
+      "addPatient": "Bemor qo'shish",
+      "details": "Qabul tafsilotlari",
+      "type": {
+        "label": "Qabul turi",
+        "select": "Qabul turini tanlang",
+        "emergency": "Shoshilinch",
+        "opd": "Ambulatoriya",
+        "video": "Video maslahat"
+      },
+      "payment": {
+        "status": {
+          "label": "To'lov holati",
+          "select": "To'lov holatini tanlang",
+          "paid": "To'langan",
+          "unpaid": "To'lanmagan"
+        },
+        "method": {
+          "label": "To'lov usuli",
+          "select": "To'lov usulini tanlang"
+        },
+        "details": "To'lov tafsilotlari",
+        "timeSlot": "Vaqtni tanlang"
+      },
+      "fee": {
+        "label": "Narx",
+        "total": "Umumiy summa"
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Qabul qo'shish"
+      }
+    },
+    "payment": {
+      "details": "To'lov tafsilotlari",
+      "timeSlot": "Vaqtni tanlang"
+    },
+    "labels": {
+      "appointmentDate": "Qabul sanasi",
+      "appointmentTimeSlot": "Qabul vaqti",
+      "selectDoctor": "Shifokorni tanlang",
+      "selectType": "Qabul turini tanlang"
+    },
+    "buttons": {
+      "refreshTable": "Jadvalni yangilash",
+      "close": "Yopish"
+    },
+    "timeSlots": {
+      "selectDateTime": "Sana va vaqtni tanlang",
+      "available": "Mavjud vaqtlar",
+      "noAvailable": "Kechirasiz, tanlangan sana uchun mavjud vaqtlar topilmadi."
+    },
+    "reschedule": {
+      "title": "Qabulni qayta rejalashtirish",
+      "button": "Qabulni qayta rejalashtirish"
+    },
+    "update": {
+      "patientDetails": "Bemor ma'lumotlari",
+      "doctorDetails": "Shifokor ma'lumotlari",
+      "labels": {
+        "patientFirstName": "Bemor ismi",
+        "patientLastName": "Bemor familiyasi",
+        "phone": "Telefon",
+        "gender": "Jinsi",
+        "doctorFirstName": "Shifokor ismi",
+        "doctorLastName": "Shifokor familiyasi",
+        "meetingLink": "Uchrashuv havolasi"
+      },
+      "cancellationTab": "Bemordan bekor qilish so'rovi",
+      "alerts": {
+        "reject": {
+          "title": "Qabulni rad etish",
+          "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+          "cancel": "Bekor qilish",
+          "confirm": "Rad etish"
+        },
+        "cancellation": {
+          "title": "{{type}} so'rovi",
+          "message": "Ishonchingiz komilmi? Bekor qilish holatini {{type}} ga o'zgartirish",
+          "cancel": "Bekor qilish",
+          "confirm": "{{type}} bekor qilish so'rovi"
+        }
+      },
+      "details": "Qabul tafsilotlari",
+      "source": "Manba",
+      "buttons": {
+        "joinMeeting": "Uchrashuvga qo'shilish",
+        "printReport": "Maslahat hisobotini chop etish",
+        "back": "Orqaga"
+      },
+      "labels": {
+        "updateRequestStatus": "So'rov holatini yangilash"
+      }
+    },
+    "actions": {
+      "edit": "Qabulni tahrirlash"
+    },
+    "search": {
+      "placeholder": "Qidirish"
+    },
+    "messages": {
+      "error": {
+        "title": "Xatolik!",
+        "description": "Nimadir noto'g'ri bajarildi."
+      }
+    }
+  },
+  "welcome": {
+    "title": "Qaytganingiz bilan!",
+    "stats": {
+      "activeDoctors": "Jami faol shifokorlar",
+      "appointments": "Jami qabullar",
+      "patients": "Jami bemorlar",
+      "users": "Jami foydalanuvchilar",
+      "departments": "Jami bo'limlar",
+      "prescriptions": "Jami retseptlar",
+      "medicine": "Jami dori-darmonlar",
+      "doctorReviews": "Shifokor sharhlari"
+    }
+  },
+  "registration": {
+    "users": {
+      "title": "So'nggi {{days}} kun ichida foydalanuvchilar ro'yxatdan o'tishi"
+    },
+    "patients": {
+      "title": "So'nggi {{days}} kun ichida bemorlar ro'yxatdan o'tishi"
+    }
+  },
+  "cancellation": {
+    "requests": {
+      "initiated": "Bekor qilish so'rovi yuborildi",
+      "processing": "Bekor qilish so'rovi ko'rib chiqilmoqda",
+      "approved": "Bekor qilish so'rovi tasdiqlandi",
+      "rejected": "Bekor qilish so'rovi rad etildi"
+    },
+    "chart": {
+      "title": "Qabulni bekor qilish holati",
+      "labels": {
+        "initiated": "Bekor qilish so'rovi yuborildi",
+        "rejected": "Bekor qilish so'rovi rad etildi",
+        "approved": "Bekor qilish so'rovi tasdiqlandi",
+        "processing": "Bekor qilish so'rovi ko'rib chiqilmoqda"
+      }
+    }
+  },
+  "checkin": {
+    "title": "Yangi ro'yxatdan o'tish",
+    "or": "Yoki",
+    "buttons": {
+      "scanQr": "QR skanerlash",
+      "addManually": "Qo'lda kiritish",
+      "getDetails": "Ma'lumotlarni olish",
+      "close": "Yopish",
+      "add": "Ro'yxatdan o'tkazish",
+      "showDisplay": "Ro'yxatdan o'tish ekranini ko'rsatish",
+      "update": "Ro'yxatni yangilash"
+    },
+    "form": {
+      "appointmentId": "Qabul ID",
+      "date": "Sana",
+      "time": "Vaqt"
+    },
+    "errors": {
+      "notFound": "Qabul topilmadi",
+      "videoConsult": "Video maslahatlar ro'yxatdan o'tkazilmaydi"
+    },
+    "delete": {
+      "title": "Ro'yxatdan o'chirilsinmi",
+      "confirm": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "cancel": "Bekor qilish",
+      "delete": "O'chirish"
+    },
+    "success": {
+      "added": "Qo'shildi!",
+      "deleted": "O'chirildi!",
+      "updated": "Yangilandi!"
+    },
+    "update": {
+      "title": "Ro'yxatni yangilash"
+    },
+    "queue": {
+      "nextPatients": "Keyingi bemorlar",
+      "noUpcoming": "Kutilayotgan bemorlar yo'q",
+      "currentlyBeingSeen": "Hozirda qabuldagi bemor yo'q",
+      "now": "Hozir",
+      "table": {
+        "serialNo": "T/r",
+        "id": "ID",
+        "patientName": "Bemor ismi"
+      },
+      "doctor": {
+        "title": "Shifokor",
+        "selectOption": "Tanlang",
+        "selectDate": "Sanani tanlang"
+      },
+      "appointment": {
+        "id": "Qabul ID",
+        "name": "Ism",
+        "time": "Vaqt",
+        "date": "Sana"
+      }
+    }
+  },
+  "errors": {
+    "oops": "Voy!",
+    "somethingWrong": "Nimadir xato ketdi.",
+    "pleaseTryRefreshing": "Iltimos, sahifa yangilang, yoki bosh sahifaga qaytishingiz mumkin.",
+    "tryAgain": "Qayta urinib ko'ring",
+    "500": "500",
+    "internalServerError": "Tashqi server xatoligi",
+    "logout": "Chiqish"
+  },
+  "common": {
+    "search": "Qidirish",
+    "addNew": "Yangi qo'shish"
+  },
+  "payments": {
+    "methods": {
+      "cash": "Naqd pul",
+      "online": "Onlayn",
+      "other": "Boshqa",
+      "wallet": "Hamyon",
+      "upi": "UPI"
+    },
+    "modal": {
+      "amountPaid": "To'lov amalga oshirildi",
+      "selectMode": "To'lov usulini tanlang",
+      "close": "Yopish",
+      "setToPaid": "To'langan deb belgilash"
+    }
+  },
+  "doctors": {
+    "add": {
+      "title": "Shifokor qo'shish",
+      "back": "Orqaga",
+      "form": {
+        "email": "Email",
+        "password": "Parol",
+        "confirmPassword": "Parolni tasdiqlang",
+        "firstName": "Ism",
+        "lastName": "Familiya",
+        "phone": "Telefon",
+        "dateOfBirth": "Tug'ilgan sana (OO/KK/YYYY)",
+        "gender": {
+          "label": "Jinsi",
+          "select": "Jinsni tanlang",
+          "female": "Ayol",
+          "male": "Erkak"
+        },
+        "experience": "Tajriba yillari",
+        "department": "Bo'lim",
+        "specialization": "Ixtisoslik",
+        "submit": "Qo'shish"
+      },
+      "profilePicture": {
+        "title": "Profil rasmi",
+        "upload": "Profil rasmini yuklash",
+        "clear": "Tozalash"
+      },
+      "errors": {
+        "passwordMismatch": "Parollar mos kelmadi",
+        "selectDepartment": "Bo'limni tanlang",
+        "selectSpecialization": "Ixtisoslikni tanlang"
+      },
+      "success": "Shifokor qo'shildi!"
+    },
+    "delete": {
+      "title": "Shifokorni o'chirish",
+      "confirmMessage": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "cancel": "Bekor qilish",
+      "confirm": "Shifokorni o'chirish",
+      "success": "Shifokor o'chirildi!",
+      "titleWithName": "Shifokorni o'chirish ( {{id}} , {{firstName}} {{lastName}} )"
+    },
+    "appointments": {
+      "title": "Shifokor qabullari",
+      "search": "Qidirish",
+      "addNew": "Yangi qo'shish",
+      "filters": {
+        "confirmed": "Tasdiqlangan",
+        "visited": "Tashrif buyurilgan",
+        "completed": "Yakunlangan",
+        "pending": "Kutilmoqda",
+        "cancelled": "Bekor qilingan",
+        "rejected": "Rad etilgan",
+        "cancellationInitiated": "Bekor qilish so'rovi"
+      },
+      "noPermission": "Qabullarni ko'rish uchun ruxsatingiz yo'q",
+      "error": {
+        "title": "Xatolik!",
+        "description": "Nimadir noto'g'ri bajarildi."
+      },
+      "statuses": {
+        "Confirmed": "Tasdiqlangan",
+        "Visited": "Tashrif buyurilgan",
+        "Completed": "Yakunlangan",
+        "Pending": "Kutilmoqda",
+        "Cancelled": "Bekor qilingan",
+        "Rejected": "Rad etilgan",
+        "Cancellation": "Bekor qilish so'rovi",
+        "Emergency": "Shoshilinch",
+        "Regular": "Oddiy",
+        "Paid": "To'langan",
+        "Refunded": "Qaytarilgan",
+        "Not Paid": "To'lanmagan"
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "addNew": "Yangi qo'shish",
+      "table": {
+        "name": "Ism",
+        "phone": "Telefon",
+        "email": "Email",
+        "specialization": "Ixtisoslik",
+        "department": "Bo'lim",
+        "active": "Faol",
+        "stopBooking": "Qabulni to'xtatish"
+      },
+      "actions": {
+        "edit": "Tahrirlash",
+        "delete": "O'chirish"
+      },
+      "errors": {
+        "title": "Xatolik!",
+        "description": "Nimadir noto'g'ri bajarildi."
+      },
+      "success": {
+        "updated": "Shifokor yangilandi!"
+      },
+      "noPermission": "Shifokorlarni ko'rish uchun ruxsatingiz yo'q"
+    },
+    "review": {
+      "appointmentsDone": "Qabullar yakunlangan",
+      "loading": "Yuklanmoqda...",
+      "noReviews": "Hali sharhlar yo'q"
+    },
+    "update": {
+      "title": "Shifokorni yangilash",
+      "personalInfo": "Shaxsiy ma'lumotlar",
+      "educationInfo": "Ta'lim va boshqa ma'lumotlar",
+      "active": "Shifokor faolmi?",
+      "stopBooking": "Qabulni to'xtatish?",
+      "socialLinks": {
+        "title": "Ijtimoiy tarmoqlar",
+        "invalidUrl": "Bu yaroqli URL emas",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "youtube": "Youtube"
+      },
+      "success": "Shifokor yangilandi!",
+      "tabs": {
+        "details": "Shifokor ma'lumotlari",
+        "timeSlots": "Vaqt oralig'i",
+        "reviews": "Sharhlar",
+        "appointments": "Qabullar"
+      },
+      "basicDetails": "Asosiy ma'lumotlar",
+      "contactDetails": "Aloqa ma'lumotlari",
+      "addressDetails": "Manzil",
+      "password": "Parol",
+      "form": {
+        "firstName": "Ism",
+        "lastName": "Familiya",
+        "dob": "Tug'ilgan sana",
+        "gender": {
+          "label": "Jinsi",
+          "selectGender": "Jinsni tanlang",
+          "male": "Erkak",
+          "female": "Ayol"
+        },
+        "experience": {
+          "label": "Tajriba yillari",
+          "placeholder": "Tajriba yillarini kiriting"
+        },
+        "email": "Email",
+        "phone": "Telefon",
+        "secondaryPhone": "Qo'shimcha telefon",
+        "description": "Tavsif",
+        "state": "Viloyat",
+        "city": "Shahar",
+        "postalCode": "Pochta indeksi",
+        "address": "Manzil",
+        "password": "Parol",
+        "confirmPassword": "Parolni tasdiqlang",
+        "department": "Bo'lim",
+        "selectDepartment": "Bo'limni tanlang",
+        "specialization": "Ixtisoslik",
+        "selectSpecialization": "Ixtisoslikni tanlang",
+        "placeholders": {
+          "firstName": "Ism",
+          "lastName": "Familiya",
+          "phone": "Telefon raqamini kiriting",
+          "description": "Tavsif",
+          "state": "Viloyat",
+          "city": "Shahar",
+          "postalCode": "Pochta indeksi",
+          "address": "Manzil",
+          "password": "Parol"
+        }
+      },
+      "profilePicture": {
+        "title": "Profil rasmi",
+        "upload": "Profil rasmini yuklash",
+        "delete": "O'chirish"
+      },
+      "fees": {
+        "title": "To'lovlar",
+        "opd": "Qabul narxi",
+        "video": "Video maslahat narxi",
+        "emergency": "Shoshilinch qabul narxi"
+      },
+      "buttons": {
+        "back": "Orqaga",
+        "update": "Yangilash"
+      },
+      "socialLinks": {
+        "placeholders": {
+          "facebook": "Facebook",
+          "twitter": "Twitter",
+          "instagram": "Instagram",
+          "youtube": "Youtube"
+        }
+      },
+      "messages": {
+        "imageDeleted": "Rasm o'chirildi!",
+        "doctorUpdated": "Shifokor muvaffaqiyatli yangilandi"
+      },
+      "validation": {
+        "required": "Bu maydon to'ldirilishi shart",
+        "email": "Noto'g'ri email manzil",
+        "phone": "Noto'g'ri telefon raqam"
+      },
+      "headings": {
+        "personalInfo": "Shaxsiy ma'lumotlar",
+        "contactInfo": "Aloqa ma'lumotlari",
+        "addressInfo": "Manzil ma'lumotlari",
+        "professionalInfo": "Kasbiy ma'lumotlar",
+        "socialLinks": "Ijtimoiy tarmoqlar"
+      },
+      "professionalInfo": "Kasbiy ma'lumotlar",
+      "appointmentSettings": "Qabul sozlamalari",
+      "active": "Shifokor faolmi?",
+      "stopBooking": "Qabulni to'xtatish?",
+      "basicDetails": "Asosiy ma'lumotlar",
+      "contactDetails": "Aloqa ma'lumotlari",
+      "addressDetails": "Manzil ma'lumotlari",
+      "fees": {
+        "title": "To'lovlar",
+        "opd": "Qabul narxi",
+        "video": "Video maslahat narxi",
+        "emergency": "Shoshilinch qabul narxi"
+      }
+    }
+  },
+  "departments": {
+    "add": {
+      "title": "Bo'lim qo'shish",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        },
+        "description": {
+          "label": "Tavsif",
+          "placeholder": "Tavsif"
+        },
+        "image": {
+          "dropzone": {
+            "title": "Faylni tanlang yoki bu yerga tashlang",
+            "selectedFile": "Tanlangan fayl:"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Bo'lim qo'shish"
+      },
+      "messages": {
+        "success": "Bo'lim qo'shildi!"
+      }
+    },
+    "delete": {
+      "title": "Bo'limni o'chirish",
+      "titleWithName": "Bo'limni o'chirish ( {{title}} )",
+      "confirmMessage": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Bo'lim o'chirildi!"
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "addNew": "Yangi qo'shish",
+      "table": {
+        "name": "Nomi",
+        "active": "Faol"
+      },
+      "errors": {
+        "title": "Xatolik!",
+        "description": "Nimadir noto'g'ri bajarildi."
+      },
+      "messages": {
+        "updated": "Bo'lim yangilandi!",
+        "noPermission": "Bo'limlarni ko'rish uchun ruxsatingiz yo'q"
+      },
+      "actions": {
+        "edit": "Tahrirlash",
+        "delete": "O'chirish"
+      }
+    },
+    "update": {
+      "title": "Bo'limni yangilash",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        },
+        "description": {
+          "label": "Tavsif",
+          "placeholder": "Tavsif"
+        },
+        "image": {
+          "dropzone": {
+            "title": "Faylni tanlang yoki bu yerga tashlang",
+            "selectedFile": "Tanlangan fayl:"
+          },
+          "remove": "Rasmni o'chirish"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Bo'limni yangilash"
+      },
+      "messages": {
+        "success": "Bo'lim yangilandi!",
+        "imageDeleted": "Rasm o'chirildi!"
+      }
+    }
+  },
+  "specializations": {
+    "add": {
+      "title": "Ixtisoslik qo'shish",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Ixtisoslik qo'shish"
+      },
+      "messages": {
+        "success": "Ixtisoslik qo'shildi!"
+      }
+    },
+    "delete": {
+      "title": "Ixtisoslikni o'chirish",
+      "titleWithName": "Ixtisoslikni o'chirish ( {{title}} )",
+      "confirmMessage": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "Ixtisoslikni o'chirish"
+      },
+      "messages": {
+        "success": "Ixtisoslik o'chirildi!"
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "addNew": "Yangi qo'shish",
+      "table": {
+        "name": "Nomi",
+        "active": "Faol"
+      },
+      "errors": {
+        "title": "Xatolik!",
+        "description": "Nimadir noto'g'ri bajarildi."
+      },
+      "messages": {
+        "noPermission": "Ixtisosliklarni ko'rish uchun ruxsatingiz yo'q"
+      },
+      "actions": {
+        "edit": "Tahrirlash",
+        "delete": "O'chirish"
+      }
+    },
+    "update": {
+      "title": "Ixtisoslikni yangilash",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Ixtisoslikni yangilash"
+      },
+      "messages": {
+        "success": "Ixtisoslik yangilandi!"
+      }
+    }
+  },
+  "roles": {
+    "add": {
+      "title": "Rol qo'shish",
+      "form": {
+        "title": "Rol nomi",
+        "placeholder": "Rol nomini kiriting"
+      },
+      "buttons": {
+        "close": "Yopish",
+        "submit": "Rol qo'shish"
+      },
+      "messages": {
+        "success": "Rol qo'shildi!"
+      }
+    },
+    "assign": {
+      "title": "Foydalanuvchiga rol tayinlash",
+      "form": {
+        "user": "Foydalanuvchini tanlang",
+        "role": "Rolni tanlang",
+        "placeholder": "Rolni tanlang"
+      },
+      "buttons": {
+        "close": "Yopish",
+        "submit": "Rolni tayinlash",
+        "assign": "Foydalanuvchiga rol tayinlash"
+      },
+      "messages": {
+        "success": "Rol muvaffaqiyatli tayinlandi!",
+        "error": "Ruxsat xatosi",
+        "errorDescription": "Rollarni tayinlash uchun ruxsatingiz yo'q"
+      }
+    },
+    "delete": {
+      "title": "Rolni o'chirish",
+      "messages": {
+        "success": "Rol muvaffaqiyatli o'chirildi!",
+        "confirm": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+        "cannotDelete": "Bu rolni o'chirib bo'lmaydi!"
+      },
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "Rolni o'chirish"
+      }
+    },
+    "search": {
+      "placeholder": "Qidirish"
+    },
+    "buttons": {
+      "assignRoleToUser": "Foydalanuvchiga rol tayinlash",
+      "addNew": "Yangi rol qo'shish",
+      "delete": "O'chirish"
+    },
+    "error": {
+      "title": "Xatolik!",
+      "description": "Nimadir noto'g'ri bajarildi."
+    },
+    "types": {
+      "doctor": "Shifokor",
+      "admin": "Administrator",
+      "frontDesk": "Qabulxona"
+    },
+    "update": {
+      "title": "Rolni yangilash",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nom"
+        },
+        "permissions": {
+          "label": "Ruxsatlar"
+        }
+      },
+      "buttons": {
+        "updateTitle": "Nomni yangilash",
+        "updatePermissions": "Ruxsatlarni yangilash",
+        "close": "Yopish"
+      },
+      "messages": {
+        "success": {
+          "role": "Rol yangilandi!",
+          "permissions": "Ruxsatlar yangilandi"
+        }
+      }
+    }
+  },
+  "patients": {
+    "messages": {
+      "success": "Bemor qo'shildi",
+      "error": "Nimadir noto'g'ri bajarildi"
+    },
+    "placeholder": {
+      "search": "Bemor qidirish"
+    },
+    "add": {
+      "title": "Bemor qo'shish",
+      "form": {
+        "firstName": {
+          "label": "Ism",
+          "placeholder": "Ism"
+        },
+        "lastName": {
+          "label": "Familiya",
+          "placeholder": "Familiya"
+        },
+        "phone": {
+          "label": "Telefon raqam",
+          "placeholder": "Telefon raqam"
+        },
+        "gender": {
+          "label": "Jins",
+          "placeholder": "Jins",
+          "options": {
+            "male": "Erkak",
+            "female": "Ayol"
+          }
+        },
+        "dob": {
+          "label": "Tug'ilgan sana"
+        },
+        "city": {
+          "label": "Shahar"
+        },
+        "state": {
+          "label": "Viloyat"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Bemor qo'shish"
+      },
+      "messages": {
+        "success": "Bemor qo'shildi",
+        "errors": {
+          "selectIsd": "ISD kodini tanlang"
+        }
+      }
+    },
+    "update": {
+      "title": "Bemorni yangilash",
+      "actions": {
+        "edit": "Tahrirlash",
+        "back": "Orqaga",
+        "update": "Yangilash"
+      },
+      "messages": {
+        "success": "Bemor yangilandi",
+        "error": "Nimadir noto'g'ri bajarildi"
+      },
+      "details": "Tafsilotlar",
+      "files": "Fayllar",
+      "appointments": "Reja",
+      "prescriptions": "Rezepter",
+      "basicDetails": "Asosiy tafsilotlar",
+      "contactDetails": "Aloqa tafsilotlari",
+      "form": {
+        "firstName": {
+          "label": "Ism",
+          "placeholder": "Ism"
+        },
+        "lastName": {
+          "label": "Familiya",
+          "placeholder": "Familiya"
+        },
+        "phone": {
+          "label": "Telefon raqam",
+          "placeholder": "Telefon raqam"
+        },
+        "gender": {
+          "label": "Jins",
+          "placeholder": "Jins",
+          "options": {
+            "male": "Erkak",
+            "female": "Ayol"
+          }
+        },
+        "dob": {
+          "label": "Tug'ilgan sana",
+          "placeholder": "Tug'ilgan sana"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "address": {
+          "label": "Manzil",
+          "placeholder": "Manzil"
+        },
+        "state": {
+          "label": "Viloyat",
+          "placeholder": "Viloyat"
+        },
+        "city": {
+          "label": "Shahar",
+          "placeholder": "Shahar"
+        },
+        "postalCode": {
+          "label": "Pochta indeksi",
+          "placeholder": "Pochta indeksi"
+        },
+        "notes": {
+          "label": "Izoh",
+          "placeholder": "Izoh"
+        },
+        "profilePicture": {
+          "label": "Rasm",
+          "placeholder": "Rasm"
+        },
+        "uploadProfilePicture": {
+          "label": "Rasm yuklash",
+          "placeholder": "Rasm yuklash"
+        },
+        "delete": {
+          "label": "O'chirish",
+          "placeholder": "O'chirish"
+        }
+      }
+    },
+    "patientFiles": {
+      "title": "Bemor Fayllar",
+      "updatedOn": "Yangilangan sana",
+      "actions": {
+        "edit": "Tahrirlash",
+        "delete": "O'chirish",
+        "addNew": "Yangi qo'shish"
+      },
+      "add": {
+        "title": "Bemor Fayllar qo'shish",
+        "form": {
+          "name": {
+            "label": "Nomi",
+            "placeholder": "Nomi"
+          },
+          "file": {
+            "choose": "Faylni tanlang",
+            "dragHere": "yoki bu yerga tashlang",
+            "selectedFile": "Tanlangan fayl:",
+            "maxSize": "Max 5 MB"
+          }
+        },
+        "buttons": {
+          "close": "Yopish",
+          "add": "Qo'shish"
+        },
+        "messages": {
+          "success": "Bemor Fayli qo'shildi!",
+          "error": "5 MB dan kichik faylni tanlang."
+        }
+      },
+      "update": {
+        "title": "Bemor Faylini yangilash",
+        "form": {
+          "title": {
+            "label": "Nomi",
+            "placeholder": "Nomi"
+          },
+          "file": {
+            "choose": "Faylni tanlang",
+            "dragHere": "yoki bu yerga tashlang",
+            "selectedFile": "Tanlangan fayl:",
+            "maxSize": "Max 5 MB"
+          },
+          "close": "Yopish",
+          "update": "Yangilash"
+        },
+        "buttons": {
+          "close": "Close",
+          "update": "Update"
+        },
+        "messages": {
+          "success": "Bemor Fayli yangilandi!",
+          "error": "5 MB dan kichik faylni tanlang."
+        }
+      }
+    },
+    "actions": {
+      "next": "Keyingi",
+      "previous": "Oldingi"
+    },
+    "tables": {
+      "actions": "Amallar",
+      "name": "Nomi",
+      "phone": "Telefon raqam",
+      "gender": "Jins",
+      "dateOfBirth": "Tug'ilgan sana",
+      "email": "Email",
+      "image": "Rasm",
+      "createdOn": "Yaratilgan sana"
+    }
+  },
+  "users": {
+    "add": {
+      "title": "Foydalanuvchi qo'shish",
+      "back": "Orqaga",
+      "form": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Parol",
+          "placeholder": "Parol"
+        },
+        "confirmPassword": {
+          "label": "Parolni tasdiqlang",
+          "placeholder": "Parolni tasdiqlang"
+        },
+        "firstName": {
+          "label": "Ism",
+          "placeholder": "Ism"
+        },
+        "lastName": {
+          "label": "Familiya",
+          "placeholder": "Familiya"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Telefon raqami"
+        },
+        "dateOfBirth": {
+          "label": "Tug'ilgan sana (OO/KK/YYYY)"
+        },
+        "gender": {
+          "label": "Jins",
+          "placeholder": "Jinsni tanlang",
+          "options": {
+            "male": "Erkak",
+            "female": "Ayol"
+          }
+        },
+        "profilePicture": {
+          "label": "Profil rasmi",
+          "upload": "Profil rasmini yuklash",
+          "clear": "Tozalash"
+        }
+      },
+      "buttons": {
+        "add": "Qo'shish"
+      },
+      "messages": {
+        "passwordMismatch": "Parollar mos kelmadi",
+        "success": "Foydalanuvchi qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "vitals": {
+      "title": "Oila a'zolari sog'lig'i ko'rsatkichlari",
+      "back": "Orqaga",
+      "form": {
+        "familyMember": {
+          "label": "Oila a'zosini tanlang",
+          "placeholder": "Oila a'zosini tanlang"
+        },
+        "alert": "Iltimos, oila a'zosini tanlang"
+      },
+      "tabs": {
+        "bloodPressure": "Qon bosimi",
+        "bloodSugar": "Qondagi qand miqdori",
+        "spo2": "SpO2",
+        "temperature": "Harorat",
+        "weight": "Vazn"
+      }
+    },
+    "update": {
+      "title": {
+        "admin": "Admin ma'lumotlari",
+        "user": "Foydalanuvchi ma'lumotlari"
+      },
+      "back": "Orqaga",
+      "wallet": "Hamyon miqdori",
+      "form": {
+        "firstName": {
+          "label": "Ism",
+          "placeholder": "Ism"
+        },
+        "lastName": {
+          "label": "Familiya",
+          "placeholder": "Familiya"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Telefon raqami"
+        },
+        "dateOfBirth": {
+          "label": "Tug'ilgan sana (OO/KK/YYYY)",
+          "placeholder": "Sanani tanlang"
+        },
+        "gender": {
+          "label": "Jins",
+          "placeholder": "Jinsni tanlang",
+          "options": {
+            "male": "Erkak",
+            "female": "Ayol"
+          }
+        },
+        "profilePicture": {
+          "label": "Profil rasmi",
+          "change": "Profil rasmini o'zgartirish",
+          "clear": "Tozalash"
+        }
+      },
+      "buttons": {
+        "update": "Yangilash"
+      },
+      "messages": {
+        "success": "Foydalanuvchi yangilandi!",
+        "error": "Xatolik yuz berdi",
+        "imageDeleted": "Rasm o'chirildi!"
+      },
+      "tabs": {
+        "overview": "Umumiy ma'lumot",
+        "familyMembers": "Oila a'zolari",
+        "familyVitals": "Oila sog'lig'i ko'rsatkichlari",
+        "wallet": "Hamyon"
+      }
+    },
+    "index": {
+      "title": "Barcha foydalanuvchilar",
+      "search": "Qidirish",
+      "add": "Foydalanuvchi qo'shish",
+      "tabs": {
+        "all": "Barcha",
+        "admin": "Admin",
+        "user": "Foydalanuvchi"
+      }
+    }
+  },
+  "cities": {
+    "add": {
+      "title": "Shahar qo'shish",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Shahar qo'shish"
+      },
+      "messages": {
+        "success": "Shahar qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "update": {
+      "title": "Shaharni yangilash",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Shaharni yangilash"
+      },
+      "messages": {
+        "success": "Shahar yangilandi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "delete": {
+      "title": "Shaharni o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Shahar o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    }
+  },
+  "coupons": {
+    "add": {
+      "title": "Kupon qo'shish",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        },
+        "value": {
+          "label": "Qiymati (Chegirma %)",
+          "placeholder": "Qiymati"
+        },
+        "description": {
+          "label": "Tavsif",
+          "placeholder": "Tavsif"
+        },
+        "dates": {
+          "start": {
+            "label": "Boshlanish sanasi",
+            "placeholder": "Boshlanish sanasi"
+          },
+          "end": {
+            "label": "Tugash sanasi",
+            "placeholder": "Tugash sanasi"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Kupon qo'shish"
+      }
+    },
+    "index": {
+      "title": "Barcha kuponlar",
+      "search": "Qidirish",
+      "addNew": "Yangi qo'shish",
+      "table": {
+        "active": "Faol",
+        "title": "Nomi",
+        "value": "Qiymati",
+        "description": "Tavsif",
+        "startDate": "Boshlanish sanasi",
+        "endDate": "Tugash sanasi",
+        "updatedAt": "Yangilangan sana"
+      },
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        },
+        "success": {
+          "statusUpdated": "Yangilandi!"
+        }
+      },
+      "tabs": {
+        "all": "Barcha kuponlar",
+        "used": "Ishlatilgan kuponlar"
+      }
+    },
+    "update": {
+      "title": "Kuponni yangilash",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        },
+        "value": {
+          "label": "Qiymati (Chegirma %)",
+          "placeholder": "Qiymati"
+        },
+        "description": {
+          "label": "Tavsif",
+          "placeholder": "Tavsif"
+        },
+        "startDate": {
+          "label": "Boshlanish sanasi",
+          "placeholder": "Boshlanish sanasi"
+        },
+        "endDate": {
+          "label": "Tugash sanasi",
+          "placeholder": "Tugash sanasi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Kuponni yangilash"
+      },
+      "messages": {
+        "success": "Kupon yangilandi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "delete": {
+      "title": "Kuponni o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Kupon o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "deleteUsed": {
+      "title": "Ishlatilgan kuponni o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Ishlatilgan kupon o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "usedCoupons": {
+      "title": "Ishlatilgan kuponlar",
+      "actions": {
+        "add": "Yangi qo'shish"
+      },
+      "error": {
+        "title": "Xatolik!",
+        "description": "Nimadir noto'g'ri bajarildi."
+      }
+    }
+  },
+  "familyMembers": {
+    "add": {
+      "title": "Oila a'zosi qo'shish",
+      "form": {
+        "user": "Foydalanuvchi",
+        "firstName": {
+          "label": "Ism",
+          "placeholder": "Ism"
+        },
+        "lastName": {
+          "label": "Familiya",
+          "placeholder": "Familiya"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Telefon raqami"
+        },
+        "dateOfBirth": {
+          "label": "Tug'ilgan sana (OO/KK/YYYY)",
+          "placeholder": "Sanani tanlang"
+        },
+        "gender": {
+          "label": "Jins",
+          "placeholder": "Jinsni tanlang",
+          "options": {
+            "male": "Erkak",
+            "female": "Ayol"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Oila a'zosi qo'shish"
+      },
+      "messages": {
+        "success": "Oila a'zosi qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "delete": {
+      "title": "Oila a'zosi o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Oila a'zosi o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "edit": {
+      "title": "Oila a'zosi yangilash",
+      "form": {
+        "user": "Foydalanuvchi",
+        "firstName": {
+          "label": "Ism",
+          "placeholder": "Ism"
+        },
+        "lastName": {
+          "label": "Familiya",
+          "placeholder": "Familiya"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Telefon raqami"
+        },
+        "dateOfBirth": {
+          "label": "Tug'ilgan sana (OO/KK/YYYY)",
+          "placeholder": "Sanani tanlang"
+        },
+        "gender": {
+          "label": "Jins",
+          "placeholder": "Jinsni tanlang",
+          "options": {
+            "male": "Erkak",
+            "female": "Ayol"
+          }
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Oila a'zosi yangilash"
+      },
+      "messages": {
+        "success": "Oila a'zosi yangilandi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "byUser": {
+      "title": "Foydalanuvchi a'zolari",
+      "search": "Qidirish",
+      "buttons": {
+        "add": "Yangi qo'shish",
+        "edit": "Tahrirlash",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "table": {
+        "name": "Ism",
+        "phone": "Telefon",
+        "gender": "Jins",
+        "dob": "Tug'ilgan sana",
+        "createdAt": "Yaratilgan sana"
+      },
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        }
+      },
+      "buttons": {
+        "add": "Yangi qo'shish",
+        "edit": "Tahrirlash",
+        "delete": "O'chirish"
+      }
+    }
+  },
+  "reviews": {
+    "search": "Sharh qidirish",
+    "buttons": {
+      "refresh": "Yangilash"
+    },
+    "title": "Sharhlar",
+    "message": "Iltimos, sharh statusini {{type}} ga o'zgartirishni xohlaysizmi?"
+  },
+  "transactions": {
+    "add": {
+      "title": "Transaction qo'shish",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Transaction qo'shish"
+      },
+      "messages": {
+        "success": "Transaction qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "delete": {
+      "title": "Transactionni o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Transaction o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "update": {
+      "title": "Transactionni yangilash",
+      "form": {
+        "title": {
+          "label": "Nomi",
+          "placeholder": "Nomi"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Transactionni yangilash"
+      },
+      "messages": {
+        "success": "Transaction yangilandi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "badge": {
+        "credited": "Credited",
+        "debited": "Debited",
+        "na": "N/A",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "tabs": {
+        "all": "Barcha Transactionlar",
+        "appointmentPayments": "Appointment to'lovlar",
+        "invoices": "Hisobotlar"
+      },
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        }
+      }
+    },
+    "chart": {
+      "title": "So'nggi {{days}} kun ichidagi tranzaksiyalar",
+      "lastDays": "So'nggi {{days}} kun",
+      "distribution": "Tranzaksiyalar umumiy summasi taqsimoti"
+    }
+  },
+  "notifications": {
+    "title": "Bildirishnomalar",
+    "search": {
+      "placeholder": "Qidirish"
+    },
+    "table": {
+      "id": "ID",
+      "title": "Sarlavha",
+      "body": "Matn",
+      "appointmentId": "Qabul ID",
+      "userId": "Foydalanuvchi ID",
+      "fileId": "Fayl ID",
+      "prescriptionId": "Retsept ID",
+      "updatedAt": "Yangilangan",
+      "buttons": {
+        "goToAppointment": "Qabulga o'tish",
+        "goToUser": "Foydalanuvchiga o'tish",
+        "goToFile": "Faylga o'tish",
+        "goToPrescription": "Retseptga o'tish"
+      }
+    },
+    "buttons": {
+      "addNew": "Yangi qo'shish"
+    },
+    "messages": {
+      "error": {
+        "title": "Xatolik!",
+        "description": "Xatolik yuz berdi."
+      }
+    },
+    "add": {
+      "title": "Bildirishnoma yuborish",
+      "form": {
+        "title": {
+          "label": "Sarlavha",
+          "placeholder": "Sarlavha"
+        },
+        "body": {
+          "label": "Matn",
+          "placeholder": "Matn"
+        },
+        "file": {
+          "choose": "Faylni tanlang",
+          "dragHere": "yoki bu yerga tashlang",
+          "selectedFile": "Tanlangan fayl:"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "send": "Yuborish"
+      },
+      "messages": {
+        "success": "Bildirishnoma yuborildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    }
+  },
+  "states": {
+    "add": {
+      "title": "Davlat qo'shish",
+      "submit": "Nomi",
+      "buttons": {
+        "close": "Yopish",
+        "add": "Davlat qo'shish"
+      },
+      "messages": {
+        "success": "Davlat qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "delete": {
+      "title": "Davlatni o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Davlat o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "add": "Yangi qo'shish",
+      "buttons": {
+        "edit": "Tahrirlash",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Davlat qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "update": {
+      "title": "Davlatni yangilash",
+      "submit": "Nomi",
+      "buttons": {
+        "close": "Yopish",
+        "update": "Davlatni yangilash"
+      },
+      "messages": {
+        "success": "Davlat yangilandi!",
+        "error": "Xatolik yuz berdi"
+      }
+    }
+  },
+  "prescriptions": {
+    "add": {
+      "title": "Retsept qo'shish",
+      "medicine": "Dori",
+      "dosage": "Dozasi",
+      "duration": {
+        "label": "Davomiyligi",
+        "options": {
+          "threeDays": "3 kun davomida",
+          "fiveDays": "5 kun davomida",
+          "sevenDays": "7 kun davomida",
+          "fifteenDays": "15 kun davomida",
+          "oneMonth": "1 oy davomida"
+        }
+      },
+      "time": {
+        "label": "Qabul vaqti",
+        "options": {
+          "afterMeal": "Ovqatdan keyin",
+          "beforeMeal": "Ovqatdan oldin"
+        }
+      },
+      "doseInterval": {
+        "label": "Qabul oralig'i",
+        "options": {
+          "onceADay": "Kuniga bir marta",
+          "everyMorningAndEvening": "Ertalab va kechqurun",
+          "threeTimesADay": "Kuniga uch marta",
+          "fourTimesADay": "Kuniga to'rt marta"
+        }
+      },
+      "notes": {
+        "label": "Izohlar"
+      },
+      "buttons": {
+        "save": "Retseptni saqlash",
+        "back": "Orqaga",
+        "newMedicine": "Yangi dori"
+      },
+      "form": {
+        "physicalInformation": {
+          "label": "Jismoniy ma'lumot"
+        },
+        "foodAllergies": {
+          "label": "Oziq-ovqat allergiyasi"
+        },
+        "tendencyToBleed": {
+          "label": "Qon ketishga moyillik"
+        },
+        "heartDisease": {
+          "label": "Yurak kasalligi"
+        },
+        "bloodPressure": {
+          "label": "Qon bosimi"
+        },
+        "diabetic": {
+          "label": "Qandli diabet"
+        },
+        "surgery": {
+          "label": "Jarrohlik"
+        },
+        "accident": {
+          "label": "Baxtsiz hodisa"
+        },
+        "others": {
+          "label": "Boshqalar"
+        },
+        "medicalHistory": {
+          "label": "Tibbiy tarix"
+        },
+        "currentMedication": {
+          "label": "Hozirgi dori-darmonlar"
+        },
+        "femalePregnancy": {
+          "label": "Homiladorlik"
+        },
+        "breastFeeding": {
+          "label": "Emizish"
+        },
+        "pulseRate": {
+          "label": "Yurak urishi"
+        },
+        "temperature": {
+          "label": "Harorat"
+        },
+        "problemAndAdvice": {
+          "label": "Muammo va maslahat"
+        },
+        "problem": {
+          "label": "Muammo"
+        },
+        "tests": {
+          "label": "Tekshiruvlar"
+        },
+        "advice": {
+          "label": "Maslahat"
+        },
+        "nextVisit": {
+          "label": "Keyingi tashrif",
+          "after": "Keyin",
+          "days": "kun"
+        }
+      }
+    },
+    "index": {
+      "search": "Qidirish",
+      "table": {
+        "action": "Amal",
+        "id": "ID",
+        "appointmentId": "Appointment ID",
+        "patient": "Pacient",
+        "date": "Sana",
+        "pulseRate": "Tashrif",
+        "temperature": "Harorat"
+      },
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        },
+        "noData": "Jadvalda ma'lumot yo'q"
+      }
+    },
+    "delete": {
+      "title": "Receptni o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      }
+    },
+    "prescription": {
+      "title": "Recept",
+      "search": "Qidirish",
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        },
+        "noData": "Jadvalda ma'lumot yo'q"
+      },
+      "table": {
+        "patient": "Pacient",
+        "doctor": "Shifokor",
+        "date": "Sana",
+        "pulseRate": "Tashrif",
+        "temperature": "Harorat"
+      },
+      "buttons": {
+        "newPrescription": "Yangi Recept",
+        "close": "Yopish",
+        "print": "Chiqarish"
+      }
+    },
+    "prescriptionByPatientID": {
+      "title": "Pacientning Recepti",
+      "search": "Qidirish",
+      "tables": {
+        "id": "ID",
+        "appointmentId": "Appointment ID",
+        "patient": "Patient",
+        "date": "Sana",
+        "pulseRate": "Tashrif",
+        "temperature": "Harorat",
+        "action": "Amal"
+      },
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        },
+        "noData": "Jadvalda ma'lumot yo'q"
+      }
+    },
+    "update": {
+      "title": "Receptni yangilash",
+      "messages": {
+        "success": "Recept yangilandi!",
+        "error": "Xatolik yuz berdi"
+      },
+      "buttons": {
+        "close": "Yopish",
+        "back": "Orqaga",
+        "update": "Receptni yangilash",
+        "newMedicine": "Yangi dori",
+        "save": "Saqlash"
+      },
+      "form": {
+        "dosage": "Dori miqdori",
+        "duration": {
+          "label": "Davomiyligi",
+          "options": {
+            "threeDays": "3 kun",
+            "fiveDays": "5 kun",
+            "sevenDays": "7 kun",
+            "fifteenDays": "15 kun",
+            "oneMonth": "1 oy"
+          }
+        },
+        "time": {
+          "label": "Vaqt",
+          "options": {
+            "afterMeal": "Ovqatdan keyin",
+            "beforeMeal": "Ovqatdan oldin"
+          }
+        },
+        "doseInterval": {
+          "label": "Dori intervali",
+          "options": {
+            "onceADay": "1 marta",
+            "everyMorningAndEvening": "Har kuni ikki marta",
+            "threeTimesADay": "Har kuni 3 marta",
+            "fourTimesADay": "Har kuni 4 marta"
+          }
+        },
+        "notes": {
+          "label": "Izoh",
+          "placeholder": "Izoh"
+        },
+        "physicalInformation": {
+          "label": "Fizik ma'lumot"
+        },
+        "foodAllergies": {
+          "label": "Ovqat alergiyasi"
+        },
+        "tendencyToBleed": {
+          "label": "Tendensiya qon sifatida"
+        },
+        "heartDisease": {
+          "label": "Qon to'qimasidan xavfli"
+        },
+        "bloodPressure": {
+          "label": "Qon bosimi"
+        },
+        "diabetic": {
+          "label": "Diabet"
+        },
+        "surgery": {
+          "label": "Operatsiya"
+        },
+        "accident": {
+          "label": "Oqibat"
+        },
+        "others": {
+          "label": "Boshqa"
+        },
+        "medicalHistory": {
+          "label": "Shffokoroik  tarixi"
+        },
+        "currentMedication": {
+          "label": "Davolash"
+        },
+        "femalePregnancy": {
+          "label": "Ayolning o'simligi"
+        },
+        "breastFeeding": {
+          "label": "Ota-ona yolg'onligi"
+        },
+        "pulseRate": {
+          "label": "Tashrif"
+        },
+        "temperature": {
+          "label": "Harorat"
+        },
+        "problem": {
+          "label": "Muammolaringiz"
+        },
+        "tests": {
+          "label": "Testlar"
+        },
+        "advice": {
+          "label": "Tafsilotlar"
+        },
+        "nextVisit": {
+          "label": "Keyingi kun",
+          "after": "Keyingi",
+          "days": "kun",
+          "afterDays": "Keyingi {{days}} kun"
+        }
+      }
+    }
+  },
+  "files": {
+    "title": "Pacient fayllarini qo'shish",
+    "buttons": {
+      "close": "Yopish",
+      "add": "Qo'shish"
+    },
+    "form": {
+      "title": "Pacient",
+      "fileName": "Fayl nomi",
+      "maxSize": "Max 5 MB",
+      "choose": "Faylni tanlang",
+      "dragHere": "Yoki bu yerga tashlang",
+      "selectedFile": "Tanlangan fayl:"
+    },
+    "messages": {
+      "sizeError": "5 MB dan kichik faylni tanlang",
+      "fileError": "Faylni tanlang",
+      "patientError": "Pacientni tanlang",
+      "success": "Fayl qo'shildi!"
+    }
+  },
+  "medicines": {
+    "add": {
+      "title": "Dori qo'shish",
+      "form": {
+        "name": {
+          "label": "Nomi",
+          "placeholder": "Dori nomi"
+        },
+        "notes": {
+          "label": "Izohlar",
+          "placeholder": "Qo'shimcha izohlar"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "add": "Dori qo'shish"
+      },
+      "messages": {
+        "success": "Dori qo'shildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "update": {
+      "title": "Dorini yangilash",
+      "form": {
+        "name": {
+          "label": "Nomi",
+          "placeholder": "Dori nomi"
+        },
+        "notes": {
+          "label": "Izohlar",
+          "placeholder": "Qo'shimcha izohlar"
+        }
+      },
+      "buttons": {
+        "close": "Yopish",
+        "update": "Dorini yangilash"
+      },
+      "messages": {
+        "success": "Dori yangilandi!",
+        "error": "Xatolik yuz berdi"
+      }
+    },
+    "index": {
+      "title": "Dorilar",
+      "search": {
+        "placeholder": "Qidirish"
+      },
+      "buttons": {
+        "addNew": "Yangi qo'shish"
+      },
+      "messages": {
+        "error": {
+          "title": "Xatolik!",
+          "description": "Xatolik yuz berdi."
+        }
+      }
+    },
+    "delete": {
+      "title": "Dorini o'chirish",
+      "message": "Ishonchingiz komilmi? Bu amalni qaytarib bo'lmaydi.",
+      "buttons": {
+        "cancel": "Bekor qilish",
+        "delete": "O'chirish"
+      },
+      "messages": {
+        "success": "Dori o'chirildi!",
+        "error": "Xatolik yuz berdi"
+      }
+    }
+  }
+}
