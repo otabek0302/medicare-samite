@@ -1,0 +1,8 @@
+jobs:
+  deploy:
+    runs-on: self-hosted  # Убедись, что это указано
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Run script
+        run: echo "Runner is working!"
