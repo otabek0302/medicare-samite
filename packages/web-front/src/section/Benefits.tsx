@@ -17,8 +17,8 @@ const InfoCards: React.FC<InfoCardsProps> = () => {
         <div className="bg-[#4a89ff] text-white p-8 rounded-lg shadow-lg">
           <div className="flex items-center justify-center mb-4">
           </div>
-          <h2 className="font-bold text-2xl mb-3">Personalized Care</h2>
-          <p className="text-lg text-start">
+          <h2 className="font-bold text-3xl mb-3 text-start">Personalized Care</h2>
+          <p className="text-sm text-start">
             At SAMIT, we prioritize your health and well-being above all else. Our hospital offers
             comprehensive medical services tailored to meet your individual needs, ensuring you receive
             the highest quality of care at every step of your journey.
@@ -28,8 +28,8 @@ const InfoCards: React.FC<InfoCardsProps> = () => {
         <div className="bg-[#215bff] text-white p-8 rounded-lg shadow-lg">
           <div className="flex items-center justify-center mb-4">
           </div>
-          <h2 className="font-bold text-2xl mb-3">Expert Team</h2>
-          <p className="text-lg text-start">
+          <h2 className="font-bold text-3xl mb-3 text-start">Expert Team</h2>
+          <p className="text-sm text-start">
             With a dedicated team of experienced healthcare professionals, including doctors, nurses, and
             support staff, we are committed to providing you with personalized attention and expert medical
             guidance. You can trust our skilled team to deliver compassionate care and support throughout your
@@ -40,8 +40,8 @@ const InfoCards: React.FC<InfoCardsProps> = () => {
         <div className="bg-[#0828a7] text-white p-8 rounded-lg shadow-lg">
           <div className="flex items-center justify-center mb-4">
           </div>
-          <h2 className="font-bold text-2xl mb-3">Cutting-Edge Facilities</h2>
-          <p className="text-lg text-start">
+          <h2 className="font-bold text-3xl mb-3 text-start">Cutting-Edge Facilities</h2>
+          <p className="text-sm text-start">
             At SAMIT, we prioritize your health and well-being above all else. Our hospital offers
             comprehensive medical services tailored to meet your individual needs, ensuring you receive
             the highest quality of care at every step of your journey.
