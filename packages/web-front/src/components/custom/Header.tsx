@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     <h1>SAMIT</h1>
     </div>
 
-    <Select>
+    {/* <Select>
   <SelectTrigger className="w-[80px] bg-white text-black ml-auto">
     <SelectValue placeholder="EN" />
   </SelectTrigger>
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <SelectItem value="dark">UZ</SelectItem>
     <SelectItem value="system">EN</SelectItem>
   </SelectContent>
-</Select>
+</Select> */}
 </div>
 
     </div>
