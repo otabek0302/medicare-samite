@@ -10,16 +10,15 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout Repository
-        uses: gitlab-runner
+        uses: actions/checkout@v4
 
       - name: Pull latest changes
-        run: git pull origin main
-
-      - name: Change to project directory
-        run: cd $PROJECT_FOLDER
+        run: |
+          git fetch origin
+          git reset --hard origin/main
 
       - name: Restart Docker containers
+        working-directory: ${{ github.workspace }}
         run: |
-          docker-compose down
-          docker-compose up --build -d
-          docker system prune -f
+          docker-compose up --pull always --build -d
+          docker system prune -f --volumes
