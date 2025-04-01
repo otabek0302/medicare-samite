@@ -19,8 +19,9 @@ jobs:
       - name: Run deploy script on server with password
         run: |
           sshpass -p "cPe4!uQshbHT" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << EOF
-            cd /path/to/your/project
+            
             git pull origin main
+            cd medical-samite
             docker-compose down
             docker-compose up --build -d
             docker system prune -f
