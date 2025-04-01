@@ -20,7 +20,7 @@ jobs:
         run: |
           sshpass -p "cPe4!uQshbHT" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << EOF
             
-            git pull origin main
+            git clone https://github.com/otabek0302/medicare-samite.git
             cd medical-samite
             docker-compose down
             docker-compose up --build -d
