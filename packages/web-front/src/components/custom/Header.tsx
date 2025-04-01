@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     <div>
 
 <div className="bg-[#041150] w-full text-white font-bold flex items-center justify-center py-[10px] px-5 gap-9 md:justify-around ">
-    <div className="flex md:gap-2">
+    <div className="flex md:gap-5">
     <img src="/logo.png" alt="logo.png" className="w-[40px] h-[32px]" />
     <h1>SAMIT</h1>
     </div>
