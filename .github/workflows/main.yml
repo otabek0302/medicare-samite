@@ -10,7 +10,16 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
-      
-      - name: Run a Test Command
-        run: echo "Runner is working!"
+        uses: gitlab-runner
+
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - name: Change to project directory
+        run: cd $PROJECT_FOLDER
+
+      - name: Restart Docker containers
+        run: |
+          docker-compose down
+          docker-compose up --build -d
+          docker system prune -f
