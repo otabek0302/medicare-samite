@@ -11,7 +11,8 @@ const Home: React.FC<HomeProps> = () => {
     return ( <>
     <Hero/>
         <InfoCards />
-        <Features/>
+        <Features />
+        
     </> );
 }
  
