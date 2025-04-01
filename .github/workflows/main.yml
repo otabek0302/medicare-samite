@@ -7,18 +7,24 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
-    steps:
-      - name: Manually checkout repository
-        run: |
-          cd $GITHUB_WORKSPACE
-          git init
-          git remote add origin https://github.com/otabek0302/medicare-samite.git
-          git fetch origin
-          git reset --hard origin/main
+    runs-on: ubuntu-latest
 
-      - name: Restart Docker containers
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get install sshpass
+
+      - name: Copy files to server
         run: |
-          cd $GITHUB_WORKSPACE
-          docker-compose up --pull always --build -d
-          docker system prune -f --volumes
+          sshpass -p cPe4!uQshbHT rsync -avz --exclude '.git*' ./ root@83.222.23.106:/var/www/html/
+
+      - name: Run commands on the server
+        run: |
+          sshpass -p  cPe4!uQshbHT  ssh root@83.222.23.106 << EOF
+            cd /var/www/html/
+            docker-compose down
+            docker-compose up --build -d
+            docker system prune -f
+          EOF
