@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = () => {
 
         <>
         
-            <div className="bg-[#041150] pt-7 px-2 md:flex items-center md:px-7 pb-20 lg:pb-0">
+            <div className="bg-[#041150] pt-7 px-2 md:flex items-center md:px-7 md:pb-20 lg:pb-0">
                 
                 <div>
                     <h2 className="text-xl text-white font-normal mt-3 md:text-2xl lg:text-2xl">Welcome to SAMIT</h2>
