@@ -9,7 +9,8 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = () => {
     return ( <>
     <Hero/>
-        <InfoCards/>
+    <InfoCards/>
+    
     </> );
 }
  
