@@ -13,7 +13,7 @@ const Features: React.FC<FeaturesProps> = () => {
                 <img src="/doctor-2.png" alt="doc" className="w-[70%] mx-auto md:w-[40%] lg:w-[30%] px-3" />
 
 
-             <div className="bg-gray-100 py-10 px-6 sm:px-10 ">
+             <div className="bg-gray-100 py-10  w-[100%] px-6 sm:px-10 md:w-[55%]">
                     <div className="max-w-3xl mx-auto text-start text-[#4A5568] lg:text-left">
                      <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2">
           We are always ensure best <span className="text-[#34C38F]">Medical treatment</span> for Your Health
