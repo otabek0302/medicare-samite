@@ -11,13 +11,17 @@ jobs:
 
     steps:
       - name: Checkout repository
-        run: |
-          git clone https://github.com/otabek0302/medicare-samite.git
-          cd medicare-samite
+        uses: actions/checkout@v3
 
       - name: Install sshpass
-        run: sudo apt-get install sshpass
+        run: sudo apt-get install -y sshpass
 
       - name: Run deploy script on server with password
         run: |
-          ssh   root@83.222.23.106
+          sshpass -p "cPe4!uQshbHT" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << EOF
+            cd /path/to/your/project
+            git pull origin main
+            docker-compose down
+            docker-compose up --build -d
+            docker system prune -f
+          EOF
