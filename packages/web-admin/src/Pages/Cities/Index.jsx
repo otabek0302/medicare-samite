@@ -18,8 +18,10 @@ export default function Cities() {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [SelectedData, setSelectedData] = useState();
+  
   const { isOpen: DeleteisOpen, onOpen: DeleteonOpen, onClose: DeleteonClose } = useDisclosure();
   const { isOpen: EditisOpen, onOpen: EditonOpen, onClose: EditonClose } = useDisclosure();
+  
   const toast = useToast();
   const id = 'Errortoast';
 
@@ -28,7 +30,8 @@ export default function Cities() {
     return res.data;
   };
 
-  const handleActionClick = (rowData: any) => {
+  // @ts-ignore
+  const handleActionClick = (rowData) => {
     setSelectedData(rowData);
   };
 
