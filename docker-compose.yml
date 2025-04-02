@@ -63,7 +63,7 @@ services:
     environment:
       - DISABLE_IPV6=true
     ports:
-      - 80:5174
+      - 5173:80
     restart: unless-stopped
 
 networks:
