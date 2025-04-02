@@ -4,6 +4,7 @@ import InfoCards from "@/section/InfoCards";
 import Benefits from "@/section/Benefits"
 import React from "react";
 import Workflow from "@/section/Workflow";
+import Faq from "@/section/Faq";
 
 interface HomeProps {
     
@@ -16,6 +17,7 @@ const Home: React.FC<HomeProps> = () => {
         <Features/>
         <Benefits />
         <Workflow/>
+        <Faq/>
     </> );
 }
  

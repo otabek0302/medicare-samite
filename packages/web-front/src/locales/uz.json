@@ -1,0 +1,94 @@
+{
+  "title": "SAMIT",
+  "language": "UZ",
+  "welcome": "SAMITga xush kelibsiz",
+  "headline": "Biz eng yaxshi va arzon tibbiy yordamni taqdim etamiz.",
+  "description": "SAMITda mislsiz tibbiy mukammallikni boshdan kechiring: keng qamrovli tibbiy xizmatlar, ilg‘or shifoxona boshqaruvi va mehribon bemorlarni parvarish qilish.",
+  "get_started": "Boshlash",
+  "get_appointment": "Qabulga yozilish",
+  
+  "reach_out_title": "Biz bilan bog‘laning",
+  "reach_out_text": "Istalgan vaqtda biz bilan bog‘lanishdan tortinmang. Biz sizga yordam berishga tayyormiz!",
+
+  "service_title": "24 soatlik xizmat",
+  "service_text": "Biz 24 soatlik tibbiy xizmatni taqdim etishdan faxrlanamiz, shunda siz istalgan vaqtda kerakli yordamni olishingiz mumkin.",
+
+  "tech_title": "Zamonaviy tibbiy texnologiyalar",
+  "tech_text": "Biz eng yuqori sifatli yordamni taqdim etish uchun ilg‘or tibbiy texnologiyalardan foydalanamiz.",
+
+  "features_title": "Biz har doim eng yaxshi tibbiy davolashni kafolatlaymiz",
+  "features_description": "Og'riqni boshqarish davolash variantlari. Og'riq va simptomlarni boshqarish – palliativ va gospis parvarishining asosiy maqsadlaridan biridir.",
+  "features_bullet_1": "Sog'liqni saqlash sohasidagi eng yaxshi mutaxassislar.",
+  "features_bullet_2": "Rivojlangan tibbiyot xizmatlari mavjud.",
+  "features_bullet_3": "Barcha tibbiy muolajalar uchun chegirmalar mavjud.",
+  "features_bullet_4": "Oson va tez ro‘yxatdan o‘tish jarayoni.",
+  "make_appointment": "Qabulga yozilish",
+
+  "features_half_text1": "Biz har doim eng yaxshisini ta’minlaymiz",
+  "features_half_text2": "Tibbiy davolash",
+  "features_half_text3": "sog‘lig‘ingiz uchun",
+
+  "info_cards_title": "Nima uchun bizning shifoxonani tanlashingiz kerak?",
+  "info_cards_subtitle_1": "Shaxsiylashtirilgan parvarish",
+  "info_cards_text_1": "SAMITda biz sizning sog'lig'ingiz va farovonlig'ingizni barcha narsadan ustun qo'yamiz. Bizning shifoxonamiz shaxsiy ehtiyojlaringizni qondirish uchun moslashtirilgan keng qamrovli tibbiy xizmatlarni taklif etadi, bu esa har bir davolash bosqichida eng yuqori sifatli yordamni ta'minlaydi.",
+  "info_cards_subtitle_2": "Mutaxassislar jamoasi",
+  "info_cards_text_2": "Tajribali tibbiy mutaxassislar jamoasi, shu jumladan shifokorlar, hamshiralar va yordamchi xodimlar bilan biz sizga shaxsiy e'tibor va professionallikni taqdim etishga tayyormiz. Bizning malakali jamoamiz sizning davolanish jarayonida yordam va qo'llab-quvvatlashni ta'minlaydi.",
+  "info_cards_subtitle_3": "Zamonaviy tibbiy uskunalar",
+  "info_cards_text_3": "SAMITda biz sizning sog'lig'ingizni birinchi o'ringa qo'yamiz. Bizning shifoxonamiz sizning ehtiyojlaringizni qondirish uchun kompleks tibbiy xizmatlarni taklif etadi, bu esa har bir davolash bosqichida eng yuqori sifatli yordamni ta'minlaydi.",
+  "info_cards_subtitle_4": "Eng zamonaviy tibbiy muassasalar",
+  "info_cards_text_4": "SAMITda biz sizga eng zamonaviy tibbiy texnologiyalar va yuqori darajadagi xizmatlarni taqdim etamiz. Klinikamiz eng so‘nggi jihozlar bilan ta’minlangan bo‘lib, sifatli davolanishni kafolatlaydi.",
+
+  "workflow_title": "Bizning operatsion usulimiz",
+  "workflow_subtitle": "Sog'lig'ingiz bo'yicha to'liq qo'llanma",
+  "workflow_description": "Biz sizning barcha tibbiy ehtiyojlaringiz uchun ishonchli markazimiz. Bizning keng qamrovli katalogimiz siz va oilangiz uchun eng yaxshi tibbiy xizmatlarni taqdim etish uchun turli xil tibbiy xizmatlar va mutaxassislarga qulay kirishni ta'minlaydi.",
+  "workflow_step_1": "Qabulga yozilish",
+  "workflow_step_2": "Tibbiy ko'rikdan o'tish",
+  "workflow_step_3": "Davolash",
+  "workflow_step_4": "Dori-darmonlar va to'lov",
+
+
+  "faq_title": "Ko'p So'raladigan Savollar",
+  
+  "faq_question_1": "SAMIT qanday xizmatlarni taklif qiladi?",
+  "faq_answer_1": "SAMIT stomatologiya, ginekologiya, ortopediya, nevrologiya, umumiy tibbiyot, dermatologiya va kardiologiyani o‘z ichiga olgan keng qamrovli tibbiy xizmatlarni taklif qiladi. Shuningdek, biz ilg‘or laboratoriya tahlillari va diagnostika xizmatlarini taqdim etamiz.",
+
+  "faq_question_2": "SAMIT boshqa tibbiyot muassasalaridan nimasi bilan farq qiladi?",
+  "faq_answer_2": "SAMIT arzon tibbiy xizmat, ilg‘or tibbiy texnologiyalar, yuqori malakali mutaxassislar va 24 soatlik xizmat bilan ajralib turadi. Biz barcha tibbiy muolajalarga chegirmalar taqdim etamiz va tezkor ro‘yxatdan o‘tish jarayonini kafolatlaymiz.",
+
+  "faq_question_3": "SAMITda qanday qilib qabulga yozilishim mumkin?",
+  "faq_answer_3": "Siz bizning veb-saytimizdagi 'Qabulga yozilish' bo‘limiga o‘tib, xizmatni tanlash, qulay vaqtni belgilash va bron qilish orqali osongina qabulga yozilishingiz mumkin.",
+
+  "faq_question_4": "Sizning laboratoriyangizda qanday diagnostik testlar mavjud?",
+  "faq_answer_4": "Bizning laboratoriyamizda qon umumiy tahlili (CBC), gemoglobin (Hb) testlari, rentgen va KT skanerlari kabi keng ko‘lamli diagnostik testlar mavjud. Biz tez va aniq natijalarni taqdim etamiz.",
+
+  "faq_question_5": "Tibbiy muolajalar uchun chegirmalar mavjudmi?",
+  "faq_answer_5": "Ha, SAMIT barcha tibbiy muolajalarga chegirmalar taklif qiladi. Masalan, CBC va gemoglobin testlariga 5% chegirma, rentgen va KT skanerlari uchun esa 10% chegirma beriladi.",
+
+  "faq_question_6": "Ish vaqtingiz qanday?",
+  "faq_answer_6": "SAMIT 24 soat, haftaning 7 kuni ishlaydi. Shunday qilib, siz istalgan vaqtda tibbiy yordam olishingiz mumkin.",
+
+  "faq_question_7": "SAMIT shifokorlari kimlar?",
+  "faq_answer_7": "Bizning jamoamiz turli sohalarga ixtisoslashgan yuqori malakali va tajribali shifokorlardan iborat. Ular orasida kardiologiya, nevrologiya, dermatologiya va boshqa mutaxassisliklar mavjud. Shifokorlarimiz haqida batafsil ma’lumotni veb-saytimizdagi 'Bizning shifokorlar' bo‘limidan topishingiz mumkin.",
+
+  "faq_question_8": "Qo‘shimcha ma’lumot olish uchun SAMIT bilan qanday bog‘lanishim mumkin?",
+  "faq_answer_8": "Bizning veb-saytimizda keltirilgan aloqa ma’lumotlari orqali istalgan vaqtda biz bilan bog‘lanishingiz mumkin. Har qanday savollaringiz yoki qo‘shimcha yordam uchun biz doimo tayyormiz.",
+
+  "faq_question_9": "SAMITda davolanish jarayoni qanday amalga oshiriladi?",
+  "faq_answer_9": "SAMITda davolanish jarayoni qabulga yozilish, tibbiy ko‘rikdan o‘tish, kerakli muolajalarni o‘tkazish va dori-darmon yoki qo‘shimcha parvarish bo‘yicha tavsiyalar berishdan iborat. Bizning tizimimiz tez va samarali tibbiy xizmat ko‘rsatishga yo‘naltirilgan.",
+  
+  "faq_question_10": "SAMIT tibbiy xizmatlar sifatini qanday kafolatlaydi?",
+  "faq_answer_10": "Biz zamonaviy tibbiy texnologiyalar va ilg‘or tibbiyot uskunalaridan foydalanamiz. Bizning tajribali shifokorlarimiz har bir bemorga individual yondashib, eng yuqori sifatli tibbiy yordam ko‘rsatish uchun xizmat qilishadi.",
+
+
+
+  "footer_rights_reserved": "Barcha huquqlar himoyalangan",
+  "footer_hospital": "Kasalxona",
+  "footer_about_us": "Biz haqimizda",
+  "footer_departments": "Bo'limlar",
+  "footer_doctors": "Doktorlar",
+  "footer_contact_us": "Biz bilan bog'lanish",
+  "footer_support": "Yordam",
+  "footer_terms_of_service": "Xizmat ko'rsatish shartlari",
+  "footer_legal": "Huquqiy",
+  "footer_privacy_policy": "Maxfiylik siyosati"
+}
