@@ -97,7 +97,7 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
   const { isOpen: AddPatientisOpen, onOpen: AddPatientonOpen, onClose: AddPatientonClose } = useDisclosure();
   const { doctorsData } = useDoctorData();
   const { patientsData } = usePatientData();
-  
+
   const [patient, setpatient] = useState();
   const [doct, setdoct] = useState();
   const [selectedDate, setselectedDate] = useState();
@@ -133,17 +133,18 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
     if (paymentStatus === 'Paid' && !paymentMethod) return 'Payment Method';
     return null;
   };
-  
+
   const mutation = useMutation({
     mutationFn: async () => {
       const missingField = checkMissingValues();
       if (missingField) {
         throw new Error(`Please select ${missingField}`);
-      } else if (isDoctLoading || !doctorDetails) {
-        throw new Error(`Unable to fetch doctor details`);
+      }
+      if (isDoctLoading || !doctorDetails) {
+        throw new Error("Unable to fetch doctor details");
       }
       if (!missingField) {
-        let formData = {
+        const formData = {
           // @ts-ignore
           patient_id: patient.id,
           status: status,
@@ -169,7 +170,7 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
         await addAppointment(formData);
       }
     },
-    
+
     onError: (error) => {
       ShowToast(toast, 'error', error.message);
     },
@@ -188,12 +189,12 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
       <Modal isOpen={isOpen} onClose={onClose} size={'2xl'} onOverlayClick={false}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{t('appointments.add.title')}</ModalHeader>
+          <ModalHeader >{t('appointments.add.title')}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Flex gap={4} alignItems={'center'} justifyContent={'space-between'}>
               <Box flex={1}>
-                <UsersCombobox data={patientsData} name={'Patient'} setState={setpatient} defaultData={defaultDataForPationt} addNew={true} addOpen={AddPatientonOpen} /> 
+                <UsersCombobox data={patientsData} name={'Patient'} setState={setpatient} defaultData={defaultDataForPationt} addNew={true} addOpen={AddPatientonOpen} />
               </Box>
               <Box>
                 <Button size={'xs'} py={2} px={4} colorScheme={'blue'} onClick={AddPatientonOpen}> {t('appointments.add.addPatient')} </Button>
@@ -319,6 +320,7 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
             <Card
               mt={5}
               bg={useColorModeValue('white', 'gray.700')}>
+
               <CardBody
                 p={3}
                 as={'form'}>
@@ -431,6 +433,7 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
       </Modal>
       {timeSlotisOpen ? (
         <AvailableTimeSlotes
+
           isOpen={timeSlotisOpen}
           onClose={timeSlotonClose}
           // @ts-ignore
@@ -450,6 +453,7 @@ function AddNewAppointment({ isOpen, onClose, PatientID }) {
           }}
           isOpen={AddPatientisOpen}
           onClose={AddPatientonClose}
+
         />
       ) : null}
     </Box>

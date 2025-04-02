@@ -80,61 +80,61 @@ export default function DashboardMain() {
   );
 
   return (
-    <Box >
+    <Box>
       <Buttons />
-      <Flex gap={2.5} mt={5} >
+      <Flex gap={2.5} mt={5}>
         <Box width={"35%"} minH={"100%"} flex={1}>
           {isLoading ? <Skeleton w={"100%"} h={260} /> : <WelcomeCard data={data} />}
         </Box>
-        <Box width={"70%"} flex={1.8} >
+        <Box width={"70%"} flex={1.8}>
           {isLoading ? (
             <>
               <Flex gap={5}>
                 {" "}
                 <>
-                  <Skeleton flex={1} w={"100%"} h={24}></Skeleton>
-                  <Skeleton flex={1} w={"100%"} h={24}></Skeleton>
+                  <Skeleton flex={1} w={"100%"} h={24}/>
+                  <Skeleton flex={1} w={"100%"} h={24}/>
                 </>
               </Flex>
               <Flex gap={5} mt={8}>
                 {" "}
                 <>
-                  <Skeleton flex={1} w={"100%"} h={24}></Skeleton>
-                  <Skeleton flex={1} w={"100%"} h={24}></Skeleton>
+                  <Skeleton flex={1} w={"100%"} h={24}/>
+                  <Skeleton flex={1} w={"100%"} h={24}/>
                 </>
               </Flex>
             </>
           ) : (
-            <Flex gap={2.5} flexDirection={"column"} >
+            <Flex gap={2.5} flexDirection={"column"}>
               <AppointmentCardsTop data={data} />
               <AppointmentCardsOthers data={data} />
             </Flex>
           )}
         </Box>
       </Flex>
-      <Flex gap={2} mt={5} >
+      <Flex gap={2} mt={5}>
         {admin.role.name === "Admin" ? (
-          <Box border={'1px solid rgba(0,0,0,0.5)'} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
+          <Box border={"1px solid rgba(0,0,0,0.5)"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <UsersReg Users={usersData} />
           </Box>
         ) : hasPermission("USER_VIEW") ? (
-          <Box border={'1px solid rgba(0,0,0,0.5)'} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
+          <Box border={"1px solid rgba(0,0,0,0.5)"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <UsersReg Users={usersData} />
           </Box>
         ) : null}{" "}
         {admin.role.name === "Admin" ? (
-          <Box border={'1px solid rgba(0,0,0,0.5)'} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
+          <Box border={"1px solid rgba(0,0,0,0.5)"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <PatientsReg Patients={patientsData} />
           </Box>
         ) : hasPermission("PATIENT_VIEW") ? (
-          <Box border={'1px solid rgba(0,0,0,0.5)'} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
+          <Box border={"1px solid rgba(0,0,0,0.5)"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <PatientsReg Patients={patientsData} />
           </Box>
         ) : null}{" "}
       </Flex>
       {/* calender */}
       {hasPermission("APPOINTMENT_VIEW") && (
-        <Box mt={5} >
+        <Box mt={5}>
           <AppointmentsCalendar
             // @ts-ignore
             title={t("dashboard.calendar.title")}
@@ -144,7 +144,7 @@ export default function DashboardMain() {
       )}
       {/* appointment in last 15 days */}
       {admin.role.name === "Admin" ? (
-        <Box mt={5} >
+        <Box mt={5}>
           <AppointmentReg Appointments={appointmentsData} />
         </Box>
       ) : hasPermission("APPOINTMENT_VIEW") ? (
@@ -164,13 +164,13 @@ export default function DashboardMain() {
               confirmAppointments={confirmAppointments}
             />
           </Box>
-          <Box border={'1px solid rgba(0,0,0,0.5)'} maxW={"30%"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
+          <Box border={"1px solid rgba(0,0,0,0.5)"} maxW={"30%"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <StatusPieChart appointments={appointmentsData} />
           </Box>
         </Flex>
       ) : hasPermission("APPOINTMENT_VIEW") ? (
         <Flex gap={5} mt={5}>
-          <Box maxW={"68%"} flex={2} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8} >
+          <Box maxW={"68%"} flex={2} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <AppointmentChart
               // @ts-ignore
               title={t("dashboard.charts.appointments.title")}
@@ -185,17 +185,17 @@ export default function DashboardMain() {
         </Flex>
       ) : null}{" "}
       {admin.role.name === "Admin" ? (
-        <Flex gap={5} mt={5} >
-          <Box maxW={"68%"} flex={2} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8} border={'1px solid rgba(0,0,0,0.5)'}>
+        <Flex gap={5} mt={5}>
+          <Box maxW={"68%"} flex={2} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8} border={"1px solid rgba(0,0,0,0.5)"}>
             <TransactionChart creditTransactions={creditTxn} debitTransactions={debitTxn} />
           </Box>
-          <Box maxW={"30%"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8} border={'1px solid rgba(0,0,0,0.5)'}>
+          <Box maxW={"30%"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8} border={"1px solid rgba(0,0,0,0.5)"}>
             <TransactionPieChart transactions={transactionsData} />
           </Box>
         </Flex>
       ) : hasPermission("ALL_TRANSACTION_VIEW") ? (
-        <Flex gap={5} mt={5} >
-          <Box maxW={"68%"}  flex={2} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
+        <Flex gap={5} mt={5}>
+          <Box maxW={"68%"} flex={2} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
             <TransactionChart creditTransactions={creditTxn} debitTransactions={debitTxn} />
           </Box>
           <Box maxW={"30%"} flex={1} bg={useColorModeValue("#fff", "gray.900")} borderRadius={8}>
@@ -204,7 +204,7 @@ export default function DashboardMain() {
         </Flex>
       ) : null}{" "}
       <Flex gap={5} mt={5}>
-        <Box maxW={"68%"} flex={2} >
+        <Box maxW={"68%"} flex={2}>
           <CancellationReqStatsics
             // @ts-ignore
             title={t("dashboard.cancellation.title")}

@@ -19,16 +19,16 @@ export default function WelcomeCard({ data }) {
   const { t } = useTranslation();
 
   return (
-    <Box w={"100%"} borderRadius={8} overflow={"hidden"} boxShadow={"lg"} minH={"100%"} bg={useColorModeValue("#fff", "gray.900")} border={'1px solid rgba(0,0,0,0.5)'}>
+    <Box w={"100%"} borderRadius={8} overflow={"hidden"} boxShadow={"lg"} minH={"100%"} bg={useColorModeValue("#fff", "gray.900")} border={"1px solid rgba(0,0,0,0.5)"}>
       <Box padding={3} bg={"main.900"} pb={10} color={"#fff"} backgroundColor={"#1C325B"}>
         <Heading fontSize={"md"}>{t("welcome.title")}</Heading>
-        <Text fontSize={"sm"}>
+        <Text fontSize={"md"}>
           {admin.role.name} - {admin.f_name} {admin.l_name}
         </Text>
       </Box>
       <Box p={3} pos={"relative"} bg={useColorModeValue("#fff", "gray.900")}>
         <Image src="/admin/profile.png" w={16} top={"-8"} pos={"absolute"} />
-        <Heading fontSize={"sm"} mt={6} ml={1}>
+        <Heading fontSize={"lg"} mt={6} ml={1}>
           {admin.role.name}
         </Heading>
         <Text fontSize={"sm"} ml={1}>
@@ -39,9 +39,10 @@ export default function WelcomeCard({ data }) {
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -57,9 +58,10 @@ export default function WelcomeCard({ data }) {
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -73,13 +75,15 @@ export default function WelcomeCard({ data }) {
               </Text>
             </Box>
           </Flex>
+
           <Flex justify={"space-between"} gap={3} mt={2}>
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -95,9 +99,10 @@ export default function WelcomeCard({ data }) {
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -111,14 +116,17 @@ export default function WelcomeCard({ data }) {
               </Text>
             </Box>
           </Flex>
-          <Divider my={2} />
+
+          <Divider my={5} />
+
           <Flex justify={"space-between"} gap={3}>
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -135,9 +143,10 @@ export default function WelcomeCard({ data }) {
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -152,13 +161,15 @@ export default function WelcomeCard({ data }) {
               </Text>
             </Box>
           </Flex>
+
           <Flex justify={"space-between"} gap={3} mt={2}>
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}
@@ -175,9 +186,10 @@ export default function WelcomeCard({ data }) {
             <Box
               flex={1}
               border={"1px solid #1C325B"}
-              bg={useColorModeValue("#fff", "#1C325B")}
+              bg={useColorModeValue("#fff", "#232739")}
               borderRadius={6}
               paddingX={2.5}
+              paddingY={5}
               justifyContent={"space-between"}
               display={"flex"}
               alignItems={"center"}

@@ -50,15 +50,16 @@ export default function App() {
           updateUser(token);
         }
       } else {
-        console.error(t("notifications.messages.permissionError"));
+        // console.error(t("notifications.messages.permissionError"));
       }
     } catch (error) {
-      console.error(t("notifications.messages.error"), error);
+      // console.error(t("notifications.messages.error"), error);
     }
   };
   useEffect(() => {
-    admin && requestPermission();
+     admin && requestPermission();
   }, []);
+
   useEffect(() => {
     if (admin) {
       if (hasExpiredUser(admin.exp)) {
@@ -67,6 +68,7 @@ export default function App() {
       }
     }
   }, []);
+
   return (
     <ErrorBoundary>
       {" "}

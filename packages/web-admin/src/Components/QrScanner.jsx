@@ -4,8 +4,14 @@ import { Box, Center } from '@chakra-ui/react';
 
 const QRCodeScanner = ({ onScan }) => {
   const handleScan = (result) => {
-    if (result) {
-      onScan(JSON.parse(result[0].rawValue));
+    try {
+        if (result && result[0]?.rawValue) {
+            onScan(JSON.parse(result[0].rawValue));
+        } else {
+            console.warn('Invalid QR scan result:', result); // Log a warning for unexpected results
+        }
+    } catch (error) {
+        console.error('Error parsing QR scan result:', error); // Log parsing errors
     }
   };
 

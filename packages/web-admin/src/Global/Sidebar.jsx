@@ -25,76 +25,39 @@ import { Link, useLocation } from "react-router-dom"; // Import the custom hook
 import useHasPermission from "../Hooks/HasPermission";
 import admin from "../Controllers/admin";
 import useSettingsData from "../Hooks/SettingData";
+import { useTranslation } from "react-i18next";
 
-const LinkItems = [
-  { name: "Dashboard", icon: AiFillDashboard },
-  {
-    name: "Checkins",
-    icon: BiCheckShield,
-    permission: "CHECKIN_VIEW",
-  },
-  {
-    name: "Appointments",
-    icon: RiStethoscopeFill,
-    permission: "APPOINTMENT_VIEW",
-  },
-  {
-    name: "Appointment-Status-Log",
-    icon: RiStethoscopeFill,
-    permission: "APPOINTMENT_VIEW",
-  },
-  {
-    name: "Appointments-Calender",
-    icon: BiCalendar,
-    permission: "APPOINTMENT_VIEW",
-  },
-  {
-    name: "Transactions",
-    icon: CgArrowsExchangeAlt,
-    permission: "ALL_TRANSACTION_VIEW",
-  },
-  { name: "Departments", icon: FaHospital, permission: "DEPARTMENT_VIEW" },
-  {
-    name: "Specialization",
-    icon: FaMedkit,
-    permission: "SPECIALIZATION_VIEW",
-  },
-  { name: "Doctors", icon: FaUserMd, permission: "DOCTOR_VIEW" },
-  { name: "Patients", icon: FaHospitalUser, permission: "PATIENT_VIEW" },
-  { name: "Users", icon: ImUsers, permission: "USER_VIEW" },
-  {
-    name: "Prescriptions",
-    icon: FaFileAlt,
-    permission: "PRESCRIPTION_VIEW",
-  },
-
-  { name: "Patient-Files", icon: BiFolderOpen, permission: "FILE_VIEW" },
-  { name: "Medicines", icon: FaPills, permission: "MEDICINE_VIEW" },
-
-  { name: "Family-Members", icon: MdFamilyRestroom, permission: "FAMILY_VIEW" },
-
-  { name: "Coupons", icon: RiCoupon2Fill, permission: "COUPON_VIEW" },
-  { name: "Doctor-Reviews", icon: BsBookmarkStar, permission: "REVIEW_VIEW" },
-  {
-    name: "Notification",
-    icon: IoIosNotifications,
-    permission: "NOTIFICATION_VIEW",
-  },
-  {
-    name: "Testimonials",
-    icon: MdRateReview,
-    permission: "TESTIMONIAL_VIEW",
-  },
-  {
-    name: "Login-Screen",
-    icon: MdMobileScreenShare,
-    permission: "LOGINSCREEN_VIEW",
-  },
-  { name: "Roles", icon: MdAdminPanelSettings, permission: "ROLE_VIEW" },
-  { name: "Settings", icon: FiSettings, permission: "SETTING_VIEW" },
-];
 
 export default function Sidebar() {
+  const { t } = useTranslation();
+
+  const LinkItems = [
+    { name: t("sidebar.Dashboard"), key: "dashboard", path: "Dashboard", icon: AiFillDashboard },
+    { name: t("sidebar.Checkins"), key: "checkins", path: "Checkins", icon: BiCheckShield, permission: "CHECKIN_VIEW" },
+    { name: t("sidebar.Appointments"), key: "appointments", path: "Appointments", icon: RiStethoscopeFill, permission: "APPOINTMENT_VIEW" },
+    { name: t("sidebar.Appointment Status Log"), key: "appointment_status_log", path: "Appointment-Status-Log", icon: RiStethoscopeFill, permission: "APPOINTMENT_VIEW" },
+    { name: t("sidebar.Appointments Calendar"), key: "appointments_calendar", path: "Appointments-Calender", icon: BiCalendar, permission: "APPOINTMENT_VIEW" },
+    { name: t("sidebar.Transactions"), key: "transactions", path: "Transactions", icon: CgArrowsExchangeAlt, permission: "ALL_TRANSACTION_VIEW" },
+    { name: t("sidebar.Departments"), key: "departments", path: "Departments", icon: FaHospital, permission: "DEPARTMENT_VIEW" },
+    { name: t("sidebar.Specialization"), key: "specialization", path: "Specialization", icon: FaMedkit, permission: "SPECIALIZATION_VIEW" },
+    { name: t("sidebar.Doctors"), key: "doctors", path: "Doctors", icon: FaUserMd, permission: "DOCTOR_VIEW" },
+    { name: t("sidebar.Patients"), key: "patients", path: "Patients", icon: FaHospitalUser, permission: "PATIENT_VIEW" },
+    { name: t("sidebar.Users"), key: "users", path: "Users", icon: ImUsers, permission: "USER_VIEW" },
+    { name: t("sidebar.Prescriptions"), key: "prescriptions", path: "Prescriptions", icon: FaFileAlt, permission: "PRESCRIPTION_VIEW" },
+    { name: t("sidebar.Patient Files"), key: "patient_files", path: "Patient-Files", icon: BiFolderOpen, permission: "FILE_VIEW" },
+    { name: t("sidebar.Medicines"), key: "medicines", path: "Medicines", icon: FaPills, permission: "MEDICINE_VIEW" },
+    { name: t("sidebar.Family Members"), key: "family_members", path: "Family-Members", icon: MdFamilyRestroom, permission: "FAMILY_VIEW" },
+    { name: t("sidebar.Coupons"), key: "coupons", path: "Coupons", icon: RiCoupon2Fill, permission: "COUPON_VIEW" },
+    { name: t("sidebar.Doctor Reviews"), key: "doctor_reviews", path: "Doctor-Reviews", icon: BsBookmarkStar, permission: "REVIEW_VIEW" },
+    { name: t("sidebar.Notification"), key: "notification", path: "Notification", icon: IoIosNotifications, permission: "NOTIFICATION_VIEW" },
+    { name: t("sidebar.Testimonials"), key: "testimonials", path: "Testimonials", icon: MdRateReview, permission: "TESTIMONIAL_VIEW" },
+    { name: t("sidebar.Login Screen"), key: "login_screen", path: "Login-Screen", icon: MdMobileScreenShare, permission: "LOGINSCREEN_VIEW" },
+    { name: t("sidebar.Roles"), key: "roles", path: "Roles", icon: MdAdminPanelSettings, permission: "ROLE_VIEW" },
+    { name: t("sidebar.Settings"), key: "settings", path: "Settings", icon: FiSettings, permission: "SETTING_VIEW" }
+  ];
+
+
+
   const [isLarge] = useMediaQuery("(min-width: 998px)");
   const Uselocation = useLocation();
   const location = Uselocation.pathname.split("/")[1];
@@ -135,7 +98,7 @@ export default function Sidebar() {
       }}
     >
       {/* Sidebar */}
-      <Box bg={"main.900"} w={isOpen ? 60 : 16} overflow={"hidden"} minH="100vh" borderRightColor={useColorModeValue("gray.200", "gray.700")} color={"#FFF"} transition={"0.4s ease"}>
+      <Box bg={"#2D3748"} w={isOpen ? 60 : 16} overflow={"hidden"} minH="100vh" borderRightColor={useColorModeValue("gray.200", "gray.700")} color={"#FFF"} transition={"0.4s ease"}>
         <Flex h="16" alignItems="center" mx={isOpen ? 4 : 2} justifyContent={isOpen ? "space-between" : "center"}>
           {isOpen && (
             <Text fontSize="xl" fontFamily="monospace" fontWeight="semi-bold">
@@ -157,15 +120,15 @@ export default function Sidebar() {
 
         {isOpen && (
           <Box p={2} pt={0} mb={2}>
-            <InputGroup size={"sm"} colorScheme="blackAlpha" >
-              <InputRightElement pointerEvents="none" >
+            <InputGroup size={"sm"} colorScheme="blackAlpha">
+              <InputRightElement pointerEvents="none">
                 <AiOutlineSearch size={"20"} />
               </InputRightElement>
               <Input
                 onChange={handleSearchChange}
                 focusBorderColor="#fff"
                 type="tel"
-                outline={'none'}
+                outline={"none"}
                 placeholder="Search"
                 borderRadius={6}
                 borderColor={"#fff"}
@@ -181,12 +144,12 @@ export default function Sidebar() {
           // Check if the user is an admin or super-admin
           if (admin.role.name === "admin" || admin.role.name === "Admin" || admin.role.name === "super-admin") {
             return (
-              <Link to={link.name.toLowerCase()} key={link.name}>
+              <Link to={`/${link.path.toLowerCase()}`} key={link.path}>
                 <NavItem
                   icon={link.icon}
-                  isActive={activeTab === link.name.toLowerCase()}
+                  isActive={activeTab === link.path.toLowerCase()}
                   onClick={() => {
-                    handleTabClick(link.name);
+                    handleTabClick(link.path);
                     setSearchQuery("");
                   }}
                   isOpen={isOpen}
@@ -198,12 +161,12 @@ export default function Sidebar() {
           } else {
             return link.permission ? (
               hasPermission(link.permission) && ( // Use hasPermission hook to check permissions
-                <Link to={link.name.toLowerCase()} key={link.name}>
+                <Link to={`/${link.path.toLowerCase()}`} key={link.name}>
                   <NavItem
                     icon={link.icon}
-                    isActive={activeTab === link.name.toLowerCase()}
+                    isActive={activeTab === link.path.toLowerCase()}
                     onClick={() => {
-                      handleTabClick(link.name);
+                      handleTabClick(link.path);
                       setSearchQuery("");
                     }}
                     isOpen={isOpen}
@@ -213,12 +176,12 @@ export default function Sidebar() {
                 </Link>
               )
             ) : (
-              <Link to={link.name.toLowerCase()} key={link.name}>
+              <Link to={`/${link.path.toLowerCase()}`} key={link.path}>
                 <NavItem
                   icon={link.icon}
-                  isActive={activeTab === link.name.toLowerCase()}
+                  isActive={activeTab === link.path.toLowerCase()}
                   onClick={() => {
-                    handleTabClick(link.name);
+                    handleTabClick(link.path);
                     setSearchQuery("");
                   }}
                   isOpen={isOpen}
@@ -250,14 +213,14 @@ function NavItem({ icon: IconComponent, children, isActive, onClick, isOpen }) {
           borderBottomRightRadius={0}
           role="group"
           cursor="pointer"
-          bg={isActive ? "main.400" : "transparent"}
-          boxShadow={isActive ? "-5px -5px 15px rgba(0, 0, 0, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.2), -5px 5px 15px rgba(0, 0, 0, 0.2)" : "transparent"}
+          bg={isActive ? "blue.500" : "transparent"} // Updated active background color
+          boxShadow={isActive ? "0px 4px 10px rgba(0, 0, 0, 0.3)" : "transparent"} // Updated shadow for active items
           color={isActive ? "white" : "inherit"}
           _hover={{
-            bg: "main.400",
+            bg: "blue.600", // Updated hover color for active items
             color: "white",
           }}
-          fontWeight={500}
+          fontWeight={isActive ? "bold" : 500} // Bold font for active items
           justifyContent={isOpen ? "start" : "center"}
         >
           {IconComponent && (

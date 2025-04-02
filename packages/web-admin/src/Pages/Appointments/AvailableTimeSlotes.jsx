@@ -62,7 +62,7 @@ const swiperParams = {
 export default function AvailableTimeSlotes({ doctID, isOpen, onClose, selectedSlot, setselectedSlot, selectedDate, setselectedDate, type }) {
   const { t } = useTranslation();
   const [activeDate, setactiveDate] = useState(selectedDate || moment().format('YYYY-MM-DD'));
-  
+
   const toast = useToast();
 
   // Fetch time slots for the selected date
@@ -71,18 +71,20 @@ export default function AvailableTimeSlotes({ doctID, isOpen, onClose, selectedS
     queryFn: async () => {
       try {
         const dayName = moment(activeDate).format('dddd');
-        console.log('Fetching slots for:', dayName, 'doctID:', doctID);
-        
+        // console.log('Fetching slots for:', dayName, 'doctID:', doctID);
+
         const res = await GET(
           admin.token,
           `get_doctor_time_interval/${doctID}/${dayName}`
         );
-        
+
+        // console.log("hey: ", res.data);
+
         if (!res.data || res.data.length === 0) {
           console.log('No slots available');
           return [];
         }
-        
+
         console.log('Available slots:', res.data);
         return res.data;
       } catch (error) {
@@ -94,7 +96,7 @@ export default function AvailableTimeSlotes({ doctID, isOpen, onClose, selectedS
     enabled: !!doctID && !!activeDate
   });
 
-  console.log('timeSlots', timeSlots);
+  // console.log('timeSlots', timeSlots);
 
   // Handle date selection
   const handleDateSelect = (date) => {
@@ -105,6 +107,7 @@ export default function AvailableTimeSlotes({ doctID, isOpen, onClose, selectedS
 
   // Handle slot selection
   const handleSlotSelect = (slot) => {
+
     setselectedSlot(slot);
     setselectedDate(activeDate);
     onClose();
@@ -116,6 +119,7 @@ export default function AvailableTimeSlotes({ doctID, isOpen, onClose, selectedS
       <ModalContent>
         <ModalHeader fontSize={'md'} py={3}>
           {t('appointments.timeSlots.selectDateTime')}
+
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>

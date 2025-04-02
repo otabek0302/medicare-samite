@@ -19,16 +19,16 @@ import {
   NumberInputField,
   NumberInputStepper,
   Select,
-  useToast
-} from '@chakra-ui/react';
-import { useForm } from 'react-hook-form';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { ADD } from '../../Controllers/ApiControllers';
-import ShowToast from '../../Controllers/ShowToast';
-import admin from '../../Controllers/admin';
+  useToast,
+} from "@chakra-ui/react";
+import { useForm } from "react-hook-form";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { ADD } from "../../Controllers/ApiControllers";
+import ShowToast from "../../Controllers/ShowToast";
+import admin from "../../Controllers/admin";
 
 const AddTimeSlot = async (data) => {
-  const res = await ADD(admin.token, 'add_timeslots', data);
+  const res = await ADD(admin.token, "add_timeslots", data);
   if (res.response !== 200) {
     throw new Error(res.message);
   }
@@ -45,42 +45,32 @@ export default function AddDoctorTimeSlotes({ isOpen, onClose, doctorID }) {
       await AddTimeSlot(data);
     },
     onSuccess: () => {
-      ShowToast(toast, 'success', 'Time Slot Added!');
-      ShowToast(toast, 'success', 'Time Slot Added!sssssssss');
-      queryClient.invalidateQueries('time-slotes', doctorID);
+      ShowToast(toast, "success", "Time Slot Added!");
+      ShowToast(toast, "success", "Time Slot Added! ");
+      queryClient.invalidateQueries("time-slotes", doctorID);
       reset();
       onClose();
     },
     onError: (error) => {
-      ShowToast(toast, 'error', error.message);
-    }
+      ShowToast(toast, "error", error.message);
+    },
   });
 
   const addTimeSlotes = async (Inputdata, event) => {
     event.stopPropagation();
     let formData = {
       doct_id: doctorID,
-      ...Inputdata
+      ...Inputdata,
     };
 
     mutation.mutate(formData);
   };
 
   return (
-    <Modal
-      isOpen={isOpen}
-      onClose={onClose}
-      isCentered
-      size={'lg'}
-      scrollBehavior="inside">
+    <Modal isOpen={isOpen} onClose={onClose} isCentered size={"lg"} scrollBehavior="inside">
       <ModalOverlay />
-      <ModalContent
-        as={'form'}
-        id="addTimeSlotesForm"
-        onSubmit={handleSubmit(addTimeSlotes)}>
-        <ModalHeader
-          fontSize={18}
-          py={2}>
+      <ModalContent as={"form"} id="addTimeSlotesForm" onSubmit={handleSubmit(addTimeSlotes)}>
+        <ModalHeader fontSize={18} py={2}>
           Add Time Slot
         </ModalHeader>
         <ModalCloseButton />
@@ -89,59 +79,25 @@ export default function AddDoctorTimeSlotes({ isOpen, onClose, doctorID }) {
           <Box pb={3}>
             <FormControl isRequired>
               <FormLabel>Start Time</FormLabel>
-              <Input
-                size={'sm'}
-                type="time"
-                step={60}
-                placeholder="Start Time"
-                {...register('time_start', { required: true })}
-              />
+              <Input size={"sm"} type="time" step={60} placeholder="Start Time" {...register("time_start", { required: true })} />
             </FormControl>
-            <FormControl
-              isRequired
-              mt={3}>
+            <FormControl isRequired mt={3}>
               <FormLabel>End Time</FormLabel>
-              <Input
-                size={'sm'}
-                type="time"
-                step={60}
-                placeholder="End Time"
-                {...register('time_end', { required: true })}
-              />
+              <Input size={"sm"} type="time" step={60} placeholder="End Time" {...register("time_end", { required: true })} />
             </FormControl>
-            <FormControl
-              isRequired
-              mt={3}>
+            <FormControl isRequired mt={3}>
               <FormLabel>Time Duration ( In Minutes )</FormLabel>
-              <NumberInput
-                size={'sm'}
-                defaultValue={1}
-                min={1}
-                max={60}>
-                <NumberInputField
-                  placeholder="Time Duration"
-                  defaultValue={1}
-                  min={1}
-                  max={5}
-                  {...register('time_duration', { required: true })}
-                />
+              <NumberInput size={"sm"} defaultValue={1} min={1} max={60}>
+                <NumberInputField placeholder="Time Duration" defaultValue={1} min={1} max={5} {...register("time_duration", { required: true })} />
                 <NumberInputStepper>
                   <NumberIncrementStepper />
                   <NumberDecrementStepper />
                 </NumberInputStepper>
               </NumberInput>
             </FormControl>
-            <FormControl
-              isRequired
-              mt={3}
-              size={'sm'}
-              colorScheme="blue">
+            <FormControl isRequired mt={3} size={"sm"} colorScheme="blue">
               <FormLabel>Day</FormLabel>
-              <Select
-                colorScheme="blue"
-                placeholder="Select Day"
-                size={'sm'}
-                {...register('day', { required: true })}>
+              <Select colorScheme="blue" placeholder="Select Day" size={"sm"} {...register("day", { required: true })}>
                 <option value="Monday">Monday</option>
                 <option value="Tuesday">Tuesday</option>
                 <option value="Wednesday">Wednesday</option>
@@ -155,22 +111,19 @@ export default function AddDoctorTimeSlotes({ isOpen, onClose, doctorID }) {
         </ModalBody>
         <Divider />
         <ModalFooter py={3}>
-          <Button
-            colorScheme="gray"
-            mr={3}
-            onClick={onClose}
-            size={'sm'}>
+          <Button colorScheme="gray" mr={3} onClick={onClose} size={"sm"}>
             Close
           </Button>
           <Button
             variant="solid"
-            size={'sm'}
+            size={"sm"}
             colorScheme="blue"
             type="submit"
             isLoading={mutation.isPending}
             onClick={(e) => {
               e.stopPropagation();
-            }}>
+            }}
+          >
             Add Slot
           </Button>
         </ModalFooter>

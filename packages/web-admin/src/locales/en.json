@@ -1,1896 +1,1920 @@
 {
-  "login": {
-    "title": "Sign in to your account",
-    "email": "Email",
-    "password": "Password",
-    "forgotPassword": "Forget password?",
-    "signIn": "Sign in",
-    "loginAs": "Login As - ",
-    "continue": "Continue",
-    "cancel": "Cancel",
-    "errors": {
-      "noPermission": "You do not have permission to access the admin panel. Please contact the administrator if you believe this is an error.",
-      "wrongCredentials": "Wrong Email Or Password.",
-      "generalError": "An error occurred during login. Please try again."
-    }
-  },
-  "dashboard": {
-    "title": "Dashboard",
-    "charts": {
-      "appointments": {
-        "title": "Appointments",
-        "completed": "Completed",
-        "cancelled": "Cancelled",
-        "confirmed": "Confirmed"
-      },
-      "transactions": {
-        "title": "Transactions",
-        "credited": "Credited",
-        "debited": "Debited"
-      }
-    },
-    "calendar": {
-      "title": "Appointments Calendar"
-    },
-    "cancellation": {
-      "title": "Cancellation Request Statistics",
-      "chart": "Cancellation Request Distribution"
-    }
-  },
-  "buttons": {
-    "addNewAppointment": "Add New Appointment",
-    "addDoctor": "Add Doctor",
-    "addPatient": "Add Patient",
-    "addMedicine": "Add Medicine",
-    "newCheckin": "New Checking",
-    "showDisplay": "Show Checkin Display"
-  },
-  "appointments": {
-    "cards": {
-      "todayAppointment": "Today's Appointment",
-      "upcomingAppointment": "Upcoming Appointment",
-      "pendingAppointments": "Pending Appointments",
-      "confirmAppointments": "Confirm Appointments",
-      "cancelledAppointments": "Cancelled Appointments",
-      "rejectedAppointments": "Rejected Appointments",
-      "completedAppointments": "Completed Appointments",
-      "visitedAppointments": "Visited Appointments"
-    },
-    "status": {
-      "unknown": "Unknown",
-      "pending": "Pending",
-      "confirmed": "Confirmed",
-      "rejected": "Rejected",
-      "cancelled": "Cancelled",
-      "completed": "Completed",
-      "rescheduled": "Rescheduled",
-      "visited": "Visited",
-      "distribution": "Appointment Status Distribution",
-      "label": "Status",
-      "select": "Select Status",
-      "cancellation": "Cancellation Initiated"
-    },
-    "registration": {
-      "title": "Appointments Made in the Last {{days}} Days",
-      "columns": {
-        "doctor": "Doctor",
-        "patient": "Patient",
-        "status": "Status",
-        "date": "Date",
-        "timeSlots": "Time Slots",
-        "type": "Type",
-        "paymentStatus": "Payment Status"
-      },
-      "types": {
-        "emergency": "Emergency",
-        "regular": "Regular"
-      },
-      "payment": {
-        "paid": "Paid",
-        "refunded": "Refunded",
-        "notPaid": "Not Paid"
-      }
-    },
-    "chart": {
-      "title": "Appointments in the Last {{days}} Days",
-      "lastDays": "Last {{days}} Days",
-      "labels": {
-        "all": "All",
-        "cancelled": "Cancelled",
-        "completed": "Completed"
-      }
-    },
-    "add": {
-      "title": "Add New Appointment",
-      "or": "Or",
-      "addPatient": "Add patient",
-      "details": "Appointment Details",
-      "type": {
-        "label": "Appointment Type",
-        "select": "Select Appointment Type",
-        "emergency": "Emergency",
-        "opd": "OPD",
-        "video": "Video Consultant"
-      },
-      "payment": {
-        "status": {
-          "label": "Payment Status",
-          "select": "Select payment status",
-          "paid": "Paid",
-          "unpaid": "Not Paid"
-        },
-        "method": {
-          "label": "Payment Method",
-          "select": "Select payment method"
-        },
-        "details": "Payment Details",
-        "timeSlot": "Select Time Slot"
-      },
-      "fee": {
-        "label": "Fee",
-        "total": "Total Amount"
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Appointment"
-      }
-    },
-    "labels": {
-      "appointmentDate": "Appointment Date",
-      "appointmentTimeSlot": "Appointment Time Slot",
-      "selectDoctor": "Please Select Doctor",
-      "selectType": "Please Select Appointment Type"
-    },
-    "buttons": {
-      "refreshTable": "Refresh Table",
-      "close": "Close"
-    },
-    "timeSlots": {
-      "selectDateTime": "Select date and Time Slot",
-      "available": "Time Slots",
-      "noAvailable": "Sorry, no available time slots were found for the selected date."
-    },
-    "reschedule": {
-      "title": "Reschedule Appointment",
-      "button": "Reschedule Appointment"
-    },
-    "update": {
-      "patientDetails": "Patient Details",
-      "doctorDetails": "Doctor Details",
-      "labels": {
-        "patientFirstName": "Patient First Name",
-        "patientLastName": "Patient Last Name",
-        "phone": "Phone",
-        "gender": "Gender",
-        "doctorFirstName": "Doctor First Name",
-        "doctorLastName": "Doctor Last Name",
-        "meetingLink": "Meeting Link",
-        "updateRequestStatus": "Update Request Status"
-      },
-      "cancellationTab": "Cancellation Request By Patient",
-      "alerts": {
-        "reject": {
-          "title": "Reject Appointment",
-          "message": "Are you sure? You can't undo this action afterwards.",
-          "cancel": "Cancel",
-          "confirm": "Reject"
-        },
-        "cancellation": {
-          "title": "{{type}} Request",
-          "message": "Are you sure? update cancellation status to {{type}}",
-          "cancel": "Cancel",
-          "confirm": "{{type}} Cancellation Request"
-        }
-      },
-      "details": "Appointment Details",
-      "source": "Source",
-      "buttons": {
-        "joinMeeting": "Join Meeting",
-        "printReport": "Print Consultation Report",
-        "back": "Back"
-      }
-    }
-  },
-  "welcome": {
-    "title": "Welcome Back!",
-    "stats": {
-      "activeDoctors": "Total Active Doctors",
-      "appointments": "Total Appointments",
-      "patients": "Total Patients",
-      "users": "Total Users",
-      "departments": "Total Departments",
-      "prescriptions": "Total Prescriptions",
-      "medicine": "Total Medicine",
-      "doctorReviews": "Doctor Reviews"
-    }
-  },
-  "registration": {
-    "users": {
-      "title": "Users Registration in the Last {{days}} Days"
-    },
-    "patients": {
-      "title": "Patients Registration in the Last {{days}} Days"
-    }
-  },
-  "cancellation": {
-    "requests": {
-      "initiated": "Cancellation Request Initiated",
-      "processing": "Cancellation Request Processing",
-      "approved": "Cancellation Request Approved",
-      "rejected": "Cancellation Request Rejected"
-    },
-    "chart": {
-      "title": "Appointment Cancellation Status",
-      "labels": {
-        "initiated": "Cancel Request Initiated",
-        "rejected": "Cancel Request Rejected",
-        "approved": "Cancel Request Approved",
-        "processing": "Cancel Request Processing"
-      }
-    }
-  },
-  "checkin": {
-    "title": "New Checkin",
-    "or": "Or",
-    "buttons": {
-      "scanQr": "Scan QR",
-      "addManually": "Add Data Manually",
-      "getDetails": "Get Details",
-      "close": "Close",
-      "add": "Add Checkin",
-      "showDisplay": "Show Checkin Display",
-      "update": "Update Checkin"
-    },
-    "form": {
-      "appointmentId": "Appointment ID",
-      "date": "Date",
-      "time": "Time"
-    },
-    "errors": {
-      "notFound": "Appointment not found",
-      "videoConsult": "Video Consultations cannot be checked in"
-    },
-    "delete": {
-      "title": "Delete Checkin",
-      "confirm": "Are you sure? You can not undo this action afterwards.",
-      "cancel": "Cancel",
-      "delete": "Delete"
-    },
-    "success": {
-      "added": "Added!",
-      "deleted": "Deleted!",
-      "updated": "Updated!"
-    },
-    "update": {
-      "title": "Update Checkin"
-    },
-    "queue": {
-      "nextPatients": "Next Patients",
-      "noUpcoming": "No upcoming patients",
-      "currentlyBeingSeen": "No patient is currently being seen",
-      "now": "Now",
-      "table": {
-        "serialNo": "S No.",
-        "id": "ID",
-        "patientName": "Patient Name"
-      },
-      "doctor": {
-        "title": "Doctor",
-        "selectOption": "Select option",
-        "selectDate": "Select Date"
-      },
-      "appointment": {
-        "id": "Appointment ID",
-        "name": "Name",
-        "time": "Time",
-        "date": "Date"
-      }
-    }
-  },
-  "errors": {
-    "oops": "Oops!",
-    "somethingWrong": "Something bad happens.",
-    "pleaseTryRefreshing": "Please try refreshing the page, or you can return to the homepage.",
-    "tryAgain": "Try Again",
-    "500": "500",
-    "internalServerError": "Internal Server Error",
-    "logout": "Logout"
-  },
-  "common": {
-    "search": "Search",
-    "addNew": "Add New"
-  },
-  "payments": {
-    "methods": {
-      "cash": "Cash",
-      "online": "Online",
-      "other": "Other",
-      "wallet": "Wallet",
-      "upi": "UPI"
-    },
-    "modal": {
-      "amountPaid": "Amount Paid",
-      "selectMode": "Select Payment Mode",
-      "close": "Close",
-      "setToPaid": "Set Amount to Paid"
-    }
-  },
-  "calendar": {
-    "title": "Appointment Calendar",
-    "views": {
-      "week": "Week",
-      "day": "Day",
-      "agenda": "Agenda"
-    },
-    "messages": {
-      "noEvents": "No appointments in this time range",
-      "allDay": "All Day",
-      "date": "Date",
-      "time": "Time",
-      "event": "Event"
-    }
-  },
-  "doctors": {
-    "index": {
-      "search": "Search",
-      "addNew": "Add New",
-      "table": {
-        "name": "Name",
-        "phone": "Phone",
-        "email": "Email",
-        "specialization": "Specialization",
-        "department": "Department",
-        "active": "Active",
-        "stopBooking": "Stop Booking"
-      },
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "errors": {
-        "title": "Oops!",
-        "description": "Something went wrong."
-      },
-      "success": {
-        "updated": "Doctor Updated!"
-      },
-      "noPermission": "You don't have permission to view doctors"
-    },
-    "review": {
-      "appointmentsDone": "Appointments Done",
-      "loading": "Loading...",
-      "noReviews": "No reviews yet"
-    },
-    "update": {
-      "title": "Update Doctor",
-      "form": {
-        "firstName": "First Name",
-        "lastName": "Last Name",
-        "email": "Email",
-        "phone": "Phone",
-        "department": "Department",
-        "selectDepartment": "Select Department",
-        "gender": {
-          "label": "Gender",
-          "selectGender": "Select Gender",
-          "male": "Male",
-          "female": "Female"
-        },
-        "experience": {
-          "label": "Years of Experience",
-          "placeholder": "Enter years of experience"
-        },
-        "validation": {
-          "required": "This field is required",
-          "email": "Invalid email address",
-          "phone": "Invalid phone number"
-        }
-      },
-      "buttons": {
-        "update": "Update"
-      },
-      "messages": {
-        "doctorUpdated": "Doctor updated successfully"
-      },
-      "professionalInfo": "Professional Information",
-      "appointmentSettings": "Appointment Settings",
-      "active": "Doctor Active?",
-      "stopBooking": "Stop Booking?",
-      "basicDetails": "Basic Details",
-      "contactDetails": "Contact Details",
-      "addressDetails": "Address Details",
-      "fees": {
-        "title": "Fees",
-        "opd": "OPD Fee",
-        "video": "Video Fee",
-        "emergency": "Emergency Fee"
-      }
-    },
-    "socialLinks": {
-      "placeholders": {
-        "facebook": "Facebook",
-        "twitter": "Twitter",
-        "instagram": "Instagram",
-        "youtube": "Youtube"
-      }
-    },
-    "messages": {
-      "imageDeleted": "Image Deleted!",
-      "doctorUpdated": "Doctor Updated!"
-    }
-  },
-  "departments": {
-    "add": {
-      "title": "Add Department",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        },
-        "description": {
-          "label": "Description",
-          "placeholder": "Description"
-        },
-        "image": {
-          "dropzone": {
-            "title": "Choose a file or Drag it here",
-            "selectedFile": "Selected File:"
-          }
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Department"
-      },
-      "messages": {
-        "success": "Department Added!"
-      }
-    },
-    "delete": {
-      "title": "Delete Department",
-      "titleWithName": "Delete Department ( {{title}} )",
-      "confirmMessage": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "Department Deleted!"
-      }
-    },
-    "index": {
-      "search": "Search",
-      "addNew": "Add New",
-      "table": {
-        "name": "Name",
-        "active": "Active"
-      },
-      "errors": {
-        "title": "Oops!",
-        "description": "Something went wrong."
-      },
-      "messages": {
-        "updated": "Department Updated!",
-        "noPermission": "You don't have permission to view departments"
-      },
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete"
-      }
-    },
-    "update": {
-      "title": "Update Department",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        },
-        "description": {
-          "label": "Description",
-          "placeholder": "Description"
-        },
-        "image": {
-          "dropzone": {
-            "title": "Choose a file or Drag it here",
-            "selectedFile": "Selected File:"
-          },
-          "remove": "Remove Image"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update Department"
-      },
-      "messages": {
-        "success": "Department Updated!",
-        "imageDeleted": "Image deleted!"
-      }
-    }
-  },
-  "specializations": {
-    "add": {
-      "title": "Add Specialization",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Specialization"
-      },
-      "messages": {
-        "success": "Specialization Added!"
-      }
-    },
-    "delete": {
-      "title": "Delete Specialization",
-      "titleWithName": "Delete Specialization ( {{title}} )",
-      "confirmMessage": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete Specialization"
-      },
-      "messages": {
-        "success": "Specialization Deleted!"
-      }
-    },
-    "index": {
-      "search": "Search",
-      "addNew": "Add New",
-      "table": {
-        "name": "Name",
-        "active": "Active"
-      },
-      "errors": {
-        "title": "Oops!",
-        "description": "Something went wrong."
-      },
-      "messages": {
-        "noPermission": "You don't have permission to view specializations"
-      },
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete"
-      }
-    },
-    "update": {
-      "title": "Update Specialization",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update Specialization"
-      },
-      "messages": {
-        "success": "Specialization Updated!"
-      }
-    }
-  },
-  "roles": {
-    "add": {
-      "title": "Add Role",
-      "form": {
-        "title": "Role Name",
-        "placeholder": "Enter role name"
-      },
-      "buttons": {
-        "close": "Close",
-        "submit": "Add Role"
-      },
-      "messages": {
-        "success": "Role Added!"
-      }
-    },
-    "assignedUsers": {
-      "title": "Assigned Users",
-      "search": "Search",
-      "buttons": {
-        "assignRole": "Assign Role To User",
-        "addNewRole": "Add New Role"
-      },
-      "delete": {
-        "title": "Delete Assign Role",
-        "titleWithName": "Delete Assign Role ( {{role}} ) from ( {{name}} )",
-        "confirmMessage": "Are you sure? You can not undo this action afterwards.",
-        "buttons": {
-          "cancel": "Cancel",
-          "delete": "Delete"
-        },
-        "messages": {
-          "success": "Role assignment deleted!"
-        }
-      },
-      "messages": {
-        "noPermission": "You don't have permission to view roles",
-        "error": {
-          "title": "Oops!",
-          "description": "Something went wrong."
-        }
-      }
-    },
-    "assign": {
-      "title": "Assign Role to User",
-      "form": {
-        "user": "Select User",
-        "role": "Select Role",
-        "placeholder": "Select role"
-      },
-      "buttons": {
-        "close": "Close",
-        "submit": "Assign Role"
-      },
-      "messages": {
-        "success": "Role assigned successfully!",
-        "error": "Permission Error",
-        "errorDescription": "You don't have permission to assign roles"
-      }
-    },
-    "delete": {
-      "title": "Delete Role",
-      "messages": {
-        "success": "Role deleted successfully!",
-        "confirm": "Are you sure? You can not undo this action afterwards.",
-        "cannotDelete": "Cannot Delete This Role!"
-      },
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete Role"
-      }
-    },
-    "tabs": {
-      "roles": "Roles",
-      "assignedUsers": "Assigned Users"
-    },
-    "search": {
-      "placeholder": "Search"
-    },
-    "buttons": {
-      "assignRoleToUser": "Assign Role To User",
-      "addNew": "Add New Role"
-    },
-    "error": {
-      "title": "Oops!",
-      "description": "Something went wrong."
-    }
-  },
-  "patients": {
-    "messages": {
-      "success": "Patient Added",
-      "error": "Something went wrong"
-    },
-    "placeholder": {
-      "search": "Search Patient"
-    },
-    "add": {
-      "title": "Add Patient",
-      "form": {
-        "firstName": {
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        "lastName": {
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        "phone": {
-          "label": "Phone",
-          "placeholder": "Phone Number"
-        },
-        "gender": {
-          "label": "Gender",
-          "placeholder": "Gender",
-          "options": {
-            "male": "Male",
-            "female": "Female"
-          }
-        },
-        "dob": {
-          "label": "Date of Birth"
-        },
-        "city": {
-          "label": "City"
-        },
-        "state": {
-          "label": "State"
-        }
-      },
-      "actions": {
-        "close": "Close",
-        "add": "Add Patient"
-      },
-      "messages": {
-        "success": "Patient Added",
-        "errors": {
-          "selectIsd": "Select ISD Code"
-        }
-      }
-    },
-    "update": {
-      "title": "Update Patient",
-      "actions": {
-        "edit": "Edit",
-        "back": "Back",
-        "update": "Update"
-      },
-      "messages": {
-        "success": "Patient Updated",
-        "error": "Something went wrong"
-      },
-      "details": "Details",
-      "files": "Files",
-      "appointments": "Appointments",
-      "prescriptions": "Prescriptions",
-      "basicDetails": "Basic Details",
-      "contactDetails": "Contact Details",
-      "form": {
-        "firstName": {
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        "lastName": {
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        "phone": {
-          "label": "Phone",
-          "placeholder": "Phone Number"
-        },
-        "gender": {
-          "label": "Gender",
-          "placeholder": "Gender",
-          "options": {
-            "male": "Male",
-            "female": "Female"
-          }
-        },
-        "dob": {
-          "label": "Date of Birth",
-          "placeholder": "Date of Birth"
-        },
-        "email": {
-          "label": "Email",
-          "placeholder": "Email"
-        },
-        "address": {
-          "label": "Address",
-          "placeholder": "Address"
-        },
-        "state": {
-          "label": "State",
-          "placeholder": "State"
-        },
-        "city": {
-          "label": "City",
-          "placeholder": "City"
-        },
-        "postalCode": {
-          "label": "Postal Code",
-          "placeholder": "Postal Code"
-        },
-        "notes": {
-          "label": "Notes",
-          "placeholder": "Notes"
-        },
-        "profilePicture": {
-          "label": "Profile Picture",
-          "placeholder": "Profile Picture"
-        },
-        "uploadProfilePicture": {
-          "label": "Upload Profile Picture",
-          "placeholder": "Upload Profile Picture"
-        },
-        "delete": {
-          "label": "Delete",
-          "placeholder": "Delete"
-        }
-      }
-    },
-    "patientFiles": {
-      "title": "Patient Files",
-      "updatedOn": "Updated On",
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete",
-        "addNew": "Add New"
-      },
-      "add": {
-        "title": "Add Patient Files",
-        "form": {
-          "name": {
-            "label": "Name",
-            "placeholder": "Name"
-          },
-          "file": {
-            "choose": "Choose a file",
-            "dragHere": "or Drag it here",
-            "selectedFile": "Selected File:",
-            "maxSize": "Max 5 MB"
-          }
-        },
-        "buttons": {
-          "close": "Close",
-          "add": "Add"
-        },
-        "messages": {
-          "success": "Patient File Added!",
-          "error": "Please select a file smaller than 5 MB."
-        }
-      },
-      "update": {
-        "title": "Update Patient Files",
-        "form": {
-          "title": {
-            "label": "Name",
-            "placeholder": "Name"
-          },
-          "file": {
-            "choose": "Choose a file",
-            "dragHere": "or Drag it here",
-            "selectedFile": "Selected File:",
-            "maxSize": "Max 5 MB"
-          },
-          "close": "Close",
-          "update": "Update"
-        },
-        "buttons": {
-          "close": "Close",
-          "update": "Update"
-        },
-        "messages": {
-          "success": "Patient File Updated!",
-          "error": "Please select a file smaller than 5 MB."
-        }
-      }
-    },
-    "actions": {
-      "next": "Next",
-      "previous": "Previous"
-    },
-    "tables": {
-      "actions": "Actions",
-      "name": "Name",
-      "phone": "Phone",
-      "gender": "Gender",
-      "dateOfBirth": "Date of Birth",
-      "email": "Email",
-      "image": "Image",
-      "createdOn": "Created On"
-    }
-  },
-  "users": {
-    "messages": {
-      "success": "User Added",
-      "error": "Something went wrong"
-    },
-    "add": {
-      "title": "Add User",
-      "back": "Back",
-      "form": {
-        "email": {
-          "label": "Email",
-          "placeholder": "Email"
-        },
-        "password": {
-          "label": "Password",
-          "placeholder": "Password"
-        },
-        "confirmPassword": {
-          "label": "Confirm Password",
-          "placeholder": "Confirm Password"
-        },
-        "firstName": {
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        "lastName": {
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        "phone": {
-          "label": "Phone",
-          "placeholder": "Phone Number"
-        },
-        "dateOfBirth": {
-          "label": "Date Of Birth (MM/DD/YYYY)"
-        },
-        "gender": {
-          "label": "Gender",
-          "placeholder": "Select Gender",
-          "options": {
-            "male": "Male",
-            "female": "Female"
-          }
-        },
-        "profilePicture": {
-          "label": "Profile Picture",
-          "upload": "Upload Profile Picture",
-          "clear": "Clear"
-        }
-      },
-      "buttons": {
-        "add": "Add"
-      },
-      "messages": {
-        "passwordMismatch": "Password does not match",
-        "success": "User added successfully!",
-        "error": "Something went wrong"
-      }
-    },
-    "vitals": {
-      "title": "Family Vitals Details",
-      "back": "Back",
-      "form": {
-        "familyMember": {
-          "label": "Select Family Member",
-          "placeholder": "Select Family Member"
-        },
-        "alert": "Please Select Family Member"
-      },
-      "tabs": {
-        "bloodPressure": "Blood Pressure",
-        "bloodSugar": "Blood Sugar",
-        "spo2": "SpO2",
-        "temperature": "Temperature",
-        "weight": "Weight"
-      }
-    },
-    "update": {
-      "title": {
-        "admin": "Admin Details",
-        "user": "User Details"
-      },
-      "back": "Back",
-      "wallet": "Wallet Amount",
-      "form": {
-        "firstName": {
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        "lastName": {
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        "email": {
-          "label": "Email",
-          "placeholder": "Email"
-        },
-        "phone": {
-          "label": "Phone",
-          "placeholder": "Phone Number"
-        },
-        "dateOfBirth": {
-          "label": "Date Of Birth (MM/DD/YYYY)",
-          "placeholder": "Select Date"
-        },
-        "gender": {
-          "label": "Gender",
-          "placeholder": "Select Gender",
-          "options": {
-            "male": "Male",
-            "female": "Female"
-          }
-        },
-        "profilePicture": {
-          "label": "Profile Picture",
-          "change": "Change Profile Picture",
-          "clear": "Clear"
-        }
-      },
-      "buttons": {
-        "update": "Update"
-      },
-      "messages": {
-        "success": "User Updated!",
-        "error": "Something went wrong",
-        "imageDeleted": "Image Deleted!"
-      },
-      "tabs": {
-        "overview": "Overview",
-        "familyMembers": "Family Members",
-        "familyVitals": "Family Vitals Data",
-        "wallet": "Wallet"
-      }
-    },
-    "index": {
-      "title": "All Users",
-      "search": "Search",
-      "add": "Add User",
-      "tabs": {
-        "all": "All",
-        "admin": "Admin",
-        "user": "User"
-      }
-    }
-  },
-  "cities": {
-    "add": {
-      "title": "Add City",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Name"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add City"
-      },
-      "messages": {
-        "success": "City Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "index": {
-      "title": "Cities",
-      "table": {
-        "name": "Name",
-        "actions": "Actions"
-      }
-    },
-    "update": {
-      "title": "Update City",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update City"
-      },
-      "messages": {
-        "success": "City Updated!",
-        "error": "Something went wrong"
-      }
-    },
-    "delete": {
-      "title": "Delete City",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "City Deleted!",
-        "error": "Something went wrong"
-      }
-    }
-  },
-  "coupons": {
-    "add": {
-      "title": "Add Coupon",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        },
-        "value": {
-          "label": "Value (Off in %)",
-          "placeholder": "Value"
-        },
-        "description": {
-          "label": "Description",
-          "placeholder": "Description"
-        },
-        "dates": {
-          "start": {
-            "label": "Start Date",
-            "placeholder": "Start Date"
-          },
-          "end": {
-            "label": "End Date",
-            "placeholder": "End Date"
-          }
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Coupon"
-      },
-      "messages": {
-        "success": "Coupon Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "index": {
-      "title": "All Coupons",
-      "search": "Search",
-      "addNew": "Add New",
-      "table": {
-        "active": "Active",
-        "title": "Title",
-        "value": "Value",
-        "description": "Description",
-        "startDate": "Start Date",
-        "endDate": "End Date",
-        "updatedAt": "Updated At"
-      },
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happens."
-        },
-        "success": {
-          "statusUpdated": "Updated!"
-        }
-      },
-      "tabs": {
-        "all": "All Coupons",
-        "used": "Used Coupons"
-      }
-    },
-    "update": {
-      "title": "Update Coupon",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        },
-        "description": {
-          "label": "Description",
-          "placeholder": "Description"
-        },
-        "startDate": {
-          "label": "Start Date",
-          "placeholder": "Start Date"
-        },
-        "endDate": {
-          "label": "End Date",
-          "placeholder": "End Date"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update Coupon"
-      },
-      "messages": {
-        "success": "Coupon Updated!",
-        "error": "Something went wrong"
-      }
-    },
-    "delete": {
-      "title": "Delete Coupon",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "Coupon Deleted!",
-        "error": "Something went wrong"
-      }
-    },
-    "deleteUsed": {
-      "title": "Delete Used Coupon",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "Used Coupon Deleted!",
-        "error": "Something went wrong"
-      }
-    },
-    "usedCoupons": {
-      "title": "Used Coupons",
-      "actions": {
-        "add": "Add New"
-      },
-      "error": {
-        "title": "Oops!",
-        "description": "Something bad happens."
-      }
-    }
-  },
-  "familyMembers": {
-    "add": {
-      "title": "Add Family Member",
-      "form": {
-        "user": "User",
-        "firstName": {
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        "lastName": {
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        "phone": {
-          "label": "Phone",
-          "placeholder": "Phone Number"
-        },
-        "dateOfBirth": {
-          "label": "Date Of Birth (MM/DD/YYYY)",
-          "placeholder": "Select Date"
-        },
-        "gender": {
-          "label": "Gender",
-          "placeholder": "Select Gender",
-          "options": {
-            "male": "Male",
-            "female": "Female"
-          }
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Family Member"
-      },
-      "messages": {
-        "success": "Family Member Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "delete": {
-      "title": "Delete Family Member",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "Family Member Deleted!",
-        "error": "Something went wrong"
-      }
-    },
-    "edit": {
-      "title": "Edit Family Member",
-      "form": {
-        "user": "User",
-        "firstName": {
-          "label": "First Name",
-          "placeholder": "First Name"
-        },
-        "lastName": {
-          "label": "Last Name",
-          "placeholder": "Last Name"
-        },
-        "phone": {
-          "label": "Phone",
-          "placeholder": "Phone Number"
-        },
-        "dateOfBirth": {
-          "label": "Date Of Birth (MM/DD/YYYY)",
-          "placeholder": "Select Date"
-        },
-        "gender": {
-          "label": "Gender",
-          "placeholder": "Select Gender",
-          "options": {
-            "male": "Male",
-            "female": "Female"
-          }
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update Family Member"
-      },
-      "messages": {
-        "success": "Family Member Updated!",
-        "error": "Something went wrong"
-      }
-    },
-    "byUser": {
-      "title": "Family Members by User",
-      "search": "Search",
-      "buttons": {
-        "add": "Add New",
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "messages": {
-        "error": "Something went wrong"
-      }
-    },
-    "index": {
-      "search": "Search",
-      "table": {
-        "name": "Name",
-        "phone": "Phone",
-        "gender": "Gender",
-        "dob": "Date Of Birth",
-        "createdAt": "Created At"
-      },
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happens."
-        }
-      },
-      "buttons": {
-        "add": "Add New",
-        "edit": "Edit",
-        "delete": "Delete"
-      }
-    }
-  },
-  "reviews": {
-    "search": "Search Reviews",
-    "buttons": {
-      "refresh": "Refresh"
-    },
-    "title": "Reviews",
-    "message": "Are you sure? update cancellation status to {{type}}"
-  },
-  "transactions": {
-    "add": {
-      "title": "Add Transaction",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Transaction"
-      },
-      "messages": {
-        "success": "Transaction Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "delete": {
-      "title": "Delete Transaction",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "Transaction Deleted!",
-        "error": "Something went wrong"
-      }
-    },
-    "update": {
-      "title": "Update Transaction",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update Transaction"
-      },
-      "messages": {
-        "success": "Transaction Updated!",
-        "error": "Something went wrong"
-      }
-    },
-    "index": {
-      "search": "Search",
-      "badge": {
-        "credited": "Credited",
-        "debited": "Debited",
-        "na": "N/A",
-        "yes": "Yes",
-        "no": "No"
-      },
-      "tabs": {
-        "all": "All Transactions",
-        "appointmentPayments": "Appointment Payments",
-        "invoices": "Invoices"
-      },
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happens."
-        }
-      }
-    },
-    "chart": {
-      "title": "Transactions for the last {{days}} days",
-      "lastDays": "Last {{days}} days",
-      "distribution": "Total transaction amount distribution"
-    }
-  },
-  "notifications": {
-    "title": "Notifications",
-    "search": {
-      "placeholder": "Search"
-    },
-    "table": {
-      "id": "ID",
-      "title": "Title",
-      "body": "Body",
-      "appointmentId": "Appointment ID",
-      "userId": "User ID",
-      "fileId": "File ID",
-      "prescriptionId": "Prescription ID",
-      "updatedAt": "Updated At",
-      "buttons": {
-        "goToAppointment": "Go to Appointment",
-        "goToUser": "Go to User",
-        "goToFile": "Go to File",
-        "goToPrescription": "Go to Prescription"
-      }
-    },
-    "buttons": {
-      "addNew": "Add New"
-    },
-    "messages": {
-      "error": {
-        "title": "Oops!",
-        "description": "Something bad happened."
-      }
-    },
-    "add": {
-      "title": "Send User Notification",
-      "form": {
-        "title": {
-          "label": "Title",
-          "placeholder": "Title"
-        },
-        "body": {
-          "label": "Body",
-          "placeholder": "Body"
-        },
-        "file": {
-          "choose": "Choose a file",
-          "dragHere": "or Drag it here",
-          "selectedFile": "Selected File:"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "send": "Send Notification"
-      },
-      "messages": {
-        "success": "Notification sent!",
-        "error": "Something went wrong"
-      }
-    }
-  },
-  "states": {
-    "add": {
-      "title": "Add State",
-      "submit": "Title",
-      "buttons": {
-        "close": "Close",
-        "add": "Add State"
-      },
-      "messages": {
-        "success": "State Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "delete": {
-      "title": "Delete State",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "State Deleted!",
-        "error": "Something went wrong"
-      }
-    },
-    "index": {
-      "search": "Search",
-      "add": "Add New",
-      "buttons": {
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "State Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "update": {
-      "title": "Update State",
-      "submit": "Title",
-      "buttons": {
-        "close": "Close",
-        "update": "Update State"
-      },
-      "messages": {
-        "success": "State Updated!",
-        "error": "Something went wrong"
-      }
-    }
-  },
-  "prescriptions": {
-    "add": {
-      "title": "Add Prescription",
-      "medicine": "Medicine",
-      "dosage": "Dosage",
-      "duration": {
-        "label": "Duration",
-        "options": {
-          "threeDays": "For 3 days",
-          "fiveDays": "For 5 days",
-          "sevenDays": "For 7 days",
-          "fifteenDays": "For 15 days",
-          "oneMonth": "For 1 month"
-        }
-      },
-      "time": {
-        "label": "Time",
-        "options": {
-          "afterMeal": "After Meal",
-          "beforeMeal": "Before Meal"
-        }
-      },
-      "doseInterval": {
-        "label": "Dose Interval",
-        "options": {
-          "onceADay": "Once a Day",
-          "everyMorningAndEvening": "Every Morning and Evening",
-          "threeTimesADay": "Three Times a Day",
-          "fourTimesADay": "Four Times a Day"
-        }
-      },
-      "notes": {
-        "label": "Notes"
-      },
-      "buttons": {
-        "save": "Save Prescription",
-        "back": "Back",
-        "newMedicine": "New Medicine"
-      },
-      "form": {
-        "physicalInformation": {
-          "label": "Physical Information"
-        },
-        "foodAllergies": {
-          "label": "Food Allergies"
-        },
-        "tendencyToBleed": {
-          "label": "Tendency to Bleed"
-        },
-        "heartDisease": {
-          "label": "Heart Disease"
-        },
-        "bloodPressure": {
-          "label": "Blood Pressure"
-        },
-        "diabetic": {
-          "label": "Diabetic"
-        },
-        "surgery": {
-          "label": "Surgery"
-        },
-        "accident": {
-          "label": "Accident"
-        },
-        "others": {
-          "label": "Others"
-        },
-        "medicalHistory": {
-          "label": "Medical History"
-        },
-        "currentMedication": {
-          "label": "Current Medication"
-        },
-        "femalePregnancy": {
-          "label": "Female Pregnancy"
-        },
-        "breastFeeding": {
-          "label": "Breast Feeding"
-        },
-        "pulseRate": {
-          "label": "Pulse Rate"
-        },
-        "temperature": {
-          "label": "Temperature"
-        },
-        "problemAndAdvice": {
-          "label": "Problem and Advice"
-        },
-        "problem": {
-          "label": "Problem"
-        },
-        "tests": {
-          "label": "Tests"
-        },
-        "advice": {
-          "label": "Advice"
-        },
-        "nextVisit": {
-          "label": "Next Visit",
-          "after": "After",
-          "days": "days"
-        }
-      }
-    },
-    "index": {
-      "search": "Search",
-      "table": {
-        "action": "Action",
-        "id": "ID",
-        "appointmentId": "Appointment ID",
-        "patient": "Patient",
-        "date": "Date",
-        "pulseRate": "Pulse Rate",
-        "temperature": "Temperature"
-      },
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happens."
-        },
-        "noData": "No data available in table"
-      }
-    },
-    "delete": {
-      "title": "Delete Prescription",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      }
-    },
-    "prescription": {
-      "title": "Prescription",
-      "search": "Search",
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happens."
-        },
-        "noData": "No data available in table"
-      },
-      "table": {
-        "patient": "Patient",
-        "doctor": "Doctor",
-        "date": "Date",
-        "pulseRate": "Pulse Rate",
-        "temperature": "Temperature"
-      },
-      "buttons": {
-        "newPrescription": "New Prescription",
-        "close": "Close",
-        "print": "Print"
-      }
-    },
-    "prescriptionByPatientID": {
-      "title": "Prescription by Patient ID",
-      "search": "Search",
-      "tables": {
-        "id": "ID",
-        "appointmentId": "Appointment ID",
-        "patient": "Patient",
-        "date": "Date",
-        "pulseRate": "Pulse Rate",
-        "temperature": "Temperature",
-        "action": "Action"
-      },
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happens."
-        },
-        "noData": "No data available in table"
-      }
-    },
-    "update": {
-      "title": "Update Prescription",
-      "messages": {
-        "success": "Prescription Updated!",
-        "error": "Something went wrong"
-      },
-      "buttons": {
-        "close": "Close",
-        "back": "Back",
-        "update": "Update Prescription",
-        "newMedicine": "New Medicine",
-        "save": "Save"
-      },
-      "form": {
-        "dosage": "Dosage",
-        "duration": {
-          "label": "Duration",
-          "options": {
-            "threeDays": "For 3 days",
-            "fiveDays": "For 5 days",
-            "sevenDays": "For 7 days",
-            "fifteenDays": "For 15 days",
-            "oneMonth": "For 1 Month"
-          }
-        },
-        "time": {
-          "label": "Time",
-          "options": {
-            "afterMeal": "After Meal",
-            "beforeMeal": "Before Meal"
-          }
-        },
-        "doseInterval": {
-          "label": "Dose Interval",
-          "options": {
-            "onceADay": "Once a Day",
-            "everyMorningAndEvening": "Every Morning & Evening",
-            "threeTimesADay": "3 Times a day",
-            "fourTimesADay": "4 Times a day"
-          }
-        },
-        "notes": {
-          "label": "Notes",
-          "placeholder": "Notes"
-        },
-        "physicalInformation": {
-          "label": "Physical Information",
-          "placeholder": "Physical Information"
-        },
-        "foodAllergies": {
-          "label": "Food Allergies",
-          "placeholder": "Food Allergies"
-        },
-        "tendencyToBleed": {
-          "label": "Tendency to Bleed",
-          "placeholder": "Tendency to Bleed"
-        },
-        "heartDisease": {
-          "label": "Heart Disease",
-          "placeholder": "Heart Disease"
-        },
-        "bloodPressure": {
-          "label": "Blood Pressure",
-          "placeholder": "Blood Pressure"
-        },
-        "diabetic": {
-          "label": "Diabetic",
-          "placeholder": "Diabetic"
-        },
-        "surgery": {
-          "label": "Surgery",
-          "placeholder": "Surgery"
-        },
-        "accident": {
-          "label": "Accident",
-          "placeholder": "Accident"
-        },
-        "others": {
-          "label": "Others",
-          "placeholder": "Others"
-        },
-        "medicalHistory": {
-          "label": "Medical History",
-          "placeholder": "Medical History"
-        },
-        "currentMedication": {
-          "label": "Current Medication",
-          "placeholder": "Current Medication"
-        },
-        "femalePregnancy": {
-          "label": "Female Pregnancy",
-          "placeholder": "Female Pregnancy"
-        },
-        "breastFeeding": {
-          "label": "Breast Feeding",
-          "placeholder": "Breast Feeding"
-        },
-        "pulseRate": {
-          "label": "Pulse Rate",
-          "placeholder": "Pulse Rate"
-        },
-        "temperature": {
-          "label": "Temperature",
-          "placeholder": "Temperature"
-        },
-        "problem": {
-          "label": "Problem",
-          "placeholder": "Problem"
-        },
-        "tests": {
-          "label": "Tests",
-          "placeholder": "Tests"
-        },
-        "advice": {
-          "label": "Advice",
-          "placeholder": "Advice"
-        },
-        "nextVisit": {
-          "label": "Next Visit",
-          "after": "After",
-          "days": "days"
-        }
-      }
-    }
-  },
-  "files": {
-    "title": "Add Patient Files",
-    "buttons": {
-      "close": "Close",
-      "add": "Add Files"
-    },
-    "form": {
-      "title": "Patient",
-      "fileName": "File Name",
-      "maxSize": "Max 5 MB",
-      "choose": "Choose a file",
-      "dragHere": "or Drag it here",
-      "selectedFile": "Selected File:"
-    },
-    "messages": {
-      "sizeError": "Please select a file smaller than 5 MB.",
-      "fileError": "Please select a file",
-      "patientError": "Please select a patient",
-      "success": "File Added!"
-    }
-  },
-  "medicines": {
-    "add": {
-      "title": "Add Medicine",
-      "form": {
-        "name": {
-          "label": "Name",
-          "placeholder": "Medicine name"
-        },
-        "notes": {
-          "label": "Notes",
-          "placeholder": "Additional notes"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "add": "Add Medicine"
-      },
-      "messages": {
-        "success": "Medicine Added!",
-        "error": "Something went wrong"
-      }
-    },
-    "update": {
-      "title": "Update Medicine",
-      "form": {
-        "name": {
-          "label": "Name",
-          "placeholder": "Medicine name"
-        },
-        "notes": {
-          "label": "Notes",
-          "placeholder": "Additional notes"
-        }
-      },
-      "buttons": {
-        "close": "Close",
-        "update": "Update Medicine"
-      },
-      "messages": {
-        "success": "Medicine Updated!",
-        "error": "Something went wrong"
-      }
-    },
-    "index": {
-      "title": "Medicines",
-      "search": {
-        "placeholder": "Search"
-      },
-      "buttons": {
-        "addNew": "Add New"
-      },
-      "messages": {
-        "error": {
-          "title": "Oops!",
-          "description": "Something bad happened."
-        }
-      }
-    },
-    "delete": {
-      "title": "Delete Medicine",
-      "message": "Are you sure? You can not undo this action afterwards.",
-      "buttons": {
-        "cancel": "Cancel",
-        "delete": "Delete"
-      },
-      "messages": {
-        "success": "Medicine Deleted!",
-        "error": "Something went wrong"
-      }
-    }
-  }
+	"login": {
+		"title": "Sign in to your account",
+		"email": "Email",
+		"password": "Password",
+		"forgotPassword": "Forget password?",
+		"signIn": "Sign in",
+		"loginAs": "Login As - ",
+		"continue": "Continue",
+		"cancel": "Cancel",
+		"errors": {
+			"noPermission": "You do not have permission to access the admin panel. Please contact the administrator if you believe this is an error.",
+			"wrongCredentials": "Wrong Email Or Password.",
+			"generalError": "An error occurred during login. Please try again."
+		}
+	},
+	"dashboard": {
+		"title": "Dashboard",
+		"charts": {
+			"appointments": {
+				"title": "Appointments",
+				"completed": "Completed",
+				"cancelled": "Cancelled",
+				"confirmed": "Confirmed"
+			},
+			"transactions": {
+				"title": "Transactions",
+				"credited": "Credited",
+				"debited": "Debited"
+			}
+		},
+		"calendar": {
+			"title": "Appointments Calendar"
+		},
+		"cancellation": {
+			"title": "Cancellation Request Statistics",
+			"chart": "Cancellation Request Distribution"
+		}
+	},
+	"buttons": {
+		"addNewAppointment": "Add New Appointment",
+		"addDoctor": "Add Doctor",
+		"addPatient": "Add Patient",
+		"addMedicine": "Add Medicine",
+		"newCheckin": "New Checking",
+		"showDisplay": "Show Checkin Display"
+	},
+	"appointments": {
+		"cards": {
+			"todayAppointment": "Today's Appointment",
+			"upcomingAppointment": "Upcoming Appointment",
+			"pendingAppointments": "Pending Appointments",
+			"confirmAppointments": "Confirm Appointments",
+			"cancelledAppointments": "Cancelled Appointments",
+			"rejectedAppointments": "Rejected Appointments",
+			"completedAppointments": "Completed Appointments",
+			"visitedAppointments": "Visited Appointments"
+		},
+		"status": {
+			"unknown": "Unknown",
+			"pending": "Pending",
+			"confirmed": "Confirmed",
+			"rejected": "Rejected",
+			"cancelled": "Cancelled",
+			"completed": "Completed",
+			"rescheduled": "Rescheduled",
+			"visited": "Visited",
+			"distribution": "Appointment Status Distribution",
+			"label": "Status",
+			"select": "Select Status",
+			"cancellation": "Cancellation Initiated"
+		},
+		"registration": {
+			"title": "Appointments Made in the Last {{days}} Days",
+			"columns": {
+				"doctor": "Doctor",
+				"patient": "Patient",
+				"status": "Status",
+				"date": "Date",
+				"timeSlots": "Time Slots",
+				"type": "Type",
+				"paymentStatus": "Payment Status"
+			},
+			"types": {
+				"emergency": "Emergency",
+				"regular": "Regular"
+			},
+			"payment": {
+				"paid": "Paid",
+				"refunded": "Refunded",
+				"notPaid": "Not Paid"
+			}
+		},
+		"chart": {
+			"title": "Appointments in the Last {{days}} Days",
+			"lastDays": "Last {{days}} Days",
+			"labels": {
+				"all": "All",
+				"cancelled": "Cancelled",
+				"completed": "Completed"
+			}
+		},
+		"add": {
+			"title": "Add New Appointment",
+			"or": "Or",
+			"addPatient": "Add patient",
+			"details": "Appointment Details",
+			"type": {
+				"label": "Appointment Type",
+				"select": "Select Appointment Type",
+				"emergency": "Emergency",
+				"opd": "OPD",
+				"video": "Video Consultant"
+			},
+			"payment": {
+				"status": {
+					"label": "Payment Status",
+					"select": "Select payment status",
+					"paid": "Paid",
+					"unpaid": "Not Paid"
+				},
+				"method": {
+					"label": "Payment Method",
+					"select": "Select payment method"
+				},
+				"details": "Payment Details",
+				"timeSlot": "Select Time Slot"
+			},
+			"fee": {
+				"label": "Fee",
+				"total": "Total Amount"
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Appointment"
+			}
+		},
+		"labels": {
+			"appointmentDate": "Appointment Date",
+			"appointmentTimeSlot": "Appointment Time Slot",
+			"selectDoctor": "Please Select Doctor",
+			"selectType": "Please Select Appointment Type"
+		},
+		"buttons": {
+			"refreshTable": "Refresh Table",
+			"close": "Close"
+		},
+		"timeSlots": {
+			"selectDateTime": "Select date and Time Slot",
+			"available": "Time Slots",
+			"noAvailable": "Sorry, no available time slots were found for the selected date."
+		},
+		"reschedule": {
+			"title": "Reschedule Appointment",
+			"button": "Reschedule Appointment"
+		},
+		"update": {
+			"patientDetails": "Patient Details",
+			"doctorDetails": "Doctor Details",
+			"labels": {
+				"patientFirstName": "Patient First Name",
+				"patientLastName": "Patient Last Name",
+				"phone": "Phone",
+				"gender": "Gender",
+				"doctorFirstName": "Doctor First Name",
+				"doctorLastName": "Doctor Last Name",
+				"meetingLink": "Meeting Link",
+				"updateRequestStatus": "Update Request Status"
+			},
+			"cancellationTab": "Cancellation Request By Patient",
+			"alerts": {
+				"reject": {
+					"title": "Reject Appointment",
+					"message": "Are you sure? You can't undo this action afterwards.",
+					"cancel": "Cancel",
+					"confirm": "Reject"
+				},
+				"cancellation": {
+					"title": "{{type}} Request",
+					"message": "Are you sure? update cancellation status to {{type}}",
+					"cancel": "Cancel",
+					"confirm": "{{type}} Cancellation Request"
+				}
+			},
+			"details": "Appointment Details",
+			"source": "Source",
+			"buttons": {
+				"joinMeeting": "Join Meeting",
+				"printReport": "Print Consultation Report",
+				"back": "Back"
+			}
+		}
+	},
+	"welcome": {
+		"title": "Welcome Back!",
+		"stats": {
+			"activeDoctors": "Total Active Doctors",
+			"appointments": "Total Appointments",
+			"patients": "Total Patients",
+			"users": "Total Users",
+			"departments": "Total Departments",
+			"prescriptions": "Total Prescriptions",
+			"medicine": "Total Medicine",
+			"doctorReviews": "Doctor Reviews"
+		}
+	},
+	"registration": {
+		"users": {
+			"title": "Users Registration in the Last {{days}} Days"
+		},
+		"patients": {
+			"title": "Patients Registration in the Last {{days}} Days"
+		}
+	},
+	"cancellation": {
+		"requests": {
+			"initiated": "Cancellation Request Initiated",
+			"processing": "Cancellation Request Processing",
+			"approved": "Cancellation Request Approved",
+			"rejected": "Cancellation Request Rejected"
+		},
+		"chart": {
+			"title": "Appointment Cancellation Status",
+			"labels": {
+				"initiated": "Cancel Request Initiated",
+				"rejected": "Cancel Request Rejected",
+				"approved": "Cancel Request Approved",
+				"processing": "Cancel Request Processing"
+			}
+		}
+	},
+	"checkin": {
+		"title": "New Checkin",
+		"or": "Or",
+		"buttons": {
+			"scanQr": "Scan QR",
+			"addManually": "Add Data Manually",
+			"getDetails": "Get Details",
+			"close": "Close",
+			"add": "Add Checkin",
+			"showDisplay": "Show Checkin Display",
+			"update": "Update Checkin"
+		},
+		"form": {
+			"appointmentId": "Appointment ID",
+			"date": "Date",
+			"time": "Time"
+		},
+		"errors": {
+			"notFound": "Appointment not found",
+			"videoConsult": "Video Consultations cannot be checked in"
+		},
+		"delete": {
+			"title": "Delete Checkin",
+			"confirm": "Are you sure? You can not undo this action afterwards.",
+			"cancel": "Cancel",
+			"delete": "Delete"
+		},
+		"success": {
+			"added": "Added!",
+			"deleted": "Deleted!",
+			"updated": "Updated!"
+		},
+		"update": {
+			"title": "Update Checkin"
+		},
+		"queue": {
+			"nextPatients": "Next Patients",
+			"noUpcoming": "No upcoming patients",
+			"currentlyBeingSeen": "No patient is currently being seen",
+			"now": "Now",
+			"table": {
+				"serialNo": "S No.",
+				"id": "ID",
+				"patientName": "Patient Name"
+			},
+			"doctor": {
+				"title": "Doctor",
+				"selectOption": "Select option",
+				"selectDate": "Select Date"
+			},
+			"appointment": {
+				"id": "Appointment ID",
+				"name": "Name",
+				"time": "Time",
+				"date": "Date"
+			}
+		}
+	},
+	"errors": {
+		"oops": "Oops!",
+		"somethingWrong": "Something bad happens.",
+		"pleaseTryRefreshing": "Please try refreshing the page, or you can return to the homepage.",
+		"tryAgain": "Try Again",
+		"500": "500",
+		"internalServerError": "Internal Server Error",
+		"logout": "Logout"
+	},
+	"common": {
+		"search": "Search",
+		"addNew": "Add New"
+	},
+	"payments": {
+		"methods": {
+			"cash": "Cash",
+			"online": "Online",
+			"other": "Other",
+			"wallet": "Wallet",
+			"upi": "UPI"
+		},
+		"modal": {
+			"amountPaid": "Amount Paid",
+			"selectMode": "Select Payment Mode",
+			"close": "Close",
+			"setToPaid": "Set Amount to Paid"
+		}
+	},
+	"calendar": {
+		"title": "Appointment Calendar",
+		"views": {
+			"week": "Week",
+			"day": "Day",
+			"agenda": "Agenda"
+		},
+		"messages": {
+			"noEvents": "No appointments in this time range",
+			"allDay": "All Day",
+			"date": "Date",
+			"time": "Time",
+			"event": "Event"
+		}
+	},
+	"doctors": {
+		"index": {
+			"search": "Search",
+			"addNew": "Add New",
+			"table": {
+				"name": "Name",
+				"phone": "Phone",
+				"email": "Email",
+				"specialization": "Specialization",
+				"department": "Department",
+				"active": "Active",
+				"stopBooking": "Stop Booking"
+			},
+			"actions": {
+				"edit": "Edit",
+				"delete": "Delete"
+			},
+			"errors": {
+				"title": "Oops!",
+				"description": "Something went wrong."
+			},
+			"success": {
+				"updated": "Doctor Updated!"
+			},
+			"noPermission": "You don't have permission to view doctors"
+		},
+		"review": {
+			"appointmentsDone": "Appointments Done",
+			"loading": "Loading...",
+			"noReviews": "No reviews yet"
+		},
+		"update": {
+			"title": "Update Doctor",
+			"form": {
+				"firstName": "First Name",
+				"lastName": "Last Name",
+				"email": "Email",
+				"phone": "Phone",
+				"department": "Department",
+				"selectDepartment": "Select Department",
+				"gender": {
+					"label": "Gender",
+					"selectGender": "Select Gender",
+					"male": "Male",
+					"female": "Female"
+				},
+				"experience": {
+					"label": "Years of Experience",
+					"placeholder": "Enter years of experience"
+				},
+				"validation": {
+					"required": "This field is required",
+					"email": "Invalid email address",
+					"phone": "Invalid phone number"
+				}
+			},
+			"buttons": {
+				"update": "Update"
+			},
+			"messages": {
+				"doctorUpdated": "Doctor updated successfully"
+			},
+			"professionalInfo": "Professional Information",
+			"appointmentSettings": "Appointment Settings",
+			"active": "Doctor Active?",
+			"stopBooking": "Stop Booking?",
+			"basicDetails": "Basic Details",
+			"contactDetails": "Contact Details",
+			"addressDetails": "Address Details",
+			"fees": {
+				"title": "Fees",
+				"opd": "OPD Fee",
+				"video": "Video Fee",
+				"emergency": "Emergency Fee"
+			}
+		},
+		"socialLinks": {
+			"placeholders": {
+				"facebook": "Facebook",
+				"twitter": "Twitter",
+				"instagram": "Instagram",
+				"youtube": "Youtube"
+			}
+		},
+		"messages": {
+			"imageDeleted": "Image Deleted!",
+			"doctorUpdated": "Doctor Updated!"
+		}
+	},
+	"departments": {
+		"add": {
+			"title": "Add Department",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				},
+				"description": {
+					"label": "Description",
+					"placeholder": "Description"
+				},
+				"image": {
+					"dropzone": {
+						"title": "Choose a file or Drag it here",
+						"selectedFile": "Selected File:"
+					}
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Department"
+			},
+			"messages": {
+				"success": "Department Added!"
+			}
+		},
+		"delete": {
+			"title": "Delete Department",
+			"titleWithName": "Delete Department ( {{title}} )",
+			"confirmMessage": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "Department Deleted!"
+			}
+		},
+		"index": {
+			"search": "Search",
+			"addNew": "Add New",
+			"table": {
+				"name": "Name",
+				"active": "Active"
+			},
+			"errors": {
+				"title": "Oops!",
+				"description": "Something went wrong."
+			},
+			"messages": {
+				"updated": "Department Updated!",
+				"noPermission": "You don't have permission to view departments"
+			},
+			"actions": {
+				"edit": "Edit",
+				"delete": "Delete"
+			}
+		},
+		"update": {
+			"title": "Update Department",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				},
+				"description": {
+					"label": "Description",
+					"placeholder": "Description"
+				},
+				"image": {
+					"dropzone": {
+						"title": "Choose a file or Drag it here",
+						"selectedFile": "Selected File:"
+					},
+					"remove": "Remove Image"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update Department"
+			},
+			"messages": {
+				"success": "Department Updated!",
+				"imageDeleted": "Image deleted!"
+			}
+		}
+	},
+	"specializations": {
+		"add": {
+			"title": "Add Specialization",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Specialization"
+			},
+			"messages": {
+				"success": "Specialization Added!"
+			}
+		},
+		"delete": {
+			"title": "Delete Specialization",
+			"titleWithName": "Delete Specialization ( {{title}} )",
+			"confirmMessage": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete Specialization"
+			},
+			"messages": {
+				"success": "Specialization Deleted!"
+			}
+		},
+		"index": {
+			"search": "Search",
+			"addNew": "Add New",
+			"table": {
+				"name": "Name",
+				"active": "Active"
+			},
+			"errors": {
+				"title": "Oops!",
+				"description": "Something went wrong."
+			},
+			"messages": {
+				"noPermission": "You don't have permission to view specializations"
+			},
+			"actions": {
+				"edit": "Edit",
+				"delete": "Delete"
+			}
+		},
+		"update": {
+			"title": "Update Specialization",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update Specialization"
+			},
+			"messages": {
+				"success": "Specialization Updated!"
+			}
+		}
+	},
+	"roles": {
+		"add": {
+			"title": "Add Role",
+			"form": {
+				"title": "Role Name",
+				"placeholder": "Enter role name"
+			},
+			"buttons": {
+				"close": "Close",
+				"submit": "Add Role"
+			},
+			"messages": {
+				"success": "Role Added!"
+			}
+		},
+		"assignedUsers": {
+			"title": "Assigned Users",
+			"search": "Search",
+			"buttons": {
+				"assignRole": "Assign Role To User",
+				"addNewRole": "Add New Role"
+			},
+			"delete": {
+				"title": "Delete Assign Role",
+				"titleWithName": "Delete Assign Role ( {{role}} ) from ( {{name}} )",
+				"confirmMessage": "Are you sure? You can not undo this action afterwards.",
+				"buttons": {
+					"cancel": "Cancel",
+					"delete": "Delete"
+				},
+				"messages": {
+					"success": "Role assignment deleted!"
+				}
+			},
+			"messages": {
+				"noPermission": "You don't have permission to view roles",
+				"error": {
+					"title": "Oops!",
+					"description": "Something went wrong."
+				}
+			}
+		},
+		"assign": {
+			"title": "Assign Role to User",
+			"form": {
+				"user": "Select User",
+				"role": "Select Role",
+				"placeholder": "Select role"
+			},
+			"buttons": {
+				"close": "Close",
+				"submit": "Assign Role"
+			},
+			"messages": {
+				"success": "Role assigned successfully!",
+				"error": "Permission Error",
+				"errorDescription": "You don't have permission to assign roles"
+			}
+		},
+		"delete": {
+			"title": "Delete Role",
+			"messages": {
+				"success": "Role deleted successfully!",
+				"confirm": "Are you sure? You can not undo this action afterwards.",
+				"cannotDelete": "Cannot Delete This Role!"
+			},
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete Role"
+			}
+		},
+		"tabs": {
+			"roles": "Roles",
+			"assignedUsers": "Assigned Users"
+		},
+		"search": {
+			"placeholder": "Search"
+		},
+		"buttons": {
+			"assignRoleToUser": "Assign Role To User",
+			"addNew": "Add New Role"
+		},
+		"error": {
+			"title": "Oops!",
+			"description": "Something went wrong."
+		}
+	},
+	"patients": {
+		"messages": {
+			"success": "Patient Added",
+			"error": "Something went wrong"
+		},
+		"placeholder": {
+			"search": "Search Patient"
+		},
+		"add": {
+			"title": "Add Patient",
+			"form": {
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "First Name"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Last Name"
+				},
+				"phone": {
+					"label": "Phone",
+					"placeholder": "Phone Number"
+				},
+				"gender": {
+					"label": "Gender",
+					"placeholder": "Gender",
+					"options": {
+						"male": "Male",
+						"female": "Female"
+					}
+				},
+				"dob": {
+					"label": "Date of Birth"
+				},
+				"city": {
+					"label": "City"
+				},
+				"state": {
+					"label": "State"
+				}
+			},
+			"actions": {
+				"close": "Close",
+				"add": "Add Patient"
+			},
+			"messages": {
+				"success": "Patient Added",
+				"errors": {
+					"selectIsd": "Select ISD Code"
+				}
+			}
+		},
+		"update": {
+			"title": "Update Patient",
+			"actions": {
+				"edit": "Edit",
+				"back": "Back",
+				"update": "Update"
+			},
+			"messages": {
+				"success": "Patient Updated",
+				"error": "Something went wrong"
+			},
+			"details": "Details",
+			"files": "Files",
+			"appointments": "Appointments",
+			"prescriptions": "Prescriptions",
+			"basicDetails": "Basic Details",
+			"contactDetails": "Contact Details",
+			"form": {
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "First Name"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Last Name"
+				},
+				"phone": {
+					"label": "Phone",
+					"placeholder": "Phone Number"
+				},
+				"gender": {
+					"label": "Gender",
+					"placeholder": "Gender",
+					"options": {
+						"male": "Male",
+						"female": "Female"
+					}
+				},
+				"dob": {
+					"label": "Date of Birth",
+					"placeholder": "Date of Birth"
+				},
+				"email": {
+					"label": "Email",
+					"placeholder": "Email"
+				},
+				"address": {
+					"label": "Address",
+					"placeholder": "Address"
+				},
+				"state": {
+					"label": "State",
+					"placeholder": "State"
+				},
+				"city": {
+					"label": "City",
+					"placeholder": "City"
+				},
+				"postalCode": {
+					"label": "Postal Code",
+					"placeholder": "Postal Code"
+				},
+				"notes": {
+					"label": "Notes",
+					"placeholder": "Notes"
+				},
+				"profilePicture": {
+					"label": "Profile Picture",
+					"placeholder": "Profile Picture"
+				},
+				"uploadProfilePicture": {
+					"label": "Upload Profile Picture",
+					"placeholder": "Upload Profile Picture"
+				},
+				"delete": {
+					"label": "Delete",
+					"placeholder": "Delete"
+				}
+			}
+		},
+		"patientFiles": {
+			"title": "Patient Files",
+			"updatedOn": "Updated On",
+			"actions": {
+				"edit": "Edit",
+				"delete": "Delete",
+				"addNew": "Add New"
+			},
+			"add": {
+				"title": "Add Patient Files",
+				"form": {
+					"name": {
+						"label": "Name",
+						"placeholder": "Name"
+					},
+					"file": {
+						"choose": "Choose a file",
+						"dragHere": "or Drag it here",
+						"selectedFile": "Selected File:",
+						"maxSize": "Max 5 MB"
+					}
+				},
+				"buttons": {
+					"close": "Close",
+					"add": "Add"
+				},
+				"messages": {
+					"success": "Patient File Added!",
+					"error": "Please select a file smaller than 5 MB."
+				}
+			},
+			"update": {
+				"title": "Update Patient Files",
+				"form": {
+					"title": {
+						"label": "Name",
+						"placeholder": "Name"
+					},
+					"file": {
+						"choose": "Choose a file",
+						"dragHere": "or Drag it here",
+						"selectedFile": "Selected File:",
+						"maxSize": "Max 5 MB"
+					},
+					"close": "Close",
+					"update": "Update"
+				},
+				"buttons": {
+					"close": "Close",
+					"update": "Update"
+				},
+				"messages": {
+					"success": "Patient File Updated!",
+					"error": "Please select a file smaller than 5 MB."
+				}
+			}
+		},
+		"actions": {
+			"next": "Next",
+			"previous": "Previous"
+		},
+		"tables": {
+			"actions": "Actions",
+			"name": "Name",
+			"phone": "Phone",
+			"gender": "Gender",
+			"dateOfBirth": "Date of Birth",
+			"email": "Email",
+			"image": "Image",
+			"createdOn": "Created On"
+		}
+	},
+	"users": {
+		"messages": {
+			"success": "User Added",
+			"error": "Something went wrong"
+		},
+		"add": {
+			"title": "Add User",
+			"back": "Back",
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "Email"
+				},
+				"password": {
+					"label": "Password",
+					"placeholder": "Password"
+				},
+				"confirmPassword": {
+					"label": "Confirm Password",
+					"placeholder": "Confirm Password"
+				},
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "First Name"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Last Name"
+				},
+				"phone": {
+					"label": "Phone",
+					"placeholder": "Phone Number"
+				},
+				"dateOfBirth": {
+					"label": "Date Of Birth (MM/DD/YYYY)"
+				},
+				"gender": {
+					"label": "Gender",
+					"placeholder": "Select Gender",
+					"options": {
+						"male": "Male",
+						"female": "Female"
+					}
+				},
+				"profilePicture": {
+					"label": "Profile Picture",
+					"upload": "Upload Profile Picture",
+					"clear": "Clear"
+				}
+			},
+			"buttons": {
+				"add": "Add"
+			},
+			"messages": {
+				"passwordMismatch": "Password does not match",
+				"success": "User added successfully!",
+				"error": "Something went wrong"
+			}
+		},
+		"vitals": {
+			"title": "Family Vitals Details",
+			"back": "Back",
+			"form": {
+				"familyMember": {
+					"label": "Select Family Member",
+					"placeholder": "Select Family Member"
+				},
+				"alert": "Please Select Family Member"
+			},
+			"tabs": {
+				"bloodPressure": "Blood Pressure",
+				"bloodSugar": "Blood Sugar",
+				"spo2": "SpO2",
+				"temperature": "Temperature",
+				"weight": "Weight"
+			}
+		},
+		"update": {
+			"title": {
+				"admin": "Admin Details",
+				"user": "User Details"
+			},
+			"back": "Back",
+			"wallet": "Wallet Amount",
+			"form": {
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "First Name"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Last Name"
+				},
+				"email": {
+					"label": "Email",
+					"placeholder": "Email"
+				},
+				"phone": {
+					"label": "Phone",
+					"placeholder": "Phone Number"
+				},
+				"dateOfBirth": {
+					"label": "Date Of Birth (MM/DD/YYYY)",
+					"placeholder": "Select Date"
+				},
+				"gender": {
+					"label": "Gender",
+					"placeholder": "Select Gender",
+					"options": {
+						"male": "Male",
+						"female": "Female"
+					}
+				},
+				"profilePicture": {
+					"label": "Profile Picture",
+					"change": "Change Profile Picture",
+					"clear": "Clear"
+				}
+			},
+			"buttons": {
+				"update": "Update"
+			},
+			"messages": {
+				"success": "User Updated!",
+				"error": "Something went wrong",
+				"imageDeleted": "Image Deleted!"
+			},
+			"tabs": {
+				"overview": "Overview",
+				"familyMembers": "Family Members",
+				"familyVitals": "Family Vitals Data",
+				"wallet": "Wallet"
+			}
+		},
+		"index": {
+			"title": "All Users",
+			"search": "Search",
+			"add": "Add User",
+			"tabs": {
+				"all": "All",
+				"admin": "Admin",
+				"user": "User"
+			}
+		}
+	},
+	"cities": {
+		"add": {
+			"title": "Add City",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Name"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add City"
+			},
+			"messages": {
+				"success": "City Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"index": {
+			"title": "Cities",
+			"table": {
+				"name": "Name",
+				"actions": "Actions"
+			}
+		},
+		"update": {
+			"title": "Update City",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update City"
+			},
+			"messages": {
+				"success": "City Updated!",
+				"error": "Something went wrong"
+			}
+		},
+		"delete": {
+			"title": "Delete City",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "City Deleted!",
+				"error": "Something went wrong"
+			}
+		}
+	},
+	"coupons": {
+		"add": {
+			"title": "Add Coupon",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				},
+				"value": {
+					"label": "Value (Off in %)",
+					"placeholder": "Value"
+				},
+				"description": {
+					"label": "Description",
+					"placeholder": "Description"
+				},
+				"dates": {
+					"start": {
+						"label": "Start Date",
+						"placeholder": "Start Date"
+					},
+					"end": {
+						"label": "End Date",
+						"placeholder": "End Date"
+					}
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Coupon"
+			},
+			"messages": {
+				"success": "Coupon Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"index": {
+			"title": "All Coupons",
+			"search": "Search",
+			"addNew": "Add New",
+			"table": {
+				"active": "Active",
+				"title": "Title",
+				"value": "Value",
+				"description": "Description",
+				"startDate": "Start Date",
+				"endDate": "End Date",
+				"updatedAt": "Updated At"
+			},
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happens."
+				},
+				"success": {
+					"statusUpdated": "Updated!"
+				}
+			},
+			"tabs": {
+				"all": "All Coupons",
+				"used": "Used Coupons"
+			}
+		},
+		"update": {
+			"title": "Update Coupon",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				},
+				"description": {
+					"label": "Description",
+					"placeholder": "Description"
+				},
+				"startDate": {
+					"label": "Start Date",
+					"placeholder": "Start Date"
+				},
+				"endDate": {
+					"label": "End Date",
+					"placeholder": "End Date"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update Coupon"
+			},
+			"messages": {
+				"success": "Coupon Updated!",
+				"error": "Something went wrong"
+			}
+		},
+		"delete": {
+			"title": "Delete Coupon",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "Coupon Deleted!",
+				"error": "Something went wrong"
+			}
+		},
+		"deleteUsed": {
+			"title": "Delete Used Coupon",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "Used Coupon Deleted!",
+				"error": "Something went wrong"
+			}
+		},
+		"usedCoupons": {
+			"title": "Used Coupons",
+			"actions": {
+				"add": "Add New"
+			},
+			"error": {
+				"title": "Oops!",
+				"description": "Something bad happens."
+			}
+		}
+	},
+	"familyMembers": {
+		"add": {
+			"title": "Add Family Member",
+			"form": {
+				"user": "User",
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "First Name"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Last Name"
+				},
+				"phone": {
+					"label": "Phone",
+					"placeholder": "Phone Number"
+				},
+				"dateOfBirth": {
+					"label": "Date Of Birth (MM/DD/YYYY)",
+					"placeholder": "Select Date"
+				},
+				"gender": {
+					"label": "Gender",
+					"placeholder": "Select Gender",
+					"options": {
+						"male": "Male",
+						"female": "Female"
+					}
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Family Member"
+			},
+			"messages": {
+				"success": "Family Member Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"delete": {
+			"title": "Delete Family Member",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "Family Member Deleted!",
+				"error": "Something went wrong"
+			}
+		},
+		"edit": {
+			"title": "Edit Family Member",
+			"form": {
+				"user": "User",
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "First Name"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Last Name"
+				},
+				"phone": {
+					"label": "Phone",
+					"placeholder": "Phone Number"
+				},
+				"dateOfBirth": {
+					"label": "Date Of Birth (MM/DD/YYYY)",
+					"placeholder": "Select Date"
+				},
+				"gender": {
+					"label": "Gender",
+					"placeholder": "Select Gender",
+					"options": {
+						"male": "Male",
+						"female": "Female"
+					}
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update Family Member"
+			},
+			"messages": {
+				"success": "Family Member Updated!",
+				"error": "Something went wrong"
+			}
+		},
+		"byUser": {
+			"title": "Family Members by User",
+			"search": "Search",
+			"buttons": {
+				"add": "Add New",
+				"edit": "Edit",
+				"delete": "Delete"
+			},
+			"messages": {
+				"error": "Something went wrong"
+			}
+		},
+		"index": {
+			"search": "Search",
+			"table": {
+				"name": "Name",
+				"phone": "Phone",
+				"gender": "Gender",
+				"dob": "Date Of Birth",
+				"createdAt": "Created At"
+			},
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happens."
+				}
+			},
+			"buttons": {
+				"add": "Add New",
+				"edit": "Edit",
+				"delete": "Delete"
+			}
+		}
+	},
+	"reviews": {
+		"search": "Search Reviews",
+		"buttons": {
+			"refresh": "Refresh"
+		},
+		"title": "Reviews",
+		"message": "Are you sure? update cancellation status to {{type}}"
+	},
+	"transactions": {
+		"add": {
+			"title": "Add Transaction",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Transaction"
+			},
+			"messages": {
+				"success": "Transaction Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"delete": {
+			"title": "Delete Transaction",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "Transaction Deleted!",
+				"error": "Something went wrong"
+			}
+		},
+		"update": {
+			"title": "Update Transaction",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update Transaction"
+			},
+			"messages": {
+				"success": "Transaction Updated!",
+				"error": "Something went wrong"
+			}
+		},
+		"index": {
+			"search": "Search",
+			"badge": {
+				"credited": "Credited",
+				"debited": "Debited",
+				"na": "N/A",
+				"yes": "Yes",
+				"no": "No"
+			},
+			"tabs": {
+				"all": "All Transactions",
+				"appointmentPayments": "Appointment Payments",
+				"invoices": "Invoices"
+			},
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happens."
+				}
+			}
+		},
+		"chart": {
+			"title": "Transactions for the last {{days}} days",
+			"lastDays": "Last {{days}} days",
+			"distribution": "Total transaction amount distribution"
+		}
+	},
+	"notifications": {
+		"title": "Notifications",
+		"search": {
+			"placeholder": "Search"
+		},
+		"table": {
+			"id": "ID",
+			"title": "Title",
+			"body": "Body",
+			"appointmentId": "Appointment ID",
+			"userId": "User ID",
+			"fileId": "File ID",
+			"prescriptionId": "Prescription ID",
+			"updatedAt": "Updated At",
+			"buttons": {
+				"goToAppointment": "Go to Appointment",
+				"goToUser": "Go to User",
+				"goToFile": "Go to File",
+				"goToPrescription": "Go to Prescription"
+			}
+		},
+		"buttons": {
+			"addNew": "Add New"
+		},
+		"messages": {
+			"error": {
+				"title": "Oops!",
+				"description": "Something bad happened."
+			}
+		},
+		"add": {
+			"title": "Send User Notification",
+			"form": {
+				"title": {
+					"label": "Title",
+					"placeholder": "Title"
+				},
+				"body": {
+					"label": "Body",
+					"placeholder": "Body"
+				},
+				"file": {
+					"choose": "Choose a file",
+					"dragHere": "or Drag it here",
+					"selectedFile": "Selected File:"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"send": "Send Notification"
+			},
+			"messages": {
+				"success": "Notification sent!",
+				"error": "Something went wrong"
+			}
+		}
+	},
+	"states": {
+		"add": {
+			"title": "Add State",
+			"submit": "Title",
+			"buttons": {
+				"close": "Close",
+				"add": "Add State"
+			},
+			"messages": {
+				"success": "State Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"delete": {
+			"title": "Delete State",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "State Deleted!",
+				"error": "Something went wrong"
+			}
+		},
+		"index": {
+			"search": "Search",
+			"add": "Add New",
+			"buttons": {
+				"edit": "Edit",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "State Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"update": {
+			"title": "Update State",
+			"submit": "Title",
+			"buttons": {
+				"close": "Close",
+				"update": "Update State"
+			},
+			"messages": {
+				"success": "State Updated!",
+				"error": "Something went wrong"
+			}
+		}
+	},
+	"prescriptions": {
+		"add": {
+			"title": "Add Prescription",
+			"medicine": "Medicine",
+			"dosage": "Dosage",
+			"duration": {
+				"label": "Duration",
+				"options": {
+					"threeDays": "For 3 days",
+					"fiveDays": "For 5 days",
+					"sevenDays": "For 7 days",
+					"fifteenDays": "For 15 days",
+					"oneMonth": "For 1 month"
+				}
+			},
+			"time": {
+				"label": "Time",
+				"options": {
+					"afterMeal": "After Meal",
+					"beforeMeal": "Before Meal"
+				}
+			},
+			"doseInterval": {
+				"label": "Dose Interval",
+				"options": {
+					"onceADay": "Once a Day",
+					"everyMorningAndEvening": "Every Morning and Evening",
+					"threeTimesADay": "Three Times a Day",
+					"fourTimesADay": "Four Times a Day"
+				}
+			},
+			"notes": {
+				"label": "Notes"
+			},
+			"buttons": {
+				"save": "Save Prescription",
+				"back": "Back",
+				"newMedicine": "New Medicine"
+			},
+			"form": {
+				"physicalInformation": {
+					"label": "Physical Information"
+				},
+				"foodAllergies": {
+					"label": "Food Allergies"
+				},
+				"tendencyToBleed": {
+					"label": "Tendency to Bleed"
+				},
+				"heartDisease": {
+					"label": "Heart Disease"
+				},
+				"bloodPressure": {
+					"label": "Blood Pressure"
+				},
+				"diabetic": {
+					"label": "Diabetic"
+				},
+				"surgery": {
+					"label": "Surgery"
+				},
+				"accident": {
+					"label": "Accident"
+				},
+				"others": {
+					"label": "Others"
+				},
+				"medicalHistory": {
+					"label": "Medical History"
+				},
+				"currentMedication": {
+					"label": "Current Medication"
+				},
+				"femalePregnancy": {
+					"label": "Female Pregnancy"
+				},
+				"breastFeeding": {
+					"label": "Breast Feeding"
+				},
+				"pulseRate": {
+					"label": "Pulse Rate"
+				},
+				"temperature": {
+					"label": "Temperature"
+				},
+				"problemAndAdvice": {
+					"label": "Problem and Advice"
+				},
+				"problem": {
+					"label": "Problem"
+				},
+				"tests": {
+					"label": "Tests"
+				},
+				"advice": {
+					"label": "Advice"
+				},
+				"nextVisit": {
+					"label": "Next Visit",
+					"after": "After",
+					"days": "days"
+				}
+			}
+		},
+		"index": {
+			"search": "Search",
+			"table": {
+				"action": "Action",
+				"id": "ID",
+				"appointmentId": "Appointment ID",
+				"patient": "Patient",
+				"date": "Date",
+				"pulseRate": "Pulse Rate",
+				"temperature": "Temperature"
+			},
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happens."
+				},
+				"noData": "No data available in table"
+			}
+		},
+		"delete": {
+			"title": "Delete Prescription",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			}
+		},
+		"prescription": {
+			"title": "Prescription",
+			"search": "Search",
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happens."
+				},
+				"noData": "No data available in table"
+			},
+			"table": {
+				"patient": "Patient",
+				"doctor": "Doctor",
+				"date": "Date",
+				"pulseRate": "Pulse Rate",
+				"temperature": "Temperature"
+			},
+			"buttons": {
+				"newPrescription": "New Prescription",
+				"close": "Close",
+				"print": "Print"
+			}
+		},
+		"prescriptionByPatientID": {
+			"title": "Prescription by Patient ID",
+			"search": "Search",
+			"tables": {
+				"id": "ID",
+				"appointmentId": "Appointment ID",
+				"patient": "Patient",
+				"date": "Date",
+				"pulseRate": "Pulse Rate",
+				"temperature": "Temperature",
+				"action": "Action"
+			},
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happens."
+				},
+				"noData": "No data available in table"
+			}
+		},
+		"update": {
+			"title": "Update Prescription",
+			"messages": {
+				"success": "Prescription Updated!",
+				"error": "Something went wrong"
+			},
+			"buttons": {
+				"close": "Close",
+				"back": "Back",
+				"update": "Update Prescription",
+				"newMedicine": "New Medicine",
+				"save": "Save"
+			},
+			"form": {
+				"dosage": "Dosage",
+				"duration": {
+					"label": "Duration",
+					"options": {
+						"threeDays": "For 3 days",
+						"fiveDays": "For 5 days",
+						"sevenDays": "For 7 days",
+						"fifteenDays": "For 15 days",
+						"oneMonth": "For 1 Month"
+					}
+				},
+				"time": {
+					"label": "Time",
+					"options": {
+						"afterMeal": "After Meal",
+						"beforeMeal": "Before Meal"
+					}
+				},
+				"doseInterval": {
+					"label": "Dose Interval",
+					"options": {
+						"onceADay": "Once a Day",
+						"everyMorningAndEvening": "Every Morning & Evening",
+						"threeTimesADay": "3 Times a day",
+						"fourTimesADay": "4 Times a day"
+					}
+				},
+				"notes": {
+					"label": "Notes",
+					"placeholder": "Notes"
+				},
+				"physicalInformation": {
+					"label": "Physical Information",
+					"placeholder": "Physical Information"
+				},
+				"foodAllergies": {
+					"label": "Food Allergies",
+					"placeholder": "Food Allergies"
+				},
+				"tendencyToBleed": {
+					"label": "Tendency to Bleed",
+					"placeholder": "Tendency to Bleed"
+				},
+				"heartDisease": {
+					"label": "Heart Disease",
+					"placeholder": "Heart Disease"
+				},
+				"bloodPressure": {
+					"label": "Blood Pressure",
+					"placeholder": "Blood Pressure"
+				},
+				"diabetic": {
+					"label": "Diabetic",
+					"placeholder": "Diabetic"
+				},
+				"surgery": {
+					"label": "Surgery",
+					"placeholder": "Surgery"
+				},
+				"accident": {
+					"label": "Accident",
+					"placeholder": "Accident"
+				},
+				"others": {
+					"label": "Others",
+					"placeholder": "Others"
+				},
+				"medicalHistory": {
+					"label": "Medical History",
+					"placeholder": "Medical History"
+				},
+				"currentMedication": {
+					"label": "Current Medication",
+					"placeholder": "Current Medication"
+				},
+				"femalePregnancy": {
+					"label": "Female Pregnancy",
+					"placeholder": "Female Pregnancy"
+				},
+				"breastFeeding": {
+					"label": "Breast Feeding",
+					"placeholder": "Breast Feeding"
+				},
+				"pulseRate": {
+					"label": "Pulse Rate",
+					"placeholder": "Pulse Rate"
+				},
+				"temperature": {
+					"label": "Temperature",
+					"placeholder": "Temperature"
+				},
+				"problem": {
+					"label": "Problem",
+					"placeholder": "Problem"
+				},
+				"tests": {
+					"label": "Tests",
+					"placeholder": "Tests"
+				},
+				"advice": {
+					"label": "Advice",
+					"placeholder": "Advice"
+				},
+				"nextVisit": {
+					"label": "Next Visit",
+					"after": "After",
+					"days": "days"
+				}
+			}
+		}
+	},
+	"files": {
+		"title": "Add Patient Files",
+		"buttons": {
+			"close": "Close",
+			"add": "Add Files"
+		},
+		"form": {
+			"title": "Patient",
+			"fileName": "File Name",
+			"maxSize": "Max 5 MB",
+			"choose": "Choose a file",
+			"dragHere": "or Drag it here",
+			"selectedFile": "Selected File:"
+		},
+		"messages": {
+			"sizeError": "Please select a file smaller than 5 MB.",
+			"fileError": "Please select a file",
+			"patientError": "Please select a patient",
+			"success": "File Added!"
+		}
+	},
+	"medicines": {
+		"add": {
+			"title": "Add Medicine",
+			"form": {
+				"name": {
+					"label": "Name",
+					"placeholder": "Medicine name"
+				},
+				"notes": {
+					"label": "Notes",
+					"placeholder": "Additional notes"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"add": "Add Medicine"
+			},
+			"messages": {
+				"success": "Medicine Added!",
+				"error": "Something went wrong"
+			}
+		},
+		"update": {
+			"title": "Update Medicine",
+			"form": {
+				"name": {
+					"label": "Name",
+					"placeholder": "Medicine name"
+				},
+				"notes": {
+					"label": "Notes",
+					"placeholder": "Additional notes"
+				}
+			},
+			"buttons": {
+				"close": "Close",
+				"update": "Update Medicine"
+			},
+			"messages": {
+				"success": "Medicine Updated!",
+				"error": "Something went wrong"
+			}
+		},
+		"index": {
+			"title": "Medicines",
+			"search": {
+				"placeholder": "Search"
+			},
+			"buttons": {
+				"addNew": "Add New"
+			},
+			"messages": {
+				"error": {
+					"title": "Oops!",
+					"description": "Something bad happened."
+				}
+			}
+		},
+		"delete": {
+			"title": "Delete Medicine",
+			"message": "Are you sure? You can not undo this action afterwards.",
+			"buttons": {
+				"cancel": "Cancel",
+				"delete": "Delete"
+			},
+			"messages": {
+				"success": "Medicine Deleted!",
+				"error": "Something went wrong"
+			}
+		}
+	},
+	"sidebar": {
+		"Dashboard": "Dashboard",
+		"Checkins": "Check-ins",
+		"Appointments": "Appointments",
+		"Appointment Status Log": "Appointment Status Log",
+		"Appointments Calendar": "Appointments Calendar",
+		"Transactions": "Transactions",
+		"Departments": "Departments",
+		"Specialization": "Specialization",
+		"Doctors": "Doctors",
+		"Patients": "Patients",
+		"Users": "Users",
+		"Prescriptions": "Prescriptions",
+		"Patient Files": "Patient Files",
+		"Medicines": "Medicines",
+		"Family Members": "Family Members",
+		"Coupons": "Coupons",
+		"Doctor Reviews": "Doctor Reviews",
+		"Notification": "Notification",
+		"Testimonials": "Testimonials",
+		"Login Screen": "Login Screen",
+		"Roles": "Roles",
+		"Settings": "Settings"
+	}
 }

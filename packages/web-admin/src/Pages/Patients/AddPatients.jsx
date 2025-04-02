@@ -59,7 +59,7 @@ function AddPatients({ nextFn, isOpen, onClose }) {
     if (!isd_code) {
       return ShowToast(toast, 'error', t('patients.add.messages.errors.selectIsd'));
     }
-    let formData = { ...data, isd_code, dob: data.dob ? moment(data.dob).format('YYYY-MM-DD') : ''};
+    const formData = { ...data, isd_code, dob: data.dob ? moment(data.dob).format('YYYY-MM-DD') : ''};
 
     mutation.mutate(formData);
   };

@@ -18,7 +18,7 @@ export default function AddPatientFiles({ isOpen, onClose, id }) {
   const MAX_FILE_SIZE = 5 * 1024 * 1024;
   const queryClient = useQueryClient();
   const { register, handleSubmit, reset } = useForm();
-  
+
   const [isLoading, setIsLoading] = useState();
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -50,7 +50,7 @@ export default function AddPatientFiles({ isOpen, onClose, id }) {
 
   // @ts-ignore
   const AddNewFile = async (data) => {
-    let formData = {
+    const formData = {
       ...data,
       patient_id: id,
       file: selectedFile
