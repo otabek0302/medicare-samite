@@ -8,7 +8,8 @@ WORKDIR /var/www/admin-build
 COPY . .
 
 # Install dependencies
-RUN npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps && npm install date-fns
+
 
 # Build the application
 RUN npm run build
