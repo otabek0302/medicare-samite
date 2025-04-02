@@ -2,7 +2,7 @@ import React from "react";
 const Footer: React.FC = () => {
     return ( <>
   <footer className="bg-[#020a40] text-white mt-10 p-6 md:p-10">
-      <div className="container mx-auto flex flex-col md:flex-row md:justify-start gap-40 items-start text-left">
+      <div className="container mx-auto  md:flex flex-row md:justify-start gap-40 items-start text-left">
         <div className="mb-6 md:mb-0">
           <h2 className="text-xl font-bold flex gap-2 items-center"><img src="/logo.png" alt=""  className="w-[50px]"/> SAMIT</h2>
           <p className="text-sm mt-6 font-medium">&copy; 2024 SAMIT. All rights reserved</p>
