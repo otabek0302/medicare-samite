@@ -1,4 +1,4 @@
-﻿/* eslint-disable react/prop-types */
+﻿import PropTypes from 'prop-types';
 import { Box, Button, Flex, IconButton, Input, Skeleton, theme, useDisclosure, useToast } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
@@ -136,14 +136,7 @@ export default function Cities() {
   );
 }
 
-interface ActionButtonProps {
-  onClick: (rowData: any) => void;
-  rowData: any;
-  DeleteonOpen: () => void;
-  EditonOpen: () => void;
-}
-
-const YourActionButton = ({ onClick, rowData, DeleteonOpen, EditonOpen }: ActionButtonProps) => {
+const YourActionButton = ({ onClick, rowData, DeleteonOpen, EditonOpen }) => {
   return (
     <Flex justify={'center'}>
       <IconButton
@@ -184,4 +177,11 @@ const YourActionButton = ({ onClick, rowData, DeleteonOpen, EditonOpen }: Action
       />
     </Flex>
   );
+};
+
+YourActionButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  rowData: PropTypes.any,
+  DeleteonOpen: PropTypes.func.isRequired,
+  EditonOpen: PropTypes.func.isRequired
 };
