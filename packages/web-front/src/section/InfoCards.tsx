@@ -2,7 +2,7 @@ interface InfoCardsProps {}
 
 const InfoCards: React.FC<InfoCardsProps> = () => {
   return (
-    <div className="mt-10 px-2">
+    <div className="mt-10 px-2 md:px-7">
       <div className="md:flex gap-4">
         <div className="bg-[#34C38F] text-white p-8 rounded-lg flex-1">
           <h2 className="font-bold text-2xl mb-2">Reach Out to Us</h2>
