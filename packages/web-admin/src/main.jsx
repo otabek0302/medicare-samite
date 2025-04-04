@@ -34,7 +34,13 @@ const rootElement = document.getElementById("root");
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/admin">
+      <BrowserRouter 
+        basename="/admin" 
+        future={{ 
+          v7_startTransition: true,
+          v7_relativeSplatPath: true 
+        }}
+      >
         <ChakraProvider theme={theme}>
           {" "}
           <App />

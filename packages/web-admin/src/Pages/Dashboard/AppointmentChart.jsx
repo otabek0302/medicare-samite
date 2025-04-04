@@ -1,6 +1,6 @@
 ﻿/* eslint-disable react/prop-types */
 import { Box, Button, Flex, Text, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, useTheme } from '@chakra-ui/react';
-import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend} from 'chart.js';
+import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend, Filler } from 'chart.js';
 import { AiOutlineDown } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
@@ -8,7 +8,7 @@ import { Line } from 'react-chartjs-2';
 
 import moment from 'moment';
 
-ChartJS.register(LineElement,CategoryScale,LinearScale,PointElement,Title,Tooltip,Legend);
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend, Filler);
 
 // @ts-ignore
 const getTransparentColor = (color, alpha) => {

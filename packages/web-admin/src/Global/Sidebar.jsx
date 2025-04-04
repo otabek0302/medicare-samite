@@ -1,4 +1,6 @@
-﻿import { BsBookmarkStar } from "react-icons/bs";
+﻿import PropTypes from "prop-types"
+
+import { BsBookmarkStar } from "react-icons/bs";
 import { IoIosNotifications } from "react-icons/io";
 import { MdMobileScreenShare } from "react-icons/md";
 import { MdRateReview } from "react-icons/md";
@@ -6,7 +8,6 @@ import { BiFolderOpen } from "react-icons/bi";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { BiCalendar, BiCheckShield } from "react-icons/bi";
 import { MdFamilyRestroom } from "react-icons/md";
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { CgArrowsExchangeAlt } from "react-icons/cg";
 import { FiSettings } from "react-icons/fi";
@@ -21,11 +22,12 @@ import { AiFillDashboard } from "react-icons/ai";
 import { FaHospital } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Box, Flex, Icon, IconButton, Input, InputGroup, InputRightElement, Text, Tooltip, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
-import { Link, useLocation } from "react-router-dom"; // Import the custom hook
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import useHasPermission from "../Hooks/HasPermission";
 import admin from "../Controllers/admin";
 import useSettingsData from "../Hooks/SettingData";
-import { useTranslation } from "react-i18next";
 
 
 export default function Sidebar() {
@@ -91,8 +93,8 @@ export default function Sidebar() {
         "::-webkit-scrollbar": {
           display: "none",
         },
-        "-ms-overflow-style": "none",
-        "scrollbar-width": "none",
+        msOverflowStyle: "none",
+        scrollbarWidth: "none",
         overflowY: "scroll",
         height: "200px",
       }}
@@ -201,7 +203,11 @@ export default function Sidebar() {
 function NavItem({ icon: IconComponent, children, isActive, onClick, isOpen }) {
   return (
     <Tooltip label={isOpen ? null : children} placement="right">
-      <Box as="a" href="#" style={{ textDecoration: "none" }} _focus={{ boxShadow: "none" }} onClick={onClick}>
+      <Box
+        style={{ textDecoration: "none" }}
+        _focus={{ boxShadow: "none" }}
+        onClick={onClick}
+      >
         <Flex
           fontSize={14}
           align="center"
@@ -213,14 +219,14 @@ function NavItem({ icon: IconComponent, children, isActive, onClick, isOpen }) {
           borderBottomRightRadius={0}
           role="group"
           cursor="pointer"
-          bg={isActive ? "blue.500" : "transparent"} // Updated active background color
-          boxShadow={isActive ? "0px 4px 10px rgba(0, 0, 0, 0.3)" : "transparent"} // Updated shadow for active items
+          bg={isActive ? "blue.500" : "transparent"}
+          boxShadow={isActive ? "0px 4px 10px rgba(0, 0, 0, 0.3)" : "transparent"}
           color={isActive ? "white" : "inherit"}
           _hover={{
-            bg: "blue.600", // Updated hover color for active items
+            bg: "blue.600",
             color: "white",
           }}
-          fontWeight={isActive ? "bold" : 500} // Bold font for active items
+          fontWeight={isActive ? "bold" : 500}
           justifyContent={isOpen ? "start" : "center"}
         >
           {IconComponent && (
@@ -240,3 +246,11 @@ function NavItem({ icon: IconComponent, children, isActive, onClick, isOpen }) {
     </Tooltip>
   );
 }
+
+NavItem.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  children: PropTypes.node.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired
+};

@@ -2,52 +2,22 @@
 import { AiFillSetting } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
 import { RiLockPasswordLine } from "react-icons/ri";
-import {
-  Flex,
-  IconButton,
-  useColorModeValue,
-  Text,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Box,
-  ModalOverlay,
-  ModalContent,
-  ModalBody,
-  Modal,
-  Avatar,
-  Image,
-  useColorMode,
-  Divider,
-  Heading,
-  Center,
-  Stack,
-  FormControl,
-  FormLabel,
-  InputGroup,
-  InputLeftElement,
-  Input,
-  VStack,
-  useMediaQuery,
-  Button,
-  useDisclosure,
-  useToast,
-} from "@chakra-ui/react";
+import { Flex, IconButton, useColorModeValue, Text, Menu, MenuButton, MenuList, MenuItem, Box, ModalOverlay, ModalContent, ModalBody, Modal, Avatar, Image, useColorMode, Divider, Heading, Center, Stack, FormControl, FormLabel, InputGroup, InputLeftElement, Input, VStack, useMediaQuery, Button, useDisclosure, useToast } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { FiSun, FiMoon, FiUser } from "react-icons/fi";
+import { useForm } from "react-hook-form";
+import { ADD } from "../Controllers/ApiControllers";
 import { useLocation, useNavigate } from "react-router-dom";
+import { BsEnvelopeAt, BsPersonAdd, BsPhone } from "react-icons/bs";
+import { useMutation } from "@tanstack/react-query";
+
 import admin from "../Controllers/admin";
 import moment from "moment";
-import { useForm } from "react-hook-form";
-import { BsEnvelopeAt, BsPersonAdd, BsPhone } from "react-icons/bs";
 import NotificationIcon from "../Components/Notification";
 import UpdateAdminPassword from "../Components/UpdatePassword";
 import useSettingsData from "../Hooks/SettingData";
 import imageBaseURL from "../Controllers/image";
 import useHasPermission from "../Hooks/HasPermission";
-import { ADD } from "../Controllers/ApiControllers";
-import { useMutation } from "@tanstack/react-query";
 import ShowToast from "../Controllers/ShowToast";
 import Logout from "../Controllers/logout";
 import LanguageDropdown from "../Components/DropdownLanguage";
@@ -101,23 +71,10 @@ export default function Topbar() {
   };
 
   return (
-    <Flex
-      as="header"
-      align="center"
-      justify="space-between"
-      px="4"
-      py="2"
-      bg={useColorModeValue("white", "gray.800")}
-      boxShadow="none"
-      zIndex="sticky"
-      top="0"
-      position={"sticky"}
-      borderBottom={"1px solid"}
-      borderColor={useColorModeValue("gray.200", "gray.600")}
-    >
+    <Flex as="header" align="center" justify="space-between" px="4" py="2" bg={useColorModeValue("white", "gray.800")} boxShadow="none" zIndex="sticky" top="0" position={"sticky"} borderBottom={"1px solid"} borderColor={useColorModeValue("gray.200", "gray.600")} >
+      
       <Box display={"flex"} alignItems={"center"} gap={5}>
-        {" "}
-        <Image w={12} src={`${imageBaseURL}/${logo?.value}`} fallbackSrc={"/logo.png"} />
+        <Image w={12} src={`${imageBaseURL}/${logo?.value}`} fallbacksrc={"/logo.png"} />
         <Text fontSize="xl" fontWeight="500" mb={0} textTransform={"capitalize"}>
           {location ? location : "Dashboard"}
         </Text>
@@ -126,23 +83,14 @@ export default function Topbar() {
       <Flex>
         <LanguageDropdown />
         <NotificationIcon />
-        <IconButton
-          aria-label="Toggle color mode"
-          icon={colorMode === "light" ? <FiMoon /> : <FiSun />}
-          onClick={() => {
-            toggleColorMode();
-            colorMode === "light" ? document.body.classList.add("dark") : document.body.classList.remove("dark");
-          }}
-          variant="ghost"
-          colorScheme="black"
-        />{" "}
+        <IconButton aria-label="Toggle color mode" icon={colorMode === "light" ? <FiMoon /> : <FiSun />} onClick={() => {   toggleColorMode();   colorMode === "light" ? document.body.classList.add("dark") : document.body.classList.remove("dark"); }} variant="ghost" colorScheme="black" />
         <Menu>
           <MenuButton as={IconButton} variant="ghost" colorScheme="black" icon={<FiUser />} />
 
           <MenuList>
             <Box p={2} w={300}>
               <Flex justify={"center"}>
-                <Avatar src={`${imageBaseURL}/${admin.image}`} fallbackSrc="/admin/profile.png" w={16} />
+                <Avatar src={`${imageBaseURL}/${admin.image}`} fallbacksrc="/admin/profile.png" w={16} />
               </Flex>
               <Text textAlign={"center"} mt={2} fontSize={"lg"}>
                 {admin.f_name} {admin.l_name}
@@ -207,7 +155,7 @@ export default function Topbar() {
                   alt="#"
                 />
                 <Flex justify={"center"} mt={-12} pos={"relative"}>
-                  <Avatar size={"xl"} name={`${admin?.f_name} ${admin?.l_name}`} src={`${imageBaseURL}/${admin.image}`} fallbackSrc={"/vite.svg"} />
+                  <Avatar size={"xl"} name={`${admin?.f_name} ${admin?.l_name}`} src={`${imageBaseURL}/${admin.image}`} fallbacksrc={"/vite.svg"} />
 
                   <FileUploadButton />
                 </Flex>

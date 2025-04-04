@@ -3,8 +3,8 @@ import { AiOutlineDown } from 'react-icons/ai';
 import { Box, Button, Flex, Text, Menu, MenuButton, MenuList, MenuItem, useColorModeValue, useTheme } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
-// Import PointElement Title, Tooltip, Legend, TimeScale 
-import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend, TimeScale } from 'chart.js';
+// Import PointElement Title, Tooltip, Legend, TimeScale, Filler 
+import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend, TimeScale, Filler } from 'chart.js';
 import { useTranslation } from 'react-i18next';
 import 'chartjs-adapter-moment'; // Import the Moment adapter
 
@@ -19,7 +19,8 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  TimeScale
+  TimeScale,
+  Filler
 );
 
 // @ts-ignore
