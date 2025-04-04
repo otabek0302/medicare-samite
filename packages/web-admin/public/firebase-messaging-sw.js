@@ -2,10 +2,10 @@
 // public/firebase-messaging-sw.js
 
 importScripts(
-  'https://www.gstatic.com/firebasejs/9.10.0/firebase-app-compat.js'
+  'https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js'
 );
 importScripts(
-  'https://www.gstatic.com/firebasejs/9.10.0/firebase-messaging-compat.js'
+  'https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js'
 );
 
 const firebaseConfig = {
@@ -18,20 +18,22 @@ const firebaseConfig = {
   measurementId: 'G-3D2YW6C0WQ'
 };
 
-// Initialize Firebase
-// @ts-expect-error Gloal variable
-firebase.initializeApp(firebaseConfig);
+try {
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-// Retrieve Firebase Messaging instance
-// @ts-expect-error Gloal variable
-const messaging = firebase.messaging();
+  // Retrieve Firebase Messaging instance
+  const messaging = firebase.messaging();
 
-// Handle background messages
-messaging.onBackgroundMessage((payload) => {
-  const notificationTitle = payload.notification.title;
-  const notificationOptions = {
-    body: payload.notification.body,
-    icon: '/logo.svg' // Optional: Custom notification icon
-  };
-  self.registration.showNotification(notificationTitle, notificationOptions);
-});
+  // Handle background messages
+  messaging.onBackgroundMessage((payload) => {
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+      body: payload.notification.body,
+      icon: '/logo.svg' // Optional: Custom notification icon
+    };
+    self.registration.showNotification(notificationTitle, notificationOptions);
+  });
+} catch (error) {
+  console.error('Firebase messaging service worker error:', error);
+}

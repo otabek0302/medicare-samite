@@ -15,6 +15,12 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase Messaging
-const messaging = getMessaging(app);
+// Initialize Firebase Messaging with feature detection
+let messaging = null;
+if (typeof window !== 'undefined' && 
+    'serviceWorker' in navigator && 
+    'Notification' in window) {
+  messaging = getMessaging(app);
+}
+
 export { app, messaging, getToken, onMessage };
