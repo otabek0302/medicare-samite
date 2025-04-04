@@ -7,8 +7,8 @@ WORKDIR /var/www/admin-build
 # Copy the rest of the application code
 COPY . .
 
-# Install dependencies
-RUN npm install i18next --legacy-peer-deps
+
+
 
 # Build the application
 RUN npm run build
@@ -16,11 +16,12 @@ RUN npm run build
 # Stage 2: Serve with Nginx
 FROM nginx:alpine
 
-# Copy the build output to Nginx's html directory
-COPY --from=build /var/www/admin-build/dist /usr/share/nginx/html
+RUN mkdir -p /usr/share/nginx/html/admin
+# Copy the build output to Nginx's html directorys
+COPY --from=build /var/www/admin-build/dist /usr/share/nginx/html/admin
 
 
-
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
