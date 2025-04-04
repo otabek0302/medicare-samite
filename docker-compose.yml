@@ -43,7 +43,7 @@ services:
     environment:
       - DISABLE_IPV6=true
     ports:
-      - 5173
+      - 5174:80
     restart: unless-stopped
   web:
     build:

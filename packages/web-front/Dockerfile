@@ -1,27 +1,23 @@
-# Stage 1: Build the React app
-FROM node:lts AS build
 
-# Set the working directory
+FROM node:lts-alpine AS build
+
+
+
 WORKDIR /var/www/front-build
 
-# Copy the rest of the application code
-COPY . .
+COPY .  .
+RUN npm install   --legacy-peer-deps 
 
-# Install dependencies
-RUN npm install --legacy-peer-deps && npm install esbuild --force
 
-# Build the application
-RUN npm run build
+RUN npm run build 
 
-# Stage 2: Serve with Nginx
+#Stage 2: Serve with Nginx
 FROM nginx:alpine
 
-# Copy the build output to Nginx's html directory
-COPY --from=build /var/www/front-build/dist /usr/share/nginx/html
+# Copy the build output to Nginx's html directorys
+COPY --from=build  /var/www/front-build/dist /usr/share/nginx/html
 
 
-
-# Expose port 80
 EXPOSE 80
 
 # Start Nginx
