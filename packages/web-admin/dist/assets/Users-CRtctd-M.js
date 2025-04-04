@@ -1,1 +1,0 @@
-import{u as a}from"./SettingData-DvTyOSTZ.js";import{O as t,z as o}from"./index-BFPSIpCx.js";const u=async()=>(await t(o.token,"get_users")).data,c=()=>{const{isLoading:r,data:s,error:e}=a({queryKey:["users"],queryFn:u});return{usersData:s,usersLoading:r,usersError:e}};export{c as u};
