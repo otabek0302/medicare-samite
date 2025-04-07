@@ -6,13 +6,12 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [react()],
   define: {
-    'process.env': process.env // Ensure this is included
+    'process.env': {} // Fix process.env undefined error
   },
-  base: '/admin/',
+  base: '/admin/', // Base path for admin routes
   resolve: {
     alias: {
-      // eslint-disable-next-line no-undef
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(import.meta.url, './src')
     }
   }
 });

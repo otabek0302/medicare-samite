@@ -8,7 +8,7 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 
-# Increase memory limit here during build
+# Increase memory limit during build
 RUN NODE_OPTIONS="--max-old-space-size=2048" npm run build
 
 # Production stage
@@ -16,7 +16,11 @@ FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
+# Copy built frontend files
 COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy custom nginx config
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
