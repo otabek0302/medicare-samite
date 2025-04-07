@@ -20,10 +20,14 @@ jobs:
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << 'EOF'
-            cd /root/medicare-samite
-            git pull origin main
-            docker-compose down
-            docker-compose up --build -d
-            docker system prune -f
+          sshpass -p "$SSH_PASSWORD" ssh \
+            -o StrictHostKeyChecking=no \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=10 \
+            root@83.222.23.106 << 'EOF'
+              cd /root/medicare-samite
+              git pull origin main
+              docker-compose down
+              docker-compose up --build -d
+              docker system prune -f
           EOF
