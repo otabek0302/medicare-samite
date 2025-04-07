@@ -50,4 +50,4 @@ COPY --from=build /var/www/api-build /var/www/api
 # Expose port 8000 and start php-fpm server
 EXPOSE 8000
 
-CMD ["php", "-S", "localhost:8000"]
+CMD ["php", "-S", "0.0.0.0:8000"]
