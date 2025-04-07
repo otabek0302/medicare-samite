@@ -1,15 +1,24 @@
+# Build stage
+FROM node:20 as builder
 
-# Stage 2: Serve with Nginx
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+COPY . .
+RUN npm run build
+
+# Production stage
 FROM nginx:alpine
 
-RUN mkdir -p /usr/share/nginx/html/admin
-# Copy the build output to Nginx's html directorys
-COPY ./dist/ /usr/share/nginx/html/admin
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
 
+# Copy built admin files to Nginx public folder
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-COPY nginx.conf /etc/nginx/nginx.conf
-
+# Expose port 80
 EXPOSE 80
 
-# Start Nginx
+# Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,1 +1,0 @@
-import{r as n}from"./index-DPnYdkUz.js";function i(t){const[e,o]=n.useState(""),a=r=>{o(r)};return{searchTerm:e,setSearchTerm:o,filteredData:(()=>{if(!e)return t;const r=e.toLowerCase();return t.filter(c=>Object.values(c).some(s=>s&&s.toString().toLowerCase().includes(r)))})(),handleSearchChange:a}}export{i as u};
