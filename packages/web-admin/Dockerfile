@@ -4,12 +4,12 @@ FROM node:20 as builder
 WORKDIR /app
 
 COPY package*.json ./
-
-# Install with a timeout workaround
-RUN npm install --legacy-peer-deps --verbose
+RUN npm install --legacy-peer-deps
 
 COPY . .
-RUN npm run build
+
+# Increase memory limit here during build
+RUN NODE_OPTIONS="--max-old-space-size=2048" npm run build
 
 # Production stage
 FROM nginx:alpine
