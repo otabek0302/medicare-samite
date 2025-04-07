@@ -16,12 +16,12 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
 
-      - name: Run deploy script on server with password
+      - name: Deploy to VPS
+        env:
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -p "cPe4!uQshbHT" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << EOF
-            
-          
-            cd medicare-samite
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << 'EOF'
+            cd /root/medicare-samite
             git pull origin main
             docker-compose down
             docker-compose up --build -d
