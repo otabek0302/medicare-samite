@@ -3,13 +3,13 @@ FROM composer:latest AS build
 
 WORKDIR /var/www/api
 
-# Copy only necessary files first for faster build
+# First copy ONLY composer files
 COPY composer.json composer.lock ./
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Copy the rest of the project files
+# Now copy the entire project (IMPORTANT!)
 COPY . .
 
 # Production stage
