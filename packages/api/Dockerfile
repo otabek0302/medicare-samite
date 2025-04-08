@@ -3,14 +3,14 @@ FROM composer:latest AS build
 
 WORKDIR /var/www/api-build
 
-# Copy only composer files first (for caching)
-COPY composer.json composer.lock ./
+# Copy composer.json and composer.lock from the right location
+COPY packages/api/composer.json packages/api/composer.lock ./
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Install PHP dependencies
+RUN composer install --no-dev --optimize-autoloader --prefer-dist
 
-# Then copy rest of the app
-COPY . .
+# Then copy the entire API project
+COPY packages/api .
 
 # Second stage: Production
 FROM php:8.2-fpm
