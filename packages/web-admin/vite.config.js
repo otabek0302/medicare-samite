@@ -1,7 +1,10 @@
-import * as path from 'node:path';  
+import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
@@ -11,7 +14,7 @@ export default defineConfig({
   base: '/admin/', // Base path for admin routes
   resolve: {
     alias: {
-      '@': path.resolve(import.meta.url, './src')
+      '@': path.resolve(__dirname, './src')
     }
   }
 });
