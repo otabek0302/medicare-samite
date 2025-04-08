@@ -51,15 +51,54 @@ class InstallController extends Controller
         return view('installation.step5');
     }
 
-    public function purchase_code(Request $request)
+    public function activate(Request $request)
     {
+        $key = base64_encode(random_bytes(32));
+        $output = 'APP_NAME=medicare
+            APP_ENV=live
+            APP_KEY=base64:' . $key . '
+            APP_DEBUG=false
+            APP_INSTALLED=true
+            APP_LOG_LEVEL=debug
+            APP_MODE=live
+            APP_URL=' . URL::to('/') . '
 
-       
-        Helpers::setEnvironmentValue('SOFTWARE_ID', 'NTYwMzU4ODU=');
-        Helpers::setEnvironmentValue('BUYER_USERNAME', $request['username']);
-        Helpers::setEnvironmentValue('PURCHASE_CODE', $request['purchase_key']);
-        return Redirect::route('dmvf', ['purchase_key' => $request['purchase_key'], 'username' => $request['username']]);
-      //  return redirect()->route('dmvf', ['purchase_key' => $request['purchase_key'], 'username' => $request['username']]);
+            DB_CONNECTION=mysql
+            DB_HOST=' . $request->DB_HOST . '
+            DB_PORT=3306
+            DB_DATABASE=' . $request->DB_DATABASE . '
+            DB_USERNAME=' . $request->DB_USERNAME . '
+            DB_PASSWORD=' . $request->DB_PASSWORD . '
+
+            MAIL_MAILER=smtp
+            MAIL_HOST=
+            MAIL_PORT=587 
+            MAIL_USERNAME=
+            MAIL_PASSWORD=
+            MAIL_ENCRYPTION=ssl
+            MAIL_FROM_ADDRESS=
+            MAIL_FROM_NAME="${APP_NAME}"
+
+            BROADCAST_DRIVER=log
+            CACHE_DRIVER=file
+            SESSION_DRIVER=file
+            SESSION_LIFETIME=120
+            QUEUE_DRIVER=sync
+
+            REDIS_HOST=127.0.0.1
+            REDIS_PASSWORD=null
+            REDIS_PORT=6379
+
+            PUSHER_APP_ID=
+            PUSHER_APP_KEY=
+            PUSHER_APP_SECRET=
+            PUSHER_APP_CLUSTER=mt1';
+
+        $file = fopen(base_path('.env'), 'w');
+        fwrite($file, $output);
+        fclose($file);
+
+        return redirect()->route('step6');
     }
 
     public function system_settings(Request $request)

@@ -14,54 +14,48 @@
                         <div class="card-main">
                             <div class="d-flex group-main">
                                 <div class="group-out">
-                                    <div class="where">
-                                        <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code"
-                                            class="text-info">Where to get purchase code ?</a>
-                                        </p>
-                                    </div>
-                                    <p class="step-name">STEP 2. Update Purchase Information</p>
-                                    <p class="step-subhead">Please provide your <strong>Codecanyon username</strong> and
-                                        <strong>purchase code</strong> below.
-                                    </p>
+                                    <p class="step-name">STEP 2. Database Configuration</p>
+                                    <p class="step-subhead">Please provide your database information below.</p>
                                     <div class="group">
                                         <div class="grp-form">
-                                            <form class="form-section" method="POST" action="{{ route('purchase.code') }}">
+                                            <form class="form-section" method="POST" action="{{ route('activate') }}">
                                                 @csrf
-                                                <div class="form-group custom-form-group d-flex">
-                                                    <div class="col-md-6">
-                                                        <label class="label-section" for="purchase_code">Codecanyon
-                                                            Username</label>
-                                                        <input type="text" value="{{ env('BUYER_USERNAME') }}"
-                                                            class="form-control input-section" id="username"
-                                                            name="username" required placeholder="Ex: - Jhon">
-                                                    </div>
+                                                <div class="form-group custom-form-group">
+                                                    <label class="label-section" for="DB_HOST">Database Host</label>
+                                                    <input type="text" class="form-control input-section" id="DB_HOST"
+                                                        name="DB_HOST" required placeholder="Ex: localhost">
+                                                </div>
 
-                                                    <div class="col-md-6 code">
-                                                        <label class="label-section" for="purchase_code">Purchase
-                                                            Code</label>
-                                                        <input type="text" value="{{ env('PURCHASE_CODE') }}"
-                                                            class="form-control input-section" id="purchase_key"
-                                                            name="purchase_key" required placeholder="Ex: x0sxxxxsxx-7a07-4e61-xxxx-xxxxeb4750a6 ">
-                                                    </div>
+                                                <div class="form-group custom-form-group">
+                                                    <label class="label-section" for="DB_DATABASE">Database Name</label>
+                                                    <input type="text" class="form-control input-section" id="DB_DATABASE"
+                                                        name="DB_DATABASE" required placeholder="Ex: medicare_db">
+                                                </div>
+
+                                                <div class="form-group custom-form-group">
+                                                    <label class="label-section" for="DB_USERNAME">Database Username</label>
+                                                    <input type="text" class="form-control input-section" id="DB_USERNAME"
+                                                        name="DB_USERNAME" required placeholder="Ex: root">
+                                                </div>
+
+                                                <div class="form-group custom-form-group">
+                                                    <label class="label-section" for="DB_PASSWORD">Database Password</label>
+                                                    <input type="password" class="form-control input-section" id="DB_PASSWORD"
+                                                        name="DB_PASSWORD" placeholder="Enter database password">
                                                 </div>
 
                                                 <div class="text-center">
-                                                    <button type="submit" class="btn btn-custom">Proceed to
-                                                        Install</button>
+                                                    <button type="submit" class="btn btn-primary">Continue</button>
                                                 </div>
                                             </form>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
-
                     </div>
                 </div>
-                <link rel="stylesheet" href="{{ asset('css/css.css') }}">
             </div>
-        @endsection
+        </div>
+    </div>
+@endsection

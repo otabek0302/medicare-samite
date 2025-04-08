@@ -1,18 +1,24 @@
+# Build stage
 FROM node:lts-alpine AS build
 
-WORKDIR /var/www/front-build
+WORKDIR /app
 
-COPY packages/web-front/package*.json ./
+# Install dependencies
+COPY package*.json ./
 RUN npm install --legacy-peer-deps
 
-COPY packages/web-front .
-
+# Copy all files and build
+COPY . .
 RUN npm run build
 
-# Production Stage
+# Production stage
 FROM nginx:alpine
 
-COPY --from=build /var/www/front-build/dist /usr/share/nginx/html
+# Clean nginx default files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy built frontend files
+COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 

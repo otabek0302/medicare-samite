@@ -1,4 +1,4 @@
-name: Deploy on Push
+name: Deploy on Push to Main
 
 on:
   push:
@@ -10,25 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install sshpass
-        run: sudo apt-get install -y sshpass
+      - name: Install SSHPass
+        run: sudo apt-get install sshpass -y
 
       - name: Deploy to VPS
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -p "$SSH_PASSWORD" ssh \
-            -o StrictHostKeyChecking=no \
-            -o ServerAliveInterval=30 \
-            -o ServerAliveCountMax=10 \
-            root@83.222.23.106 << 'EOF'
-              set -e
-              cd /root/medicare-samite
-              git pull origin main
-              docker-compose down
-              docker-compose up --build -d
-              docker system prune -f
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << 'EOF'
+            set -e
+            cd /root/medicare-samite
+
+            echo "Pulling latest changes..."
+            git pull origin main
+
+            echo "Stopping old containers..."
+            docker-compose down
+
+            echo "Building and starting fresh containers..."
+            docker-compose up -d --build
+
+            echo "Cleaning up unused Docker resources..."
+            docker system prune -af
+
+            echo "Deployment done successfully!"
           EOF

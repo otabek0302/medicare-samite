@@ -1,26 +1,27 @@
 # Build stage
-FROM node:20 as builder
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Copy only web-admin package files
-COPY packages/web-admin/package*.json ./
+# Install dependencies
+COPY package*.json ./
 RUN npm install --legacy-peer-deps
 
-COPY packages/web-admin .
-
-RUN NODE_OPTIONS="--max-old-space-size=2048" npm run build
+# Copy all files and build
+COPY . .
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
 
+# Clean nginx default files
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy build output
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy built frontend files
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy nginx config
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+# Copy your nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
