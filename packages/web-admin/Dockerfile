@@ -9,7 +9,9 @@ RUN npm install --legacy-peer-deps
 
 # Copy all files and build
 COPY . .
-RUN npm run build
+
+# 👉 Increase memory limit when building
+RUN NODE_OPTIONS="--max-old-space-size=2048" npm run build
 
 # Production stage
 FROM nginx:alpine
