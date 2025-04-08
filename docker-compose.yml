@@ -3,8 +3,8 @@ version: '3.8'
 services:
   api:
     build:
-      context: ./packages/api
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: packages/api/Dockerfile
     container_name: api-backend
     volumes:
       - ./packages/api:/var/www/api
@@ -22,8 +22,8 @@ services:
 
   admin:
     build:
-      context: ./packages/web-admin
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: packages/web-admin/Dockerfile
     container_name: admin-frontend
     env_file: ./.env
     environment:
@@ -34,8 +34,8 @@ services:
 
   web:
     build:
-      context: ./packages/web-front
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: packages/web-front/Dockerfile
     container_name: web-frontend
     env_file: ./.env
     environment:
