@@ -20,9 +20,9 @@ jobs:
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@83.222.23.106 << 'EOF'
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@82.202.128.127 << 'EOF'
             set -e
-            cd /root/medicare-samite
+            cd /root/medicare
 
             echo "Pulling latest changes..."
             git pull origin main
@@ -31,10 +31,10 @@ jobs:
             docker-compose down
 
             echo "Building and starting fresh containers..."
-            docker-compose up -d --build
+            docker-compose build --no-cache
 
             echo "Cleaning up unused Docker resources..."
-            docker system prune -af
+            docker-compose up -d
 
             echo "Deployment done successfully!"
           EOF
