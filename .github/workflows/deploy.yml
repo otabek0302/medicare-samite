@@ -10,12 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # Step 2: Install SSHPass for non-interactive SSH
       - name: Install SSHPass
         run: sudo apt-get install sshpass -y
 
+      # Step 3: Deploy to VPS
       - name: Deploy to VPS
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
@@ -24,17 +27,26 @@ jobs:
             set -e
             cd /root/medicare
 
+            # Reset any local changes
+            echo "Resetting local changes..."
+            git reset --hard
+
+            # Pull the latest changes from the main branch
             echo "Pulling latest changes..."
             git pull origin main
 
+            # Stop any running Docker containers
             echo "Stopping old containers..."
             docker-compose down
 
+            # Build new Docker containers without using cache
             echo "Building and starting fresh containers..."
             docker-compose build --no-cache
 
-            echo "Cleaning up unused Docker resources..."
+            # Start the new Docker containers in detached mode
+            echo "Starting containers..."
             docker-compose up -d
 
+            # Confirm successful deployment
             echo "Deployment done successfully!"
           EOF
