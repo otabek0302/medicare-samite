@@ -3,13 +3,13 @@ FROM composer:latest AS build
 
 WORKDIR /var/www/api-build
 
-# Copy composer.json and composer.lock from the right location
+# Correct paths
 COPY packages/api/composer.json packages/api/composer.lock ./
 
-# Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader --prefer-dist
+# 👇 Updated this line
+RUN composer install --no-dev --optimize-autoloader --prefer-dist --no-scripts
 
-# Then copy the entire API project
+# Copy the rest of your application
 COPY packages/api .
 
 # Second stage: Production
@@ -35,10 +35,10 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install gd pdo pdo_mysql bcmath ctype fileinfo mbstring xml zip sodium
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 
-# Copy the built application
+# Copy built app from build stage
 COPY --from=build /var/www/api-build /var/www/api
 
-# Expose port 8000
+# Expose the port
 EXPOSE 8000
 
 CMD ["php", "-S", "0.0.0.0:8000"]
