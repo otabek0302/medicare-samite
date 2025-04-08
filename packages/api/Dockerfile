@@ -3,27 +3,38 @@ FROM composer:latest AS build
 
 WORKDIR /var/www/api
 
-COPY . .
+# Copy only necessary files first for faster build
+COPY composer.json composer.lock ./
 
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
+
+# Copy the rest of the project files
+COPY . .
 
 # Production stage
 FROM php:8.2-fpm
 
 WORKDIR /var/www/api
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev libzip-dev \
-    libonig-dev zip unzip libmagic-dev libsodium-dev curl
-
 # Install PHP extensions
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-RUN docker-php-ext-install gd pdo pdo_mysql bcmath ctype fileinfo mbstring xml zip sodium
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libzip-dev \
+    libxml2-dev \
+    libonig-dev \
+    zip \
+    unzip \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd pdo pdo_mysql bcmath ctype fileinfo mbstring xml zip sodium
 
-# Copy application files
+# Copy files from the build stage
 COPY --from=build /var/www/api /var/www/api
 
+# Expose port 8000
 EXPOSE 8000
 
-CMD ["php-fpm"]
+# Start Laravel server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

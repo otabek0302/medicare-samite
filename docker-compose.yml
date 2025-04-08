@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # API Service (Laravel PHP)
   api:
@@ -9,8 +7,6 @@ services:
     container_name: api-backend
     volumes:
       - ./packages/api:/var/www/api
-      - /var/www/api/vendor
-    env_file: ./.env
     environment:
       - DISABLE_IPV6=true
     ports:
@@ -33,8 +29,6 @@ services:
     container_name: admin-frontend
     volumes:
       - ./packages/web-admin:/var/www/admin
-      - /var/www/admin/node_modules
-    env_file: ./.env
     environment:
       - DISABLE_IPV6=true
     ports:
@@ -49,8 +43,6 @@ services:
     container_name: web-frontend
     volumes:
       - ./packages/web-front:/var/www/front
-      - /var/www/front/node_modules
-    env_file: ./.env
     environment:
       - DISABLE_IPV6=true
     ports:
