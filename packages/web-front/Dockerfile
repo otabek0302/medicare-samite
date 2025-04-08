@@ -2,14 +2,16 @@ FROM node:lts-alpine AS build
 
 WORKDIR /var/www/front-build
 
-COPY . .
+COPY packages/web-front/package*.json ./
 RUN npm install --legacy-peer-deps
+
+COPY packages/web-front .
+
 RUN npm run build
 
-# Stage 2: Serve with Nginx
+# Production Stage
 FROM nginx:alpine
 
-# Copy the build output to Nginx's html directory
 COPY --from=build /var/www/front-build/dist /usr/share/nginx/html
 
 EXPOSE 80

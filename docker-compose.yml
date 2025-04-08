@@ -9,8 +9,6 @@ services:
     volumes:
       - ./packages/api:/var/www/api
     env_file: ./.env
-    environment:
-      - DISABLE_IPV6=true
     ports:
       - "8000:8000"
     restart: unless-stopped
@@ -26,8 +24,6 @@ services:
       dockerfile: packages/web-admin/Dockerfile
     container_name: admin-frontend
     env_file: ./.env
-    environment:
-      - DISABLE_IPV6=true
     ports:
       - "5174:80"
     restart: unless-stopped
@@ -38,8 +34,6 @@ services:
       dockerfile: packages/web-front/Dockerfile
     container_name: web-frontend
     env_file: ./.env
-    environment:
-      - DISABLE_IPV6=true
     ports:
       - "5173:80"
     restart: unless-stopped
