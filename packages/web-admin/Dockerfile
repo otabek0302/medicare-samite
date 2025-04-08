@@ -11,7 +11,7 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # ⛽️ Use more memory while building
-ENV NODE_OPTIONS="--max-old-space-size=2048"
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # Build the project
 RUN npm run build
