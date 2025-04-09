@@ -3,14 +3,12 @@ FROM composer:latest AS build
 
 WORKDIR /var/www/api
 
-# First copy ONLY composer files
-COPY composer.json composer.lock ./
-
-# Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
-
-# Now copy the entire project (IMPORTANT!)
+# 🛑 DO NOT RUN composer install first!
+# ✅ First copy all project files
 COPY . .
+
+# ✅ Now run composer install AFTER copying artisan and code
+RUN composer install --no-dev --optimize-autoloader
 
 # Production stage
 FROM php:8.2-fpm
@@ -30,7 +28,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql bcmath ctype fileinfo mbstring xml zip sodium
 
-# Copy files from the build stage
+# Copy the built project
 COPY --from=build /var/www/api /var/www/api
 
 # Expose port 8000
