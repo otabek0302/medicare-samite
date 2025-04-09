@@ -3,11 +3,10 @@ FROM composer:latest AS build
 
 WORKDIR /var/www/api
 
-# 🛑 DO NOT RUN composer install first!
-# ✅ First copy all project files
+# Copy ALL project files first
 COPY . .
 
-# ✅ Now run composer install AFTER copying artisan and code
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
 # Production stage
@@ -29,7 +28,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql bcmath ctype fileinfo mbstring xml zip sodium
 
-# Copy the built project
+# Copy the build files
 COPY --from=build /var/www/api /var/www/api
 
 # Expose port 8000
