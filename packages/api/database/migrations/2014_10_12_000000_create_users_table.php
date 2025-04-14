@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('f_name');
             $table->string('l_name');
-            $table->string('phone')>unique()->nullable();
+            $table->string('phone')->unique()->nullable();
             $table->string('email')->unique()->nullable();
             $table->string('isd_code', 6); 
             $table->enum('gender', ['male', 'female', 'other'])->nullable();
@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            
         });
     }
 
